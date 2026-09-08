@@ -12,7 +12,12 @@ public enum ComponentTranslationRoute {
     TOOLTIP_STRUCTURED("tooltip_structured", "item"),
     TOOLTIP_PARAGRAPH("tooltip_paragraph", "item"),
     SCOREBOARD("scoreboard", "scoreboard"),
-    SCREEN_UI("screen_ui", "screen_ui");
+    SCREEN_UI("screen_ui", "screen_ui"),
+    PLAYER_LIST("player_list", "other_translations"),
+    BOSS_BAR("boss_bar", "other_translations"),
+    TITLE("title", "other_translations"),
+    ACTION_BAR("action_bar", "other_translations"),
+    HOVER_TEXT("hover_text", "other_translations");
 
     private final String wireName;
     private final String promptRouteKey;

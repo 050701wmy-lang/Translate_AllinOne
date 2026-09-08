@@ -6,6 +6,7 @@ import com.alexeys.translate_allinone.utils.AnimationManager;
 import com.alexeys.translate_allinone.utils.MessageUtils;
 import com.alexeys.translate_allinone.utils.config.ModConfig;
 import com.alexeys.translate_allinone.utils.translate.ChatOutputTranslateManager;
+import com.alexeys.translate_allinone.utils.translate.HypixelMessageTranslationSupport;
 import com.alexeys.translate_allinone.utils.translate.TranslationFeatureGate;
 import com.alexeys.translate_allinone.utils.translate.WynnDialogueTranslationSupport;
 import org.spongepowered.asm.mixin.Mixin;
@@ -44,16 +45,21 @@ public abstract class ChatHudMixin {
             }
             WynnDialogueTranslationSupport.traceChatEntry(message);
             WynnDialogueTranslationSupport.handleChatMessage(message);
-            if (config.chatTranslate.output.enabled) {
+            boolean hypixelAutoTranslate = HypixelMessageTranslationSupport.shouldAutoTranslate(
+                    config.chatTranslate.output,
+                    config.chatTranslate.output.skyblock_npc_auto_translate
+                            && ChatOutputTranslateManager.isSkyblockNpcMessage(message),
+                    config.chatTranslate.output.skyblock_server_auto_translate
+                            && HypixelMessageTranslationSupport.isServerMessage(message));
+            if (config.chatTranslate.output.enabled || hypixelAutoTranslate) {
                 String plainText = AnimationManager.stripFormatting(message.getString()).trim();
                 if (plainText.isEmpty()) {
                     return message;
                 }
 
                 UUID messageId = UUID.randomUUID();
-                boolean autoTranslate = config.chatTranslate.output.auto_translate
-                        || (config.chatTranslate.output.skyblock_npc_auto_translate
-                        && ChatOutputTranslateManager.isSkyblockNpcMessage(message));
+                boolean autoTranslate = hypixelAutoTranslate || (config.chatTranslate.output.enabled
+                        && config.chatTranslate.output.auto_translate);
                 ChatOutputTranslateManager.logInterceptedMessage(messageId, message, plainText, autoTranslate);
                 MessageUtils.putTrackedMessage(messageId, message);
 

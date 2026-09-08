@@ -15,8 +15,20 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class UiScreenAdapterRegistryTest {
+    @Test
+    void genericScreensCoverVanillaButRespectDocumentAndOwnUiBoundaries() {
+        assertNotNull(UiScreenAdapterRegistry.resolveGeneric(net.minecraft.client.gui.screens.TitleScreen.class));
+        assertNotNull(UiScreenAdapterRegistry.resolveGeneric(net.minecraft.client.gui.screens.inventory.InventoryScreen.class));
+        assertNull(UiScreenAdapterRegistry.resolveGeneric(net.minecraft.client.gui.screens.ChatScreen.class));
+        assertNull(UiScreenAdapterRegistry.resolveGeneric(net.minecraft.client.gui.screens.inventory.BookViewScreen.class));
+        assertNull(UiScreenAdapterRegistry.resolveGeneric(net.minecraft.client.gui.screens.inventory.BookEditScreen.class));
+        assertNull(UiScreenAdapterRegistry.resolveGeneric(com.alexeys.translate_allinone.gui.ModConfigScreen.class));
+        assertNull(UiScreenAdapterRegistry.resolveGeneric(String.class));
+    }
+
     @Test
     void resolvesScreenFromOwningMod() {
         Class<?> externalScreenClass = org.junit.jupiter.api.Test.class;

@@ -107,10 +107,14 @@ public final class ComponentTranslationPolicy {
                 continue;
             }
             int offset = 0;
+            int occurrences = 0;
             while ((offset = text.indexOf(token, offset)) >= 0) {
-                tokens.merge(token, 1, Integer::sum);
+                occurrences++;
                 offset += token.length();
             }
+            // A private slot may already match the generic {placeholder} rule.
+            // Count occurrences in the text, not the number of matching rules.
+            if (occurrences > 0) tokens.merge(token, occurrences, Math::max);
         }
         return Collections.unmodifiableMap(new TreeMap<>(tokens));
     }
@@ -155,6 +159,7 @@ public final class ComponentTranslationPolicy {
         settings.put("literal_scope", "root_and_extra");
         settings.put("private_use", "exclude");
         settings.put("token_order", "movable");
+        settings.put("private_token_counting", "distinct-occurrences-v2");
         if (!privateTokens.isEmpty()) {
             List<String> sortedTokens = new ArrayList<>(privateTokens);
             Collections.sort(sortedTokens);

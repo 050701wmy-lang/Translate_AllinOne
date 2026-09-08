@@ -1,5 +1,7 @@
 # Translate All in One
 
+新增通用界面、Tab 玩家列表、BossBar、标题/副标题、ActionBar 与 HoverEvent ShowText 翻译，保留原有专项能力。开关、缓存与兼容范围见 [通用翻译说明](GENERIC_TRANSLATION.md)。
+
 <div align="center">
 
 [English](./README.md) | **简体中文**

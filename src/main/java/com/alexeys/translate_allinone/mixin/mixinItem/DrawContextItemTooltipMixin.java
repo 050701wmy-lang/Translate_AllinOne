@@ -6,6 +6,7 @@ import com.alexeys.translate_allinone.utils.translate.TooltipRecentRenderGuardSu
 import com.alexeys.translate_allinone.utils.translate.TooltipTextDebugCopySupport;
 import com.alexeys.translate_allinone.utils.translate.TooltipTranslationContext;
 import com.alexeys.translate_allinone.utils.translate.TooltipTranslationSupport;
+import com.alexeys.translate_allinone.utils.translate.FinalItemTooltipTranslationSupport;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
@@ -60,6 +61,10 @@ public abstract class DrawContextItemTooltipMixin {
     ) {
         List<Component> originalTooltip = cir.getReturnValue();
         TooltipTextDebugCopySupport.maybeCopyCurrentTooltip(originalTooltip);
+        if (FinalItemTooltipTranslationSupport.ownsTooltip()) {
+            // The final Component-list submission includes rows added after this getter returns.
+            return;
+        }
         if (translate_allinone$shouldUseWynnmodTooltipTracking() && TooltipTranslationContext.isInWynnmodTooltipRender()) {
             TooltipTranslationContext.setSkipDrawContextTranslation(false);
             return;

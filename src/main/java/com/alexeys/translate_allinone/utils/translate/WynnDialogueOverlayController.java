@@ -112,6 +112,10 @@ public final class WynnDialogueOverlayController {
         this.translationRouteAvailable = translationRouteAvailable;
     }
 
+    public synchronized boolean ownsOverlay() {
+        return enabled.getAsBoolean() && activeTemplate != null;
+    }
+
     public synchronized Component transformOverlay(Component original) {
         if (!enabled.getAsBoolean()) {
             disablePresentation();

@@ -1197,7 +1197,8 @@ public final class ComponentTranslationRuntimeCore {
     private static DispatchRoute dispatchRoute(ComponentTranslationRoute route) {
         return switch (route) {
             case SCREEN_UI -> DispatchRoute.SCREEN_UI;
-            case ADVANCEMENT, SIGN_FACE, SIGN_CONTINUOUS, ENTITY_NAME, TEXT_DISPLAY, BOOK_PAGE ->
+            case ADVANCEMENT, SIGN_FACE, SIGN_CONTINUOUS, ENTITY_NAME, TEXT_DISPLAY, BOOK_PAGE,
+                    PLAYER_LIST, BOSS_BAR, TITLE, ACTION_BAR, HOVER_TEXT ->
                     DispatchRoute.OTHER_TRANSLATIONS;
             case SCOREBOARD -> DispatchRoute.SCOREBOARD;
             case TOOLTIP_LINE, TOOLTIP_STRUCTURED, TOOLTIP_PARAGRAPH, CHAT_OUTPUT -> DispatchRoute.ITEM;

@@ -297,7 +297,8 @@ public final class ComponentTranslationDebugLogger {
             case TOOLTIP_LINE, TOOLTIP_STRUCTURED, TOOLTIP_PARAGRAPH -> itemFlowEnabled;
             case CHAT_OUTPUT -> false;
             case SCOREBOARD -> scoreboardFlowEnabled;
-            case ADVANCEMENT, SIGN_FACE, SIGN_CONTINUOUS, ENTITY_NAME, TEXT_DISPLAY, BOOK_PAGE, SCREEN_UI -> false;
+            case ADVANCEMENT, SIGN_FACE, SIGN_CONTINUOUS, ENTITY_NAME, TEXT_DISPLAY, BOOK_PAGE, SCREEN_UI,
+                    PLAYER_LIST, BOSS_BAR, TITLE, ACTION_BAR, HOVER_TEXT -> false;
         };
     }
 
@@ -307,7 +308,8 @@ public final class ComponentTranslationDebugLogger {
         }
         return switch (route) {
             case TOOLTIP_LINE, TOOLTIP_STRUCTURED, TOOLTIP_PARAGRAPH -> itemTextContentEnabled;
-            case CHAT_OUTPUT, SCOREBOARD, ADVANCEMENT, SIGN_FACE, SIGN_CONTINUOUS, ENTITY_NAME, TEXT_DISPLAY, BOOK_PAGE, SCREEN_UI -> false;
+            case CHAT_OUTPUT, SCOREBOARD, ADVANCEMENT, SIGN_FACE, SIGN_CONTINUOUS, ENTITY_NAME, TEXT_DISPLAY, BOOK_PAGE, SCREEN_UI,
+                    PLAYER_LIST, BOSS_BAR, TITLE, ACTION_BAR, HOVER_TEXT -> false;
         };
     }
 
@@ -322,7 +324,8 @@ public final class ComponentTranslationDebugLogger {
         return switch (route) {
             case TOOLTIP_LINE, TOOLTIP_STRUCTURED, TOOLTIP_PARAGRAPH -> itemTimingEnabled;
             case SCOREBOARD -> scoreboardTimingEnabled;
-            case CHAT_OUTPUT, ADVANCEMENT, SIGN_FACE, SIGN_CONTINUOUS, ENTITY_NAME, TEXT_DISPLAY, BOOK_PAGE, SCREEN_UI -> false;
+            case CHAT_OUTPUT, ADVANCEMENT, SIGN_FACE, SIGN_CONTINUOUS, ENTITY_NAME, TEXT_DISPLAY, BOOK_PAGE, SCREEN_UI,
+                    PLAYER_LIST, BOSS_BAR, TITLE, ACTION_BAR, HOVER_TEXT -> false;
         };
     }
 

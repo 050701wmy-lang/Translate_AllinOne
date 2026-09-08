@@ -1,5 +1,7 @@
 # Translate All in One
 
+Generic coverage now includes vanilla/mod screens, the Tab player list, boss bars, titles/subtitles, action bars, and HoverEvent ShowText, while retaining AIO's specialized pipelines. See [configuration, boundaries and validation](GENERIC_TRANSLATION.md).
+
 <div align="center">
 
 **English** | [简体中文](./README.zh.md)

@@ -123,15 +123,38 @@ public final class UiScreenAdapterRegistry {
     }
 
     private static UiScreenAdapter resolveClass(Class<?> screenClass) {
+        UiScreenAdapter generic = resolveGeneric(screenClass);
+        if (generic == null && Screen.class.isAssignableFrom(screenClass)) {
+            return null;
+        }
         UiScreenAdapter registered = resolveRegistered(screenClass.getName());
         if (registered != null) {
             return registered;
         }
         try {
-            return resolveAutomatic(screenClass, FabricLoader.getInstance().getAllMods());
+            UiScreenAdapter automatic = resolveAutomatic(screenClass, FabricLoader.getInstance().getAllMods());
+            return automatic == null ? generic : automatic;
         } catch (RuntimeException ignored) {
+            return generic;
+        }
+    }
+
+    static UiScreenAdapter resolveGeneric(Class<?> screenClass) {
+        if (screenClass == null || !Screen.class.isAssignableFrom(screenClass)
+                || screenClass.getName().startsWith("com.alexeys.translate_allinone.")) {
             return null;
         }
+        // These screens contain documents or editable text owned by dedicated translation modules.
+        for (Class<?> type = screenClass; type != null; type = type.getSuperclass()) {
+            if (Set.of("net.minecraft.client.gui.screens.ChatScreen",
+                    "net.minecraft.client.gui.screens.inventory.BookViewScreen",
+                    "net.minecraft.client.gui.screens.inventory.BookEditScreen",
+                    "net.minecraft.client.gui.screens.inventory.AbstractSignEditScreen").contains(type.getName())) {
+                return null;
+            }
+        }
+        return new UiScreenAdapter(screenClass.getName().startsWith("net.minecraft.") ? "minecraft" : "generic",
+                screenClass.getName(), UiScreenAdapter.Backend.MINECRAFT_FONT, Set.of(UiTextRole.values()));
     }
 
     private static UiScreenAdapter resolveRegistered(String className) {

@@ -28,6 +28,11 @@ public enum ComponentCacheModule {
     ADVANCEMENT("advancement", "component_advancement_translate_cache.json", EnumSet.of(
             ComponentTranslationRoute.ADVANCEMENT
     )),
+    PLAYER_LIST("player_list", "component_player_list_translate_cache.json", EnumSet.of(ComponentTranslationRoute.PLAYER_LIST)),
+    BOSS_BAR("boss_bar", "component_boss_bar_translate_cache.json", EnumSet.of(ComponentTranslationRoute.BOSS_BAR)),
+    TITLE("title", "component_title_translate_cache.json", EnumSet.of(ComponentTranslationRoute.TITLE)),
+    ACTION_BAR("action_bar", "component_action_bar_translate_cache.json", EnumSet.of(ComponentTranslationRoute.ACTION_BAR)),
+    HOVER_TEXT("hover_text", "component_hover_text_translate_cache.json", EnumSet.of(ComponentTranslationRoute.HOVER_TEXT)),
     SCREEN_UI("screen_ui", "component_screen_ui_translate_cache.json", EnumSet.of(
             ComponentTranslationRoute.SCREEN_UI
     ));

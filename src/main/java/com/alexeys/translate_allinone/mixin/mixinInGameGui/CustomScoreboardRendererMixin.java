@@ -19,7 +19,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Pseudo
 @Mixin(
-        targets = "me.owdding.customscoreboard.feature.customscoreboard.CustomScoreboardRenderer",
+        targets = {
+                "me.owdding.customscoreboard.feature.customscoreboard.CustomScoreboardRenderer",
+                "me.owdding.customscoreboard.core.CustomScoreboardRenderer"
+        },
         remap = false
 )
 public abstract class CustomScoreboardRendererMixin {

@@ -8,6 +8,7 @@ public enum ConfigSection {
     SCOREBOARD("scoreboard"),
     OTHER_TRANSLATIONS("other_translations"),
     WYNNCRAFT("wynncraft"),
+    HYPIXEL("hypixel"),
     DICTIONARY("dictionary"),
     CACHE("cache"),
     DEBUG("debug");

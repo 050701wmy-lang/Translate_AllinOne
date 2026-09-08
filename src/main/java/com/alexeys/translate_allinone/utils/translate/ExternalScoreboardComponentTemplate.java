@@ -9,7 +9,7 @@ final class ExternalScoreboardComponentTemplate {
     }
 
     static Prepared prepare(Component source, Set<String> privateTokens) {
-        return new Prepared(ComponentDynamicTemplate.prepare(source, privateTokens));
+        return new Prepared(ComponentDynamicTemplate.prepare(source, HudGlyphProtection.tokens(source, privateTokens)));
     }
 
     record Prepared(ComponentDynamicTemplate dynamicTemplate) {

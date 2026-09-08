@@ -16,6 +16,7 @@ public class ChatTranslateConfig {
         public boolean enabled = false;
         public boolean auto_translate = false;
         public boolean skyblock_npc_auto_translate = false;
+        public boolean skyblock_server_auto_translate = false;
         public String target_language = "Chinese";
         public boolean streaming_response = false;
         public int max_concurrent_requests = 1;

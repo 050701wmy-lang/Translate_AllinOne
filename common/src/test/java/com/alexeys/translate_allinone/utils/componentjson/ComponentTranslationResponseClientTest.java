@@ -22,6 +22,59 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class ComponentTranslationResponseClientTest {
     @Test
+    void seedsTitleFallsBackAfterUnsupportedSchemaAndRemembersCapability() throws Exception {
+        var server = com.sun.net.httpserver.HttpServer.create(new java.net.InetSocketAddress("127.0.0.1", 0), 0);
+        List<String> formats = new java.util.concurrent.CopyOnWriteArrayList<>();
+        server.createContext("/chat/completions", exchange -> {
+            var request = com.google.gson.JsonParser.parseString(new String(
+                    exchange.getRequestBody().readAllBytes(), java.nio.charset.StandardCharsets.UTF_8)).getAsJsonObject();
+            String format = request.has("response_format")
+                    ? request.getAsJsonObject("response_format").get("type").getAsString() : "none";
+            formats.add(format);
+            int status = format.equals("none") ? 200 : 400;
+            String response;
+            if (status == 400) {
+                response = "{\"error\":{\"message\":\"This response_format type is unavailable now\",\"type\":\"invalid_request_error\"}}";
+            } else {
+                JsonObject message = new JsonObject();
+                message.addProperty("content", validResponse("种子"));
+                JsonObject choice = new JsonObject();
+                choice.add("message", message);
+                choice.addProperty("finish_reason", "stop");
+                var choices = new com.google.gson.JsonArray();
+                choices.add(choice);
+                JsonObject body = new JsonObject();
+                body.add("choices", choices);
+                response = body.toString();
+            }
+            byte[] bytes = response.getBytes(java.nio.charset.StandardCharsets.UTF_8);
+            exchange.getResponseHeaders().set("Content-Type", "application/json");
+            exchange.sendResponseHeaders(status, bytes.length);
+            exchange.getResponseBody().write(bytes);
+            exchange.close();
+        });
+        server.start();
+        try {
+            ApiProviderProfile provider = profile();
+            provider.base_url = "http://127.0.0.1:" + server.getAddress().getPort();
+            provider.api_key = "local-test";
+            provider.model_id = "test-" + java.util.UUID.randomUUID();
+            var client = new ComponentTranslationResponseClient(new ComponentResponseParser(),
+                    new ComponentTranslationValidator(),
+                    settings -> new com.alexeys.translate_allinone.utils.llmapi.LLM(settings)::getCompletion,
+                    null, null);
+            var document = document(ComponentTranslationRoute.SCREEN_UI,
+                    List.of(new ComponentTextUnit("u0", "/text", "Seeds", Map.of(), "screen_ui")));
+            for (int attempt = 0; attempt < 2; attempt++) {
+                assertEquals(Map.of("u0", "种子"), client.translate(document, "Chinese", provider, "seeds-test")
+                        .get(10, java.util.concurrent.TimeUnit.SECONDS).translations());
+            }
+            assertEquals(List.of("json_schema", "json_object", "none", "none"), formats);
+        } finally {
+            server.stop(0);
+        }
+    }
+    @Test
     void returnsEmptyResponseWithoutCallingProviderForDocumentWithoutText() {
         AtomicInteger calls = new AtomicInteger();
         ComponentTranslationResponseClient client = client((messages, context, observer, schema, allowFallback) -> {
@@ -178,7 +231,7 @@ class ComponentTranslationResponseClientTest {
     }
 
     @Test
-    void screenUiRouteDisablesStructuredOutputFallback() {
+    void screenUiRouteAllowsStructuredOutputFallback() {
         AtomicReference<Boolean> receivedFallback = new AtomicReference<>();
         ComponentTranslationResponseClient client = client((messages, context, observer, schema, allowFallback) -> {
             receivedFallback.set(allowFallback);
@@ -193,7 +246,7 @@ class ComponentTranslationResponseClientTest {
         ).join();
 
         assertEquals(Map.of("u0", "你好"), response.translations());
-        assertEquals(Boolean.FALSE, receivedFallback.get());
+        assertEquals(Boolean.TRUE, receivedFallback.get());
     }
 
     @Test

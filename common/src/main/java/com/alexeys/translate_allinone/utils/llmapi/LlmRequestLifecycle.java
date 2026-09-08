@@ -341,8 +341,8 @@ public final class LlmRequestLifecycle {
                 return;
             }
             ACTIVE_REQUESTS.remove(this);
-            closeResponseBody();
             interruptConsumer();
+            closeResponseBody();
         }
 
         @Override
@@ -351,8 +351,8 @@ public final class LlmRequestLifecycle {
                 return;
             }
             ACTIVE_REQUESTS.remove(this);
-            closeResponseBody();
             interruptConsumer();
+            closeResponseBody();
         }
 
         private void complete() {

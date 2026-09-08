@@ -45,7 +45,8 @@ public final class ExternalScoreboardTranslationSupport {
 
     public static Result translate(Component original, Source source, boolean hidesVanillaScoreboard) {
         Component sourceComponent = original == null ? Component.empty() : original;
-        if (!TranslationFeatureGate.isEnabled()) {
+        if (ScoreboardServerLineSupport.isServerLine(sourceComponent)
+                || !TranslationFeatureGate.isEnabled()) {
             return new Result(sourceComponent, false);
         }
         String sourceName = source == null ? "unknown" : source.wireName();

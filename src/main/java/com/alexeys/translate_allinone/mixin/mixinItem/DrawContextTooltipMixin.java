@@ -91,7 +91,8 @@ public abstract class DrawContextTooltipMixin {
             boolean recalculateWidth,
             CallbackInfo ci
     ) {
-        if (translate_allinone$isProcessing.get()) {
+        if (com.alexeys.translate_allinone.utils.translate.GenericSurfaceTranslationSupport.isRenderingHover()
+                || translate_allinone$isProcessing.get()) {
             return;
         }
 

@@ -42,7 +42,8 @@ public final class ScoreboardComponentTranslationSupport {
         if (prepared == null || config == null) {
             return Component.empty();
         }
-        if (!TranslationFeatureGate.isEnabled()
+        if (ScoreboardServerLineSupport.isServerLine(prepared.original())
+                || !TranslationFeatureGate.isEnabled()
                 || ComponentRenderTranslationSupport.isTranslationBlockedByScreen()) {
             return prepared.renderOriginal();
         }
@@ -105,7 +106,8 @@ public final class ScoreboardComponentTranslationSupport {
             ScoreboardEntryTemplate.Prepared prepared,
             String targetLanguage
     ) {
-        if (!TranslationFeatureGate.isEnabled() || prepared == null) {
+        if (prepared == null || ScoreboardServerLineSupport.isServerLine(prepared.original())
+                || !TranslationFeatureGate.isEnabled()) {
             return Set.of();
         }
         Set<String> result = new LinkedHashSet<>();
@@ -124,7 +126,7 @@ public final class ScoreboardComponentTranslationSupport {
         }
         int refreshed = 0;
         for (ScoreboardEntryTemplate.Prepared prepared : preparedEntries) {
-            if (prepared == null) {
+            if (prepared == null || ScoreboardServerLineSupport.isServerLine(prepared.original())) {
                 continue;
             }
             if (prepared.document() != null

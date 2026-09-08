@@ -135,7 +135,6 @@ public final class ComponentTranslationResponseClient {
         long startedAt = System.nanoTime();
 
         int maxProviderCalls = maxProviderCalls(document.route());
-        boolean allowStructuredOutputFallback = document.route() != ComponentTranslationRoute.SCREEN_UI;
         CompletableFuture<ComponentTranslationResponse> future = requestValidResponse(
                 document,
                 messages,
@@ -200,7 +199,9 @@ public final class ComponentTranslationResponseClient {
                     }
                 },
                 responseSchema,
-                document.route() != ComponentTranslationRoute.SCREEN_UI
+                // UI collection also runs on providers without JSON Schema support.
+                // Transport fallback keeps the same response parser and validation.
+                true
         ).thenCompose(completion -> {
             String providerResponse = completion.content();
             String rawResponse = providerResponse;

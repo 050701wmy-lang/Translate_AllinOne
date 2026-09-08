@@ -132,7 +132,7 @@ public class OpenAIClient {
             return responseBody
                     .filter(line -> line.startsWith("data: "))
                     .map(line -> line.substring("data: ".length()))
-                    .filter(data -> !data.equals("[DONE]"))
+                    .takeWhile(data -> !data.strip().equals("[DONE]"))
                     .map(data -> GSON.fromJson(data, OpenAIChatCompletion.class))
                     .filter(chunk -> chunk != null && chunk.choices != null && !chunk.choices.isEmpty() && chunk.choices.get(0).delta != null && chunk.choices.get(0).delta.content != null);
 
@@ -237,7 +237,8 @@ public class OpenAIClient {
                     .filter(line -> line.startsWith("data: "))
                     .map(line -> line.substring("data: ".length()))
                     .map(String::trim)
-                    .filter(data -> !data.isEmpty() && !"[DONE]".equals(data))
+                    .takeWhile(data -> !"[DONE]".equals(data.strip()))
+                    .filter(data -> !data.isEmpty())
                     .map(data -> parseJsonObject(data, "无法解析 Responses API 流式事件"))
                     .map(event -> extractResponsesStreamText(event, sawDelta, emittedFallback))
                     .filter(chunk -> chunk != null && !chunk.isEmpty());

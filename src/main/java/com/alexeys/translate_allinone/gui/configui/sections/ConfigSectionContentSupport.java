@@ -82,16 +82,6 @@ public final class ConfigSectionContentSupport {
                 y += ROW_STEP;
                 toggleAdder.add(x, y, width, translator.t("label.auto_translate"), () -> output.auto_translate, value -> output.auto_translate = value, tooltip(translator, "label.auto_translate"));
                 y += ROW_STEP;
-                toggleAdder.add(
-                        x,
-                        y,
-                        width,
-                        translator.t("label.skyblock_npc_auto_translate"),
-                        () -> output.skyblock_npc_auto_translate,
-                        value -> output.skyblock_npc_auto_translate = value,
-                        translator.t("desc.skyblock_npc_auto_translate")
-                );
-                y += ROW_STEP;
                 toggleAdder.add(x, y, width, translator.t("label.streaming"), () -> output.streaming_response, value -> output.streaming_response = value, translator.t("desc.chat_output_streaming"));
                 y += ROW_STEP;
                 textFieldRowAdder.add(
@@ -740,6 +730,21 @@ public final class ConfigSectionContentSupport {
                 addGroupBox(groupBoxAdder, translator.t("group.basic"), x, width, basicStart, y);
 
                 y += GROUP_GAP;
+                int genericStart = y;
+                toggleAdder.add(x, y, width, translator.t("label.translate_player_list"), () -> otherTranslations.enabled_translate_player_list, value -> otherTranslations.enabled_translate_player_list = value, translator.t("desc.translate_player_list"));
+                y += ROW_STEP;
+                y += ROW_STEP;
+                toggleAdder.add(x, y, width, translator.t("label.translate_boss_bars"), () -> otherTranslations.enabled_translate_boss_bars, value -> otherTranslations.enabled_translate_boss_bars = value, translator.t("desc.translate_boss_bars"));
+                y += ROW_STEP;
+                toggleAdder.add(x, y, width, translator.t("label.translate_titles"), () -> otherTranslations.enabled_translate_titles, value -> otherTranslations.enabled_translate_titles = value, translator.t("desc.translate_titles"));
+                y += ROW_STEP;
+                toggleAdder.add(x, y, width, translator.t("label.translate_action_bar"), () -> otherTranslations.enabled_translate_action_bar, value -> otherTranslations.enabled_translate_action_bar = value, translator.t("desc.translate_action_bar"));
+                y += ROW_STEP;
+                toggleAdder.add(x, y, width, translator.t("label.translate_hover_text"), () -> otherTranslations.enabled_translate_hover_text, value -> otherTranslations.enabled_translate_hover_text = value, translator.t("desc.translate_hover_text"));
+                y += ROW_STEP;
+                addGroupBox(groupBoxAdder, translator.t("group.generic_surfaces"), x, width, genericStart, y);
+
+                y += GROUP_GAP;
                 int advancementsStart = y;
                 toggleAdder.add(
                         x,
@@ -874,6 +879,27 @@ public final class ConfigSectionContentSupport {
                 routeSelectorAdder.add(config.providerManager, RouteSlot.OTHER_TRANSLATIONS, x, y, width);
                 y += ROW_STEP;
                 addGroupBox(groupBoxAdder, translator.t("group.route"), x, width, routeStart, y);
+                return y;
+            }
+            case HYPIXEL -> {
+                ChatTranslateConfig.ChatOutputTranslateConfig output = config.chatTranslate.output;
+                int basicStart = y;
+                toggleAdder.add(
+                        x,
+                        y,
+                        width,
+                        translator.t("label.skyblock_npc_auto_translate"),
+                        () -> output.skyblock_npc_auto_translate,
+                        value -> output.skyblock_npc_auto_translate = value,
+                        translator.t("desc.skyblock_npc_auto_translate")
+                );
+                y += ROW_STEP;
+                toggleAdder.add(x, y, width, translator.t("label.skyblock_server_auto_translate"),
+                        () -> output.skyblock_server_auto_translate,
+                        value -> output.skyblock_server_auto_translate = value,
+                        translator.t("desc.skyblock_server_auto_translate"));
+                y += ROW_STEP;
+                addGroupBox(groupBoxAdder, translator.t("group.hypixel_messages"), x, width, basicStart, y);
                 return y;
             }
             case WYNNCRAFT -> {
@@ -1335,6 +1361,15 @@ public final class ConfigSectionContentSupport {
                         false
                 );
                 y += ROW_STEP;
+                for (ComponentCacheModule module : java.util.List.of(ComponentCacheModule.SCREEN_UI,
+                        ComponentCacheModule.PLAYER_LIST, ComponentCacheModule.BOSS_BAR, ComponentCacheModule.TITLE,
+                        ComponentCacheModule.ACTION_BAR, ComponentCacheModule.HOVER_TEXT)) {
+                    CacheStats stats = componentStores.forModule(module).getCacheStats();
+                    textFieldRowAdder.add(x, y, width, translator.t("label.cache_entries_" + module.wireName()),
+                            64, translator.t("value.cache_entries", stats.translated()).getString(),
+                            Component.empty(), value -> {}, value -> true, false);
+                    y += ROW_STEP;
+                }
                 addGroupBox(groupBoxAdder, translator.t("group.cache_entries"), x, width, statsStart, y);
 
                 y += GROUP_GAP;

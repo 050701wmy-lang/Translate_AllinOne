@@ -59,7 +59,8 @@ public final class ScoreboardEntryTemplate {
         String ownerText = owner == null ? "" : owner.getString();
         ComponentDynamicTemplate template = ComponentDynamicTemplate.prepare(
                 original,
-                ownerIsPassthrough && !ownerText.isBlank() ? Set.of(ownerText) : Set.of()
+                HudGlyphProtection.tokens(original,
+                        ownerIsPassthrough && !ownerText.isBlank() ? Set.of(ownerText) : Set.of())
         );
         return new Prepared(
                 original,

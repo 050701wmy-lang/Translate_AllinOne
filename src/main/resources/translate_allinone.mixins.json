@@ -6,6 +6,13 @@
   "mixins": [
   ],
   "client": [
+    "mixinScreenTranslate.UiTranslationWidgetTooltipMixin",
+    "mixinGenericTranslation.PlayerListTranslationMixin",
+    "mixinGenericTranslation.BossBarTranslationMixin",
+    "mixinGenericTranslation.HudTranslationMixin",
+    "mixinGenericTranslation.HoverEventTranslationMixin",
+    "mixinGenericTranslation.GuiComponentTooltipTranslationMixin",
+    "mixinGenericTranslation.ContainerTranslationBoundaryMixin",
     "mixinChatHud.ChatHudAccessor",
     "mixinChatHud.ChatHudMixin",
     "mixinItem.DrawContextItemTooltipMixin",

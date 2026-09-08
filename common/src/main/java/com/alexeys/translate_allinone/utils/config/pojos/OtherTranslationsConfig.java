@@ -5,6 +5,12 @@ public class OtherTranslationsConfig {
 
     public boolean enabled = false;
     public boolean enabled_screen_translation = false;
+    public boolean enabled_translate_player_list = false;
+    public boolean translate_player_display_names = false;
+    public boolean enabled_translate_boss_bars = false;
+    public boolean enabled_translate_titles = false;
+    public boolean enabled_translate_action_bar = false;
+    public boolean enabled_translate_hover_text = false;
     public boolean enabled_translate_vanilla_advancements = false;
     public boolean enabled_translate_signs = false;
     public boolean continuous_sign_translation = false;
