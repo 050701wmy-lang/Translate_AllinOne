@@ -1,4 +1,9 @@
 {
+  "text.translate_allinone.configscreen.desc.hypixel_hotkey_mode": "控制已启用的 SkyBlock NPC 对话、服务器消息和模组界面翻译。",
+  "text.translate_allinone.configscreen.desc.hypixel_hotkey": "设置 Hypixel 翻译快捷键，支持按住翻译、按住看原文或禁用快捷键。",
+  "text.translate_allinone.configscreen.desc.hypixel_refresh_hotkey": "刷新当前 SkyBlock 模组界面译文及最近一条已跟踪的 NPC／服务器消息。",
+  "text.translate_allinone.configscreen.label.skyblock_mod_ui": "SkyBlock 模组界面翻译",
+  "text.translate_allinone.configscreen.desc.skyblock_mod_ui": "自动翻译 Skyblocker、SkyHanni、SkyOcean、Custom Scoreboard 的独立界面和按钮提示。独立于通用界面翻译开关，使用独立缓存；模型沿用其他翻译的路由。",
   "text.translate_allinone.configscreen.group.hypixel_messages": "SkyBlock 消息",
   "text.translate_allinone.configscreen.group.hypixel_compatibility": "计分板兼容",
   "text.translate_allinone.configscreen.section.hypixel": "Hypixel",
@@ -628,6 +633,7 @@
   "text.translate_allinone.configscreen.desc.other_translations_hotkey_mode": "快捷键模式。\n- 始终翻译：自动翻译\n- 按住翻译：按住快捷键时翻译\n- 按住显示原文：按住快捷键时显示原文",
   "text.translate_allinone.configscreen.desc.other_translations_refresh_hotkey": "点击设置刷新其他翻译缓存的快捷键",
   "text.translate_allinone.configscreen.label.other_translations_refresh_hotkey_binding": "刷新其他翻译缓存快捷键：%s",
+  "text.translate_allinone.configscreen.route.hypixel": "Hypixel",
   "text.translate_allinone.configscreen.route.other_translations": "其他翻译",
   "text.translate_allinone.configscreen.modal.model.temperature.other_translations": "其他翻译",
   "text.translate_allinone.configscreen.desc.other_translations_enabled": "启用此分区中的所有翻译功能",

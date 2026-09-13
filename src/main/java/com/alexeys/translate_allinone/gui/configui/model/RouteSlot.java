@@ -4,6 +4,7 @@ public enum RouteSlot {
     ITEM("item"),
     SCOREBOARD("scoreboard"),
     OTHER_TRANSLATIONS("other_translations"),
+    HYPIXEL("hypixel"),
     WYNNCRAFT("wynncraft"),
     WYNN_NPC_DIALOGUE("wynn_npc_dialogue"),
     WYNNTILS_TASK_TRACKER("wynntils_task_tracker"),

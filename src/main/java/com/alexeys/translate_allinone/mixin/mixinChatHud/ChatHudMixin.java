@@ -58,10 +58,12 @@ public abstract class ChatHudMixin {
                 }
 
                 UUID messageId = UUID.randomUUID();
-                boolean autoTranslate = hypixelAutoTranslate || (config.chatTranslate.output.enabled
-                        && config.chatTranslate.output.auto_translate);
+                boolean autoTranslate = hypixelAutoTranslate ? HypixelMessageTranslationSupport.shouldShowTranslated()
+                        : config.chatTranslate.output.enabled && config.chatTranslate.output.auto_translate;
                 ChatOutputTranslateManager.logInterceptedMessage(messageId, message, plainText, autoTranslate);
                 MessageUtils.putTrackedMessage(messageId, message);
+                if (hypixelAutoTranslate) HypixelMessageTranslationSupport.trackMessage(messageId,
+                        ChatOutputTranslateManager.isSkyblockNpcMessage(message));
 
                 if (autoTranslate) {
                     if (LifecycleEventManager.isReadyForTranslation) {

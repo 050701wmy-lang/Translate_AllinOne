@@ -15,6 +15,7 @@ public final class ProviderRouteResolver {
         ITEM,
         SCOREBOARD,
         OTHER_TRANSLATIONS,
+        HYPIXEL,
         WYNNCRAFT,
         WYNN_NPC_DIALOGUE,
         WYNNTILS_TASK_TRACKER,
@@ -34,6 +35,7 @@ public final class ProviderRouteResolver {
             case ITEM -> manager.routes.item;
             case SCOREBOARD -> manager.routes.scoreboard;
             case OTHER_TRANSLATIONS -> manager.routes.other_translations;
+            case HYPIXEL -> manager.routes.hypixel;
             case WYNNCRAFT -> resolveWynncraftRouteKey(manager.routes.wynncraft, "", "");
             case WYNN_NPC_DIALOGUE -> resolveWynncraftRouteKey(manager.routes.wynncraft, manager.routes.wynn_npc_dialogue, "");
             case WYNNTILS_TASK_TRACKER -> resolveWynncraftRouteKey(manager.routes.wynncraft, manager.routes.wynntils_task_tracker, "");
@@ -147,7 +149,7 @@ public final class ProviderRouteResolver {
         return switch (route) {
             case ITEM -> ApiProviderProfile.TemperatureScene.ITEM;
             case SCOREBOARD -> ApiProviderProfile.TemperatureScene.SCOREBOARD;
-            case OTHER_TRANSLATIONS -> ApiProviderProfile.TemperatureScene.OTHER_TRANSLATIONS;
+            case OTHER_TRANSLATIONS, HYPIXEL -> ApiProviderProfile.TemperatureScene.OTHER_TRANSLATIONS;
             case WYNNCRAFT, WYNN_NPC_DIALOGUE -> ApiProviderProfile.TemperatureScene.WYNN_NPC_DIALOGUE;
             case WYNNTILS_TASK_TRACKER -> ApiProviderProfile.TemperatureScene.WYNNTILS_TASK_TRACKER;
             case CHAT_INPUT, CHAT_OUTPUT -> ApiProviderProfile.TemperatureScene.CHAT;

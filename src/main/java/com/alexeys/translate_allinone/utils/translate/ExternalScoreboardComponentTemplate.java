@@ -1,6 +1,5 @@
 package com.alexeys.translate_allinone.utils.translate;
 
-import com.alexeys.translate_allinone.utils.componentjson.ComponentDynamicTemplate;
 import java.util.Set;
 import net.minecraft.network.chat.Component;
 
@@ -9,13 +8,13 @@ final class ExternalScoreboardComponentTemplate {
     }
 
     static Prepared prepare(Component source, Set<String> privateTokens) {
-        return new Prepared(ComponentDynamicTemplate.prepare(source, HudGlyphProtection.tokens(source, privateTokens)));
+        return new Prepared(HudSentenceTemplate.prepare(source, HudGlyphProtection.tokens(source, privateTokens)));
     }
 
-    record Prepared(ComponentDynamicTemplate dynamicTemplate) {
+    record Prepared(HudSentenceTemplate dynamicTemplate) {
         Prepared {
             dynamicTemplate = dynamicTemplate == null
-                    ? ComponentDynamicTemplate.prepare(Component.empty())
+                    ? HudSentenceTemplate.prepare(Component.empty(), Set.of())
                     : dynamicTemplate;
         }
 

@@ -900,6 +900,42 @@ public final class ConfigSectionContentSupport {
                         translator.t("desc.skyblock_server_auto_translate"));
                 y += ROW_STEP;
                 addGroupBox(groupBoxAdder, translator.t("group.hypixel_messages"), x, width, basicStart, y);
+                y += GROUP_GAP;
+                int uiStart = y;
+                if (config.hypixelUi == null) config.hypixelUi = new com.alexeys.translate_allinone.utils.config.pojos.HypixelUiConfig();
+                var hypixelUi = config.hypixelUi;
+                hypixelUi.normalize();
+                toggleAdder.add(x, y, width, translator.t("label.skyblock_mod_ui"),
+                        () -> hypixelUi.enabled, value -> hypixelUi.enabled = value,
+                        translator.t("desc.skyblock_mod_ui"));
+                y += ROW_STEP;
+                addGroupBox(groupBoxAdder, translator.t("label.skyblock_mod_ui"), x, width, uiStart, y);
+                y += GROUP_GAP;
+                int hotkeyStart = y;
+                actionAdder.add(x, y, width,
+                        translator.t("label.hotkey_mode", modeText(translator, hypixelUi.keybinding.mode.name())),
+                        () -> hotkeyCycleMode.handle(HotkeyTarget.HYPIXEL), translator.t("desc.hypixel_hotkey_mode"));
+                y += ROW_STEP;
+                actionAdder.add(x, y, width, bindingLabelProvider.label(HotkeyTarget.HYPIXEL, hypixelUi.keybinding.binding),
+                        () -> hotkeyStartBinding.handle(HotkeyTarget.HYPIXEL), translator.t("desc.hypixel_hotkey"));
+                y += ROW_STEP;
+                actionAdder.add(x, y, width, bindingLabelProvider.label(HotkeyTarget.HYPIXEL_REFRESH, hypixelUi.keybinding.refreshBinding),
+                        () -> hotkeyStartBinding.handle(HotkeyTarget.HYPIXEL_REFRESH), translator.t("desc.hypixel_refresh_hotkey"));
+                y += ROW_STEP;
+                actionAdder.add(x, y, width, translator.t("button.hotkey_clear"),
+                        () -> hotkeyClearBinding.handle(HotkeyTarget.HYPIXEL), tooltip(translator, "button.hotkey_clear"));
+                y += ROW_STEP;
+                addGroupBox(groupBoxAdder, translator.t("group.hotkey"), x, width, hotkeyStart, y);
+                y += GROUP_GAP;
+                int routeStart = y;
+                textFieldRowAdder.add(x, y, width, translator.t("label.target_language"), 48,
+                        hypixelUi.target_language, translator.t("placeholder.target_language"),
+                        value -> hypixelUi.target_language = sanitizeLanguage(value), value -> true, true,
+                        tooltip(translator, "label.target_language"));
+                y += ROW_STEP;
+                routeSelectorAdder.add(config.providerManager, RouteSlot.HYPIXEL, x, y, width);
+                y += ROW_STEP;
+                addGroupBox(groupBoxAdder, translator.t("group.route"), x, width, routeStart, y);
                 return y;
             }
             case WYNNCRAFT -> {
@@ -1632,6 +1668,8 @@ public final class ConfigSectionContentSupport {
         SCOREBOARD_REFRESH,
         OTHER_TRANSLATIONS,
         OTHER_TRANSLATIONS_REFRESH,
+        HYPIXEL,
+        HYPIXEL_REFRESH,
         WYNNTILS_TASK_TRACKER,
         WYNNTILS_TASK_TRACKER_REFRESH
     }

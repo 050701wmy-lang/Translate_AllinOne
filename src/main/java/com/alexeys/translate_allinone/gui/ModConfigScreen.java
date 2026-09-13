@@ -1716,10 +1716,15 @@ public class ModConfigScreen extends Screen {
             return;
         }
 
-        if (target == ConfigSectionContentSupport.HotkeyTarget.OTHER_TRANSLATIONS) {
-            OtherTranslationsConfig.KeybindingConfig keybinding = ensureOtherTranslationsKeybinding(Translate_AllinOne.getConfig());
+        if (target == ConfigSectionContentSupport.HotkeyTarget.OTHER_TRANSLATIONS
+                || target == ConfigSectionContentSupport.HotkeyTarget.HYPIXEL) {
+            OtherTranslationsConfig.KeybindingConfig keybinding = target == ConfigSectionContentSupport.HotkeyTarget.HYPIXEL
+                    ? ensureHypixelKeybinding(Translate_AllinOne.getConfig())
+                    : ensureOtherTranslationsKeybinding(Translate_AllinOne.getConfig());
             if (hotkeyCaptureTarget == ConfigSectionContentSupport.HotkeyTarget.OTHER_TRANSLATIONS
-                    || hotkeyCaptureTarget == ConfigSectionContentSupport.HotkeyTarget.OTHER_TRANSLATIONS_REFRESH) {
+                    || hotkeyCaptureTarget == ConfigSectionContentSupport.HotkeyTarget.OTHER_TRANSLATIONS_REFRESH
+                    || hotkeyCaptureTarget == ConfigSectionContentSupport.HotkeyTarget.HYPIXEL
+                    || hotkeyCaptureTarget == ConfigSectionContentSupport.HotkeyTarget.HYPIXEL_REFRESH) {
                 hotkeyCaptureTarget = null;
             }
 
@@ -1798,8 +1803,9 @@ public class ModConfigScreen extends Screen {
                 keybinding.mode = modes[(keybinding.mode.ordinal() + 1) % modes.length];
                 setStatus(t("status.hotkey_mode_changed", sectionLabel(target), modeLabel(keybinding.mode.name())), COLOR_STATUS_OK);
             }
-            case OTHER_TRANSLATIONS -> {
-                OtherTranslationsConfig.KeybindingConfig keybinding = ensureOtherTranslationsKeybinding(config);
+            case OTHER_TRANSLATIONS, HYPIXEL -> {
+                OtherTranslationsConfig.KeybindingConfig keybinding = target == ConfigSectionContentSupport.HotkeyTarget.HYPIXEL
+                        ? ensureHypixelKeybinding(config) : ensureOtherTranslationsKeybinding(config);
                 OtherTranslationsConfig.KeybindingMode[] modes = OtherTranslationsConfig.KeybindingMode.values();
                 keybinding.mode = modes[(keybinding.mode.ordinal() + 1) % modes.length];
                 setStatus(t("status.hotkey_mode_changed", sectionLabel(target), modeLabel(keybinding.mode.name())), COLOR_STATUS_OK);
@@ -1913,6 +1919,8 @@ public class ModConfigScreen extends Screen {
                 OtherTranslationsConfig.KeybindingConfig keybinding = ensureOtherTranslationsKeybinding(config);
                 yield keybinding.refreshBinding;
             }
+            case HYPIXEL -> ensureHypixelKeybinding(config).binding;
+            case HYPIXEL_REFRESH -> ensureHypixelKeybinding(config).refreshBinding;
             case WYNNTILS_TASK_TRACKER -> {
                 WynnCraftConfig.KeybindingConfig keybinding = ensureWynntilsTaskTrackerKeybinding(config);
                 if (keybinding.binding == null) {
@@ -1945,6 +1953,12 @@ public class ModConfigScreen extends Screen {
             config.scoreboardTranslate.keybinding.refreshBinding = new InputBindingConfig();
         }
         return config.scoreboardTranslate.keybinding;
+    }
+
+    private OtherTranslationsConfig.KeybindingConfig ensureHypixelKeybinding(ModConfig config) {
+        if (config.hypixelUi == null) config.hypixelUi = new com.alexeys.translate_allinone.utils.config.pojos.HypixelUiConfig();
+        config.hypixelUi.normalize();
+        return config.hypixelUi.keybinding;
     }
 
     private OtherTranslationsConfig.KeybindingConfig ensureOtherTranslationsKeybinding(ModConfig config) {
@@ -2010,6 +2024,7 @@ public class ModConfigScreen extends Screen {
             case SCOREBOARD_REFRESH -> t("section.scoreboard");
             case OTHER_TRANSLATIONS -> t("section.other_translations");
             case OTHER_TRANSLATIONS_REFRESH -> t("section.other_translations");
+            case HYPIXEL, HYPIXEL_REFRESH -> t("section.hypixel");
             case WYNNTILS_TASK_TRACKER -> t("section.wynncraft");
             case WYNNTILS_TASK_TRACKER_REFRESH -> t("section.wynncraft");
         };
@@ -2020,6 +2035,7 @@ public class ModConfigScreen extends Screen {
             case ITEM_REFRESH -> t("label.item_refresh_hotkey_binding", bindingLabel);
             case SCOREBOARD_REFRESH -> t("label.scoreboard_refresh_hotkey_binding", bindingLabel);
             case OTHER_TRANSLATIONS_REFRESH -> t("label.other_translations_refresh_hotkey_binding", bindingLabel);
+            case HYPIXEL_REFRESH -> t("label.other_translations_refresh_hotkey_binding", bindingLabel);
             case WYNNTILS_TASK_TRACKER_REFRESH -> t("label.item_refresh_hotkey_binding", bindingLabel);
             default -> t("label.hotkey_binding", bindingLabel);
         };

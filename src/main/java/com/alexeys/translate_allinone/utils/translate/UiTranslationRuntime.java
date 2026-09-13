@@ -175,7 +175,7 @@ public final class UiTranslationRuntime {
             ComponentRenderTranslationSupport.TranslationResult translated =
                     ComponentRenderTranslationSupport.translate(
                             translationSource,
-                            ComponentTranslationRoute.SCREEN_UI,
+                            SkyblockModUiSupport.ownsScreen() ? ComponentTranslationRoute.SKYBLOCK_UI : ComponentTranslationRoute.SCREEN_UI,
                             adapter.modId() + "/" + adapter.screenId() + "/" + role.wireName(),
                             POLICY_VERSION + ":" + role.wireName(),
                             config,
@@ -285,9 +285,11 @@ public final class UiTranslationRuntime {
             FormattedCharSequence source,
             UiTextRole role
     ) {
-        if (source == null || !UiTranslationScope.isActive() || UiTranslationScope.isInternal()) {
+        if (source == null || source instanceof PreparedTooltipSequence) {
             return source;
         }
+        if (UiTranslationScope.isInternal()) return protectPreparedTooltip(source);
+        if (!UiTranslationScope.isActive()) return source;
         Set<FormattedCharSequence> handled = HANDLED_FORMATTED_SEQUENCES.get();
         if (handled.contains(source)) {
             return source;
@@ -301,6 +303,17 @@ public final class UiTranslationRuntime {
             markFormattedSequenceHandled(visible);
         }
         return visible;
+    }
+
+    public static FormattedCharSequence protectPreparedTooltip(FormattedCharSequence source) {
+        return source == null || source instanceof PreparedTooltipSequence ? source : new PreparedTooltipSequence(source);
+    }
+
+    private record PreparedTooltipSequence(FormattedCharSequence source) implements FormattedCharSequence {
+        @Override
+        public boolean accept(net.minecraft.util.FormattedCharSink sink) {
+            return source.accept(sink);
+        }
     }
 
     public static Component translateComponent(Component source, UiTextRole role) {
@@ -384,7 +397,7 @@ public final class UiTranslationRuntime {
     private static OtherTranslationsConfig currentConfig() {
         try {
             ModConfig config = Translate_AllinOne.getConfig();
-            return config == null ? null : config.otherTranslations;
+            return SkyblockModUiSupport.selectConfig(config, SkyblockModUiSupport.ownsScreen());
         } catch (RuntimeException error) {
             return null;
         }

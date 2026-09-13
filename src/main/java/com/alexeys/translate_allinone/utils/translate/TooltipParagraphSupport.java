@@ -495,7 +495,7 @@ final class TooltipParagraphSupport {
         );
     }
 
-    private static List<TooltipTranslationSupport.TooltipLineResult> renderTranslatedParagraphBlock(
+    static List<TooltipTranslationSupport.TooltipLineResult> renderTranslatedParagraphBlock(
             TooltipParagraphBlock block,
             String translatedBlockTemplate,
             ItemTranslateConfig config,
@@ -571,6 +571,13 @@ final class TooltipParagraphSupport {
             );
         }
 
+        if (block != null && block.preparedLines() != null) {
+            String sourceText = block.preparedLines().stream().map(line -> line.sourceLine().getString())
+                    .collect(java.util.stream.Collectors.joining("\n"));
+            translatedBlockTemplate = SharedHudTranslationSupport.repairTooltipResidue(sourceText,
+                    translatedBlockTemplate, config == null ? "" : config.target_language);
+            translatedBlockTemplate = TooltipPunctuationSupport.clean(sourceText, translatedBlockTemplate);
+        }
         String normalizedTemplate = normalizeParagraphTranslatedTemplate(translatedBlockTemplate);
         if (normalizedTemplate.isBlank()) {
             logParagraphRenderIfDev(
@@ -592,7 +599,10 @@ final class TooltipParagraphSupport {
             );
         }
 
-        String placeholderIssue = describeDynamicPlaceholderIdentityIssue(block, normalizedTemplate);
+        // Local dictionaries are matched against visible text with actual numbers, not AI hard tokens.
+        // Their icons/styles are restored from the source by the local renderer below.
+        String placeholderIssue = trustedLocalDictionary ? null
+                : describeDynamicPlaceholderIdentityIssue(block, normalizedTemplate);
         if (placeholderIssue != null) {
             logParagraphRenderIfDev(
                     config,
@@ -899,12 +909,25 @@ final class TooltipParagraphSupport {
             return Component.empty();
         }
 
+        Component aligned = TooltipDictionaryStyleSupport.renderSourceAligned(
+                block.preparedLines().stream().map(TooltipTemplateRuntime::renderOriginalPreparedLine).toList(),
+                reassembledTranslated, text -> {
+                    var lookup = WynnSharedDictionaryService.getInstance().lookupItemLine(text);
+                    return lookup.hit() ? lookup.translation() : null;
+                });
+        if (aligned != null) return aligned;
+
         if (containsLegacyFormattingCode(reassembledTranslated)) {
             return StylePreserver.fromLegacyText(reassembledTranslated);
         }
 
         Style inheritedStyle = resolveParagraphBodyVisualStyle(block);
-        return Component.literal(reassembledTranslated).setStyle(inheritedStyle == null ? Style.EMPTY : inheritedStyle);
+        return TooltipDictionaryStyleSupport.render(
+                block.preparedLines().stream().map(TooltipTemplateRuntime::renderOriginalPreparedLine).toList(),
+                reassembledTranslated, inheritedStyle == null ? Style.EMPTY : inheritedStyle, text -> {
+                    var lookup = WynnSharedDictionaryService.getInstance().lookupItemLine(text);
+                    return lookup.hit() ? lookup.translation() : null;
+                });
     }
 
     private static boolean containsLegacyFormattingCode(String text) {

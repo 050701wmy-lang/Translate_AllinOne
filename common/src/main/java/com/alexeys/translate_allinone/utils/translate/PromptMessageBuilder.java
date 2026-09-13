@@ -93,6 +93,7 @@ public final class PromptMessageBuilder {
                     + "\n"
                     + "Wording:\n"
                     + "Use concise, natural game UI wording.\n"
+                    + "Do not add hyphens or bullet points before sentences, words, or styled runs when absent from the source.\n"
                     + "\"take N damage from X\" means the subject receives damage from X, never deals damage to X.";
             case "scoreboard" -> "Task:\n"
                     + "Translate Minecraft scoreboard labels and status values into " + targetLanguage + ".\n"
@@ -233,7 +234,8 @@ public final class PromptMessageBuilder {
                     + failureRule;
             case "scoreboard" -> "\nScoreboard protected data: "
                     + "Keep every key, id, entry count, and entry order unchanged; translate text only. "
-                    + "Preserve exactly Minecraft formatting codes, <sN> tags, {dN}, {gN}, {valueN}, %s/%d/%f, scores, URLs, numbers, \\n, and \\t. "
+                    + "Preserve exactly Minecraft formatting codes, {dN}, {gN}, {valueN}, %s/%d/%f, scores, URLs, numbers, \\n, and \\t. "
+                    + "Preserve every <sN> style identity with flat balanced tags; only split a style span when the item context explicitly permits it. "
                     + "Use short, scannable game UI wording; do not add labels, padding, or commentary."
                     + failureRule;
             case "sign_book" -> "\nSign/book protected data: "

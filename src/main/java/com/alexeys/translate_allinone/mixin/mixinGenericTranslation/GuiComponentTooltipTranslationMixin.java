@@ -9,6 +9,8 @@ import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
+import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipPositioner;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.inventory.tooltip.TooltipComponent;
@@ -19,6 +21,15 @@ import java.util.Optional;
 
 @Mixin(GuiGraphicsExtractor.class)
 public abstract class GuiComponentTooltipTranslationMixin {
+    @WrapMethod(method = "tooltip(Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipPositioner;Lnet/minecraft/resources/Identifier;)V")
+    private void translate_allinone$drawPreparedTooltip(Font font, List<ClientTooltipComponent> lines,
+            int x, int y, ClientTooltipPositioner positioner, Identifier texture, Operation<Void> original) {
+        // This runs after setTooltipForNextFrame has returned, including custom grid tooltip components.
+        try (var ignored = UiTranslationScope.enterInternal()) {
+            original.call(font, lines, x, y, positioner, texture);
+        }
+    }
+
     @WrapMethod(method = "setTooltipForNextFrame(Lnet/minecraft/client/gui/Font;Ljava/util/List;Ljava/util/Optional;IILnet/minecraft/resources/Identifier;)V")
     private void translate_allinone$components(Font font, List<Component> source, Optional<TooltipComponent> image,
                                              int x, int y, Identifier texture, Operation<Void> original) {
@@ -27,6 +38,11 @@ public abstract class GuiComponentTooltipTranslationMixin {
                 ? FinalItemTooltipTranslationSupport.translate(source)
                 : UiTranslationRuntime.translateComponents(source, UiTextRole.TOOLTIP);
         visible = SkyblockerGridTooltipSupport.translate(visible);
+        if (FinalItemTooltipTranslationSupport.ownsTooltip()) {
+            visible = com.alexeys.translate_allinone.utils.translate.SurfaceTextCompletion.completeTooltips(visible);
+        }
+        com.alexeys.translate_allinone.utils.translate.TooltipBoundaryAudit.observe(
+                source, visible, FinalItemTooltipTranslationSupport.ownsTooltip());
         try (var ignored = UiTranslationScope.enterInternal()) {
             original.call(font, visible, image, x, y, texture);
         }

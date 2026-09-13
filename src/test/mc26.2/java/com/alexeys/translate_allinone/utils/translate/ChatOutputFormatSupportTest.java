@@ -20,19 +20,17 @@ class ChatOutputFormatSupportTest {
         var extracted = ChatOutputFormatSupport.extract(source);
         var numbers = com.alexeys.translate_allinone.utils.text.TemplateProcessor.extract(extracted.markedText);
         var glyphs = com.alexeys.translate_allinone.utils.text.TemplateProcessor.extractDecorativeGlyphTags(numbers.template());
-        // This valid source previously failed its own validator before any model was involved.
-        assertThrows(ChatOutputFormatSupport.InvalidFormat.class,
-                () -> ChatOutputFormatSupport.restore(glyphs.template(), glyphs.template()));
+        assertFalse(glyphs.template().contains("§"));
         var prepared = ChatOutputTranslateManager.prepareTranslationPayload(source, java.util.Set.of());
         var tags = java.util.regex.Pattern.compile("<s(\\d+)>").matcher(prepared.textToTranslate());
         java.util.Set<String> ids = new java.util.HashSet<>();
         while (tags.find()) assertTrue(ids.add(tags.group(1)), prepared.textToTranslate());
         assertTrue(ids.size() > 1);
-        assertEquals(source.getString(), ChatOutputTranslateManager.rebuildTranslatedText(
+        assertEquals(ChatOutputFormatSupport.normalize(source).getString(), ChatOutputTranslateManager.rebuildTranslatedText(
                 prepared.textToTranslate(), prepared).getString());
         String translated = prepared.textToTranslate().replace("Grants", "获得")
                 .replace("Foraging Fortune", "伐木幸运").replace(", which increases your", "，提高你的");
-        String expected = "     §7§f获得 §a+§816→§a20§f §6\uE054 伐木幸运§f，提高你的";
+        String expected = "     获得 +16→20 \uE054 伐木幸运，提高你的";
         assertEquals(expected, ChatOutputTranslateManager.rebuildTranslatedText(translated, prepared).getString());
         String json = ChatOutputFormatSupport.runRequest(prepared.textToTranslate()).replace("Grants", "获得")
                 .replace("Foraging Fortune", "伐木幸运").replace(", which increases your", "，提高你的");
@@ -59,8 +57,14 @@ class ChatOutputFormatSupportTest {
         Component source = Component.literal("§a[VIP] SealsAreGreat§f: Hello there!");
         var prepared = ChatOutputTranslateManager.prepareTranslationPayload(source, java.util.Set.of());
         assertFalse(prepared.textToTranslate().contains("SealsAreGreat"));
-        assertEquals("§a[VIP] SealsAreGreat§f: 你好！", ChatOutputTranslateManager.rebuildTranslatedText(
-                prepared.textToTranslate().replace("Hello there!", "你好！"), prepared).getString());
+        var translated = ChatOutputTranslateManager.rebuildTranslatedText(
+                prepared.textToTranslate().replace("Hello there!", "你好！"), prepared);
+        assertEquals("[VIP] SealsAreGreat: 你好！", translated.getString());
+        translated.visit((style, text) -> {
+            if (!text.isBlank()) assertEquals(Style.EMPTY.withColor(text.contains("SealsAreGreat")
+                    ? ChatFormatting.GREEN : ChatFormatting.WHITE).getColor(), style.getColor());
+            return Optional.empty();
+        }, Style.EMPTY);
     }
 
     @Test

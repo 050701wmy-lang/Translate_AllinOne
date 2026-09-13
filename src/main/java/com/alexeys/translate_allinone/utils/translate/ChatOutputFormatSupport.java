@@ -69,6 +69,9 @@ final class ChatOutputFormatSupport {
     }
 
     static StylePreserver.ExtractionResult extract(Component source) {
+        // Servers often send legacy codes inside literal Components. Decode them before
+        // numeric extraction or sentence translation; they are styles, never prose tokens.
+        source = normalize(source);
         StringBuilder marked = new StringBuilder();
         Map<Integer, Style> styles = new LinkedHashMap<>();
         source.visit((style, text) -> {
@@ -84,6 +87,60 @@ final class ChatOutputFormatSupport {
             return Optional.empty();
         }, Style.EMPTY);
         return new StylePreserver.ExtractionResult(marked.toString(), styles);
+    }
+
+    static Component normalize(Component source) {
+        var result = Component.empty();
+        source.visit((style, text) -> {
+            Component decoded = text.indexOf('§') < 0 ? Component.literal(text)
+                    : StylePreserver.fromLegacyText(text);
+            decoded.visit((local, value) -> {
+                if (!value.isEmpty()) {
+                    Style effective = local.applyTo(style);
+                    var siblings = result.getSiblings();
+                    if (!siblings.isEmpty() && siblings.getLast().getStyle().equals(effective)) {
+                        Component previous = siblings.removeLast();
+                        result.append(Component.literal(previous.getString() + value).setStyle(effective));
+                    } else result.append(Component.literal(value).setStyle(effective));
+                }
+                return Optional.empty();
+            }, Style.EMPTY);
+            return Optional.empty();
+        }, Style.EMPTY);
+        return result;
+    }
+
+    /** A sentence may reorder its colored phrases and move numbers with their meaning. */
+    static String restoreSentence(String source, String reply) {
+        if (reply == null) throw new InvalidFormat("Missing sentence");
+        try {
+            com.alexeys.translate_allinone.utils.componentjson.ComponentTranslationValidator
+                    .validateSentenceStyles(source, reply);
+        } catch (com.alexeys.translate_allinone.utils.componentjson.ComponentJsonException error) {
+            throw new InvalidFormat(error.getMessage());
+        }
+        Map<String, String> originalRuns = new LinkedHashMap<>();
+        var runs = TAG.matcher(source);
+        while (runs.find()) originalRuns.put(runs.group(1), runs.group(2));
+        var seen = new java.util.HashSet<String>();
+        runs = TAG.matcher(reply);
+        int end = 0;
+        while (runs.find()) {
+            if (!TOKEN.matcher(reply.substring(end, runs.start())).replaceAll("").isBlank()
+                    || !originalRuns.containsKey(runs.group(1))
+                    || MARKER.matcher(runs.group(2)).find()) {
+                throw new InvalidFormat("Invalid sentence style runs");
+            }
+            seen.add(runs.group(1));
+            end = runs.end();
+        }
+        if (!TOKEN.matcher(reply.substring(end)).replaceAll("").isBlank() || !seen.equals(originalRuns.keySet())
+                || !tokens(source).equals(tokens(reply)) || reply.indexOf('§') >= 0
+                || source.chars().filter(c -> c == '\n').count() != reply.chars().filter(c -> c == '\n').count()) {
+            throw new InvalidFormat("Changed sentence styles, values or explicit lines");
+        }
+        // Do not prepend source punctuation/tokens or put runs back in English order.
+        return reply;
     }
 
     static String restore(String source, String reply) {
@@ -133,7 +190,11 @@ final class ChatOutputFormatSupport {
                 leading.find();
                 var trailing = SUFFIX.matcher(original);
                 trailing.find();
-                content = leading.group() + PREFIX.matcher(translated).replaceFirst("").stripTrailing() + trailing.group();
+                // A comma belongs to the sentence; unlike indentation/bullets it must
+                // not be copied in front of translated punctuation a second time.
+                content = leading.group().matches("(?s).*[,.!?;:，。！？；：].*")
+                        ? translated.stripTrailing() + trailing.group()
+                        : leading.group() + PREFIX.matcher(translated).replaceFirst("").stripTrailing() + trailing.group();
                 if (Pattern.compile("\\{/?[sgcn]\\d*").matcher(TOKEN.matcher(content).replaceAll("")).find()) {
                     throw new InvalidFormat("Malformed chat placeholder");
                 }

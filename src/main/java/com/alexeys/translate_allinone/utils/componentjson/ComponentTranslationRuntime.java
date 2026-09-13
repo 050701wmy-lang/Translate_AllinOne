@@ -7,6 +7,7 @@ import com.alexeys.translate_allinone.utils.cache.component.ComponentTranslation
 import com.alexeys.translate_allinone.utils.config.ModConfig;
 import com.alexeys.translate_allinone.utils.config.pojos.ApiProviderProfile;
 import com.alexeys.translate_allinone.utils.translate.ApiKeyDecryptFailureNotifier;
+import com.alexeys.translate_allinone.utils.translate.SharedHudTranslationSupport;
 import net.minecraft.network.chat.Component;
 
 import java.util.Collections;
@@ -128,6 +129,9 @@ public final class ComponentTranslationRuntime {
             Function<ComponentTranslationResponse, T> renderer,
             String requestContext
     ) {
+        if (SharedHudTranslationSupport.supports(document)) {
+            return SharedHudTranslationSupport.resolve(document, targetLanguage, renderer, true);
+        }
         return adapt(ComponentTranslationRuntimeCore.resolve(
                 document,
                 targetLanguage,
@@ -147,6 +151,9 @@ public final class ComponentTranslationRuntime {
             String requestContext,
             boolean queueIfMissing
     ) {
+        if (SharedHudTranslationSupport.supports(document)) {
+            return SharedHudTranslationSupport.resolve(document, targetLanguage, renderer, queueIfMissing);
+        }
         return adapt(ComponentTranslationRuntimeCore.resolve(
                 document,
                 targetLanguage,
@@ -159,6 +166,9 @@ public final class ComponentTranslationRuntime {
     }
 
     public static boolean forceRefresh(ComponentTranslationDocument document, String targetLanguage) {
+        if (SharedHudTranslationSupport.supports(document)) {
+            return SharedHudTranslationSupport.forceRefresh(document, targetLanguage);
+        }
         return ComponentTranslationRuntimeCore.forceRefresh(document, targetLanguage);
     }
 

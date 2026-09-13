@@ -290,6 +290,9 @@ final class TooltipRoutePlanner {
             int startIndex,
             boolean useTagStylePreservation
     ) {
+        int dictionaryEnd = findDictionaryParagraphEnd(candidates, startIndex,
+                TooltipTemplateRuntime::hasLocalDictionaryTranslation);
+        if (dictionaryEnd > startIndex + 1) return dictionaryEnd;
         if (!canStartParagraphBlock(candidates, startIndex, useTagStylePreservation)) {
             return startIndex + 1;
         }
@@ -303,6 +306,25 @@ final class TooltipRoutePlanner {
             endExclusive++;
         }
         return endExclusive;
+    }
+
+    // A complete dictionary sentence is stronger evidence than short-line/menu/stat heuristics.
+    // Bound lookahead and never cross a title, disabled line, blank separator or sentence boundary.
+    static int findDictionaryParagraphEnd(List<TooltipLineCandidate> candidates, int start,
+                                         java.util.function.Predicate<String> lookup) {
+        StringBuilder sentence = new StringBuilder();
+        for (int i = start; i < Math.min(candidates.size(), start + 8); i++) {
+            var candidate = candidates.get(i);
+            if (candidate.firstContentLine() || candidate.decision() == null
+                    || !candidate.decision().shouldTranslate() || candidate.line() == null) break;
+            String line = TooltipTemplateRuntime.normalizeLocalDictionaryLookupSourceText(candidate.line().getString());
+            if (line.isBlank() || line.contains(":") || line.contains("：")) break;
+            if (!sentence.isEmpty()) sentence.append(' ');
+            sentence.append(line);
+            if (i > start && lookup.test(sentence.toString())) return i + 1;
+            if (endsWithStrongTerminalPunctuation(line)) break;
+        }
+        return start + 1;
     }
 
     private static void addPassthroughSegments(

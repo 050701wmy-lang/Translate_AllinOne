@@ -132,6 +132,8 @@ public class LifecycleEventManager {
                             : Translate_AllinOne.getConfig().otherTranslations
             );
             UiTranslationRuntime.expireIdleScreenSessions();
+            ComponentRenderTranslationSupport.tickRefreshState(
+                    Translate_AllinOne.getConfig() == null ? null : Translate_AllinOne.getConfig().hypixelUi);
             TooltipTextDebugCopySupport.tick(client);
         });
     }
@@ -140,6 +142,7 @@ public class LifecycleEventManager {
         ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> {
             resetReadinessState();
             ComponentTranslationRuntime.endSession();
+            com.alexeys.translate_allinone.utils.translate.HypixelMessageTranslationSupport.resetSession();
             ComponentRenderTranslationSupport.resetRenderCache();
             BookTranslationSupport.resetSession();
             ContinuousSignTranslationCoordinator.reset();

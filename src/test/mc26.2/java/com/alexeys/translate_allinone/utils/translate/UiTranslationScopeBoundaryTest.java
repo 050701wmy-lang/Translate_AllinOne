@@ -23,6 +23,28 @@ import static org.junit.jupiter.api.Assertions.assertSame;
 
 class UiTranslationScopeBoundaryTest {
     @Test
+    void preparedTooltipRetainsGlyphStyleAcrossDeferredFrames() {
+        var style = net.minecraft.network.chat.Style.EMPTY.withColor(0xffaa00)
+                .withFont(new net.minecraft.network.chat.FontDescription.Resource(
+                        net.minecraft.resources.Identifier.fromNamespaceAndPath("server", "icons")));
+        var source = FormattedCharSequence.forward("\uE000", style);
+        FormattedCharSequence protectedLine;
+        try (var ignored = UiTranslationScope.enterInternal()) {
+            protectedLine = UiTranslationRuntime.translateFormattedCharSequence(source, UiTextRole.OPTION);
+        }
+        org.junit.jupiter.api.Assertions.assertNotSame(source, protectedLine);
+        UiTranslationRuntime.beginFrame();
+        {
+            assertSame(protectedLine, UiTranslationRuntime.protectPreparedTooltip(protectedLine));
+            assertSame(protectedLine, UiTranslationRuntime.translateFormattedCharSequence(protectedLine, UiTextRole.OPTION));
+            protectedLine.accept((index, actualStyle, codepoint) -> {
+                org.junit.jupiter.api.Assertions.assertEquals(style, actualStyle);
+                org.junit.jupiter.api.Assertions.assertEquals(0xE000, codepoint);
+                return true;
+            });
+        }
+    }
+    @Test
     void genericTextEntrypointsLeaveScoreboardTextUntouchedOutsideExplicitScope() {
         assertFalse(UiTranslationScope.isActive());
 

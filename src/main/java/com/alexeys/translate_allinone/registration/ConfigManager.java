@@ -152,6 +152,7 @@ public class ConfigManager {
             boolean migratedLegacyWynnTargetLanguageConfig = migrateLegacyWynnTargetLanguageConfig(rawConfig, loadedConfig);
             boolean migratedLegacyVanillaAdvancementConfig = migrateLegacyVanillaAdvancementConfig(rawConfig, loadedConfig);
             boolean migratedLegacyComponentRoutingConfig = migrateLegacyComponentRoutingConfig(rawConfig, loadedConfig);
+            migratedLegacyComponentRoutingConfig |= ConfigMigrationSupport.migrateHypixelSettings(rawConfig, loadedConfig);
             boolean removedOtherTranslationsRequestsPerMinute = removeOtherTranslationsRequestsPerMinute(rawConfig);
             boolean removedStructuredOutputConfig = removeStructuredOutputConfig(rawConfig);
             loadedConfig = normalizeConfig(loadedConfig);
@@ -524,6 +525,8 @@ public class ConfigManager {
         if (configToUse.otherTranslations == null) {
             configToUse.otherTranslations = new OtherTranslationsConfig();
         }
+        if (configToUse.hypixelUi == null) configToUse.hypixelUi = new com.alexeys.translate_allinone.utils.config.pojos.HypixelUiConfig();
+        configToUse.hypixelUi.normalize();
         if (configToUse.wynnCraft == null) {
             configToUse.wynnCraft = new WynnCraftConfig();
         }

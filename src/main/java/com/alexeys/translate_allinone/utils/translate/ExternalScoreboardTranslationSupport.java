@@ -58,6 +58,8 @@ public final class ExternalScoreboardTranslationSupport {
             return new Result(sourceComponent, false);
         }
         boolean showOriginal = ScoreboardTranslationInputSupport.shouldShowOriginal(config);
+        Component objective = SurfaceTextCompletion.objective(sourceComponent, config.target_language);
+        if (objective != null) return new Result(showOriginal ? sourceComponent : objective, false);
 
         try {
             Set<String> privateTokens = collectPrivateTokens(sourceComponent);
@@ -134,6 +136,7 @@ public final class ExternalScoreboardTranslationSupport {
     static ComponentTranslationDocument prepareDocument(Component component, Set<String> privateTokens) {
         ComponentTranslationPolicy policy = ComponentTranslationPolicy.forRoute(ComponentTranslationRoute.SCOREBOARD)
                 .withContext(CONTEXT)
+                .withSemanticSetting("styled_sentence", "v1")
                 .withSemanticSetting("route_policy", POLICY_VERSION)
                 .withSemanticSetting("layout", "arbitrary-component")
                 .withSemanticSetting("private_slot_schema", privateSlotSchema(privateTokens));

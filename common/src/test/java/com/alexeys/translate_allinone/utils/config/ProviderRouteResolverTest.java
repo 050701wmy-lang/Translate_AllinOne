@@ -13,6 +13,16 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class ProviderRouteResolverTest {
 
     @Test
+    void hypixelRouteIsIndependentAndClearingItDoesNotFallBackToChat() {
+        ModConfig config = configWithProvider(false);
+        config.providerManager.routes.hypixel = "provider::model";
+        org.junit.jupiter.api.Assertions.assertNotNull(ProviderRouteResolver.resolve(config, ProviderRouteResolver.Route.HYPIXEL));
+        config.providerManager.routes.hypixel = "";
+        org.junit.jupiter.api.Assertions.assertNull(ProviderRouteResolver.resolve(config, ProviderRouteResolver.Route.HYPIXEL));
+        org.junit.jupiter.api.Assertions.assertNotNull(ProviderRouteResolver.resolve(config, ProviderRouteResolver.Route.CHAT_OUTPUT));
+    }
+
+    @Test
     void profileReportsDecryptFailure() {
         ApiProviderProfile profile = new ApiProviderProfile();
         assertFalse(profile.hasApiKeyDecryptFailure());

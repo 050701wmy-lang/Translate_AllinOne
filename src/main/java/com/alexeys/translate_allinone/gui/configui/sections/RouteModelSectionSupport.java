@@ -44,6 +44,7 @@ public final class RouteModelSectionSupport {
             case ITEM -> manager.routes.item;
             case SCOREBOARD -> manager.routes.scoreboard;
             case OTHER_TRANSLATIONS -> manager.routes.other_translations;
+            case HYPIXEL -> manager.routes.hypixel;
             case WYNNCRAFT -> manager.routes.wynncraft;
             case WYNN_NPC_DIALOGUE -> manager.routes.wynn_npc_dialogue;
             case WYNNTILS_TASK_TRACKER -> manager.routes.wynntils_task_tracker;
@@ -57,6 +58,7 @@ public final class RouteModelSectionSupport {
             case ITEM -> manager.routes.item = routeKey;
             case SCOREBOARD -> manager.routes.scoreboard = routeKey;
             case OTHER_TRANSLATIONS -> manager.routes.other_translations = routeKey;
+            case HYPIXEL -> manager.routes.hypixel = routeKey;
             case WYNNCRAFT -> manager.routes.wynncraft = routeKey;
             case WYNN_NPC_DIALOGUE -> manager.routes.wynn_npc_dialogue = routeKey;
             case WYNNTILS_TASK_TRACKER -> manager.routes.wynntils_task_tracker = routeKey;
@@ -105,6 +107,9 @@ public final class RouteModelSectionSupport {
         }
         if (ProviderManagerConfig.extractProviderId(manager.routes.other_translations).equals(providerId)) {
             manager.routes.other_translations = "";
+        }
+        if (ProviderManagerConfig.extractProviderId(manager.routes.hypixel).equals(providerId)) {
+            manager.routes.hypixel = "";
         }
         if (ProviderManagerConfig.extractProviderId(manager.routes.wynncraft).equals(providerId)) {
             manager.routes.wynncraft = "";

@@ -13,6 +13,23 @@ import static org.junit.jupiter.api.Assertions.*;
 /** Verify against the actual Minecraft dependency, not mocks of its rendering signatures. */
 class GenericTranslationInjectionTargetsTest {
     @Test
+    void selectedItemNameIsReadBeforeWidthAndRendering() throws IOException {
+        var hud = read("net/minecraft/client/gui/Hud");
+        var method = hud.methods.stream().filter(m -> m.name.equals("extractSelectedItemName"))
+                .findFirst().orElseThrow();
+        int nameIndex = -1;
+        int widthIndex = -1;
+        for (int i = 0; i < method.instructions.size(); i++) {
+            if (method.instructions.get(i) instanceof MethodInsnNode call) {
+                if (call.owner.equals("net/minecraft/world/item/ItemStack")
+                        && call.name.equals("getHoverName")
+                        && call.desc.equals("()Lnet/minecraft/network/chat/Component;")) nameIndex = i;
+                if (call.owner.equals("net/minecraft/client/gui/Font") && call.name.equals("width")) widthIndex = i;
+            }
+        }
+        assertTrue(nameIndex >= 0 && widthIndex > nameIndex);
+    }
+    @Test
     void widgetTooltipHasPersistentCacheAndRefreshableComponentEntry() throws IOException {
         var tooltip = read("net/minecraft/client/gui/components/Tooltip");
         assertTrue(tooltip.fields.stream().anyMatch(f -> f.name.equals("message")
@@ -76,6 +93,8 @@ class GenericTranslationInjectionTargetsTest {
 
     @Test
     void hoverAndContainerBoundariesExistWithExactDescriptors() throws IOException {
+        assertTrue(read("net/minecraft/client/gui/GuiGraphicsExtractor").methods.stream().anyMatch(m ->
+                m.name.equals("tooltip") && m.desc.equals("(Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipPositioner;Lnet/minecraft/resources/Identifier;)V")));
         assertTrue(read("net/minecraft/client/gui/GuiGraphicsExtractor").methods.stream().anyMatch(m ->
                 m.name.equals("setTooltipForNextFrame") && m.desc.equals("(Lnet/minecraft/client/gui/Font;Ljava/util/List;Ljava/util/Optional;IILnet/minecraft/resources/Identifier;)V")));
         assertTrue(read("net/minecraft/client/gui/GuiGraphicsExtractor").methods.stream().anyMatch(m ->

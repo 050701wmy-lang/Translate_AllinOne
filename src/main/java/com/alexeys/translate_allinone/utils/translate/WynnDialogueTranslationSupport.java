@@ -6,6 +6,7 @@ import com.alexeys.translate_allinone.utils.AnimationManager;
 import com.alexeys.translate_allinone.utils.cache.LookupResult;
 import com.alexeys.translate_allinone.utils.cache.TranslationStatus;
 import com.alexeys.translate_allinone.utils.cache.WynnDialogueTextCache;
+import com.alexeys.translate_allinone.utils.componentjson.*;
 import com.alexeys.translate_allinone.utils.config.ModConfig;
 import com.alexeys.translate_allinone.utils.config.ProviderRouteResolver;
 import com.alexeys.translate_allinone.utils.config.pojos.WynnCraftConfig;
@@ -544,11 +545,43 @@ public final class WynnDialogueTranslationSupport {
         return WynnDialogueTextCache.getInstance();
     }
 
+    static ComponentTranslationDocument sharedNpcDocument(String key) {
+        int separator = key.indexOf("::");
+        String text = separator < 0 ? key : key.substring(separator + 2);
+        return ComponentTranslationRuntime.prepare(Component.literal(text),
+                ComponentTranslationPolicy.forRoute(ComponentTranslationRoute.CHAT_OUTPUT)
+                        .withSemanticSetting("shared_npc", "true"));
+    }
+
+    private static LookupResult sharedNpcLookup(String key, boolean queue) {
+        var document = sharedNpcDocument(key);
+        var result = ComponentTranslationRuntime.resolve(document, getTargetLanguage(), null, () -> null,
+                response -> new ComponentTranslationApplier().apply(document, response).getString(),
+                "wynn-shared-npc", queue);
+        TranslationStatus status = switch (result.state()) {
+            case CACHE_HIT -> TranslationStatus.TRANSLATED;
+            case FAILED -> TranslationStatus.ERROR;
+            case PENDING -> TranslationStatus.PENDING;
+            default -> TranslationStatus.NOT_CACHED;
+        };
+        return new LookupResult(status, result.value(), result.errorMessage());
+    }
+
+    private static int refreshSharedNpc(Set<String> keys) {
+        int count = 0;
+        for (String key : keys) {
+            ComponentTranslationRuntime.forceRefresh(sharedNpcDocument(key), getTargetLanguage());
+            sharedNpcLookup(key, true);
+            count++;
+        }
+        return count;
+    }
+
     private static LookupResult forcedRefreshLookup(String cacheKey) {
         if (cacheKey == null || cacheKey.isBlank() || !forcedRefreshPendingKeys.contains(cacheKey)) {
             return null;
         }
-        LookupResult lookup = cache().peek(cacheKey);
+        LookupResult lookup = sharedNpcLookup(cacheKey, false);
         if (lookup.status() == TranslationStatus.NOT_CACHED) {
             forcedRefreshPendingKeys.remove(cacheKey);
             return null;
@@ -1250,7 +1283,7 @@ public final class WynnDialogueTranslationSupport {
             return;
         }
 
-        int refreshedCount = cache().forceRefresh(refreshKeys);
+        int refreshedCount = refreshSharedNpc(refreshKeys);
         if (refreshedCount > 0) {
             forcedRefreshPendingKeys.addAll(refreshKeys);
             WynnDialoguePresentation pendingPresentation = createForcedRefreshPendingPresentation(
@@ -1309,7 +1342,7 @@ public final class WynnDialogueTranslationSupport {
             if (!forcedRefreshPendingKeys.contains(candidateKey)) {
                 continue;
             }
-            LookupResult lookup = cache().peek(candidateKey);
+            LookupResult lookup = sharedNpcLookup(candidateKey, false);
             if (lookup.status() == TranslationStatus.PENDING
                     || lookup.status() == TranslationStatus.IN_PROGRESS) {
                 pending = true;
@@ -1539,7 +1572,7 @@ public final class WynnDialogueTranslationSupport {
             );
             return false;
         }
-        cache().lookupOrQueue(buildDialogueCacheKey(dialogue));
+        sharedNpcLookup(buildDialogueCacheKey(dialogue), true);
         throttledDevLog(
                 "queue_dialogue",
                 DEBUG_HUD_LOG_THROTTLE_MILLIS,
@@ -1582,7 +1615,7 @@ public final class WynnDialogueTranslationSupport {
         }
 
         for (String optionKey : optionKeys) {
-            cache().lookupOrQueue(optionKey);
+            sharedNpcLookup(optionKey, true);
         }
         throttledDevLog(
                 "queue_options",
@@ -1654,7 +1687,7 @@ public final class WynnDialogueTranslationSupport {
             return;
         }
         throttledDialoguesLocalMissLog("npc", npcName, "queue_npc", "prepared NPC name was not found in dialogues dictionary");
-        cache().lookupOrQueue(buildNpcCacheKey(npcName));
+        sharedNpcLookup(buildNpcCacheKey(npcName), true);
         throttledDevLog(
                 "queue_npc",
                 DEBUG_HUD_LOG_THROTTLE_MILLIS,
@@ -1688,8 +1721,8 @@ public final class WynnDialogueTranslationSupport {
         throttledDialoguesLocalMissLog("npc", npcName, "resolve_npc", "prepared NPC name was not found in dialogues dictionary");
 
         LookupResult lookup = allowQueue && hasConfiguredRoute()
-                ? cache().lookupOrQueue(cacheKey)
-                : cache().peek(cacheKey);
+                ? sharedNpcLookup(cacheKey, true)
+                : sharedNpcLookup(cacheKey, false);
         if (lookup.status() == TranslationStatus.TRANSLATED
                 && lookup.translation() != null
                 && !lookup.translation().isBlank()) {
@@ -1752,8 +1785,8 @@ public final class WynnDialogueTranslationSupport {
         }
 
         LookupResult lookup = allowQueue && hasConfiguredRoute()
-                ? cache().lookupOrQueue(cacheKey)
-                : cache().peek(cacheKey);
+                ? sharedNpcLookup(cacheKey, true)
+                : sharedNpcLookup(cacheKey, false);
         if (lookup.status() == TranslationStatus.TRANSLATED
                 && lookup.translation() != null
                 && !lookup.translation().isBlank()) {
@@ -1798,8 +1831,8 @@ public final class WynnDialogueTranslationSupport {
             LookupResult lookup = forcedRefresh != null
                     ? forcedRefresh
                     : allowQueue && hasConfiguredRoute()
-                    ? cache().lookupOrQueue(optionKey)
-                    : cache().peek(optionKey);
+                    ? sharedNpcLookup(optionKey, true)
+                    : sharedNpcLookup(optionKey, false);
             if (lookup.status() == TranslationStatus.TRANSLATED
                     && lookup.translation() != null
                     && !lookup.translation().isBlank()) {

@@ -113,7 +113,7 @@ public final class ComponentTranslationValidator {
             }
             if (isInlineAnchorParagraph(document)) {
                 validateInlineAnchorParagraph(unit, translation);
-            } else if (document.route() == ComponentTranslationRoute.TOOLTIP_PARAGRAPH) {
+            } else if (document.route() == ComponentTranslationRoute.TOOLTIP_PARAGRAPH || isStyledSentence(document)) {
                 validateParagraphProtectedTokens(unit, expectedTokens, actualTokens);
             } else if (isLineTooltipRoute(document.route())) {
                 validateLineProtectedTokens(unit, expectedTokens, actualTokens);
@@ -123,7 +123,7 @@ public final class ComponentTranslationValidator {
             if (!isInlineAnchorParagraph(document)) {
                 validateFlatStyleTags(unit.sourceText(), translation, unit.id());
             }
-            if (document.route() == ComponentTranslationRoute.TOOLTIP_PARAGRAPH
+            if ((document.route() == ComponentTranslationRoute.TOOLTIP_PARAGRAPH || isStyledSentence(document))
                     && !isInlineAnchorParagraph(document)) {
                 validateParagraphStyleCoverage(unit.sourceText(), translation, unit.id());
             }
@@ -133,6 +133,17 @@ public final class ComponentTranslationValidator {
             }
         }
         return response;
+    }
+
+    private static boolean isStyledSentence(ComponentTranslationDocument document) {
+        return "true".equals(document.semanticSettings().get("shared_npc"))
+                || "v1".equals(document.semanticSettings().get("styled_sentence"));
+    }
+
+    /** The provider validator and the client renderer must accept the same style grammar. */
+    public static void validateSentenceStyles(String source, String translated) {
+        validateFlatStyleTags(source, translated, "sentence");
+        validateParagraphStyleCoverage(source, translated, "sentence");
     }
 
     private static boolean isInlineAnchorParagraph(ComponentTranslationDocument document) {

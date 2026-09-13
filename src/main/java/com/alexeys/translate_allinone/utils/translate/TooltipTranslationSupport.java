@@ -383,7 +383,7 @@ public final class TooltipTranslationSupport {
                     tooltipStartedAtNanos
             );
             return new TranslatedTooltipBuildResult(
-                    TooltipRefreshNoticeSupport.appendRefreshNoticeLine(mirroredTooltip, showRefreshNotice),
+                    TooltipRefreshNoticeSupport.appendRefreshNoticeLine(SurfaceTextCompletion.completeTooltips(mirroredTooltip), showRefreshNotice),
                     locallyStableForRecentGuard
             );
         } catch (Exception e) {
@@ -509,7 +509,8 @@ public final class TooltipTranslationSupport {
             String route;
             String detail;
 
-            if (segment.kind() == TooltipRouteKind.STRUCTURED_LINE) {
+            boolean localDictionaryHit = TooltipTemplateRuntime.hasLocalDictionaryTranslation(segment.candidate().line());
+            if (segment.kind() == TooltipRouteKind.STRUCTURED_LINE && !localDictionaryHit) {
                 structuredLineResult = TooltipStructuredCaptureSupport.tryTranslateStructuredLine(
                         segment.candidate().line(),
                         useTagStylePreservation,
@@ -562,7 +563,7 @@ public final class TooltipTranslationSupport {
                         preparedTemplate
                 );
                 TooltipLineResult componentLineResult = null;
-                if (!TooltipTemplateRuntime.hasLocalDictionaryTranslation(segment.candidate().line())) {
+                if (!localDictionaryHit) {
                     componentLineResult = TooltipComponentTranslationSupport.translatePreparedLine(
                             preparedTemplate,
                             com.alexeys.translate_allinone.utils.componentjson.ComponentTranslationRoute.TOOLTIP_LINE,
@@ -571,9 +572,11 @@ public final class TooltipTranslationSupport {
                             config
                     );
                 }
-                lineResult = componentLineResult == null
-                        ? new TooltipLineResult(segment.candidate().line(), false, false)
-                        : componentLineResult;
+                lineResult = localDictionaryHit
+                        ? TooltipTemplateRuntime.translatePreparedTemplate(preparedTemplate)
+                        : componentLineResult == null
+                            ? new TooltipLineResult(segment.candidate().line(), false, false)
+                            : componentLineResult;
                 route = "line-template";
                 detail = "templateKey=" + (preparedTemplate.translationTemplateKey() == null
                         ? ""

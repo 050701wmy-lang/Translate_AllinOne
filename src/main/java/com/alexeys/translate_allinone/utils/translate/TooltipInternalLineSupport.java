@@ -44,7 +44,7 @@ public final class TooltipInternalLineSupport {
             String animationKey
     ) {
         float percentage = (stats.total() > 0) ? ((float) stats.translated() / stats.total()) * 100 : 100;
-        String progressText = String.format(" (%d/%d) - %.0f%%", stats.translated(), stats.total(), percentage);
+        String progressText = String.format(" (%d/%d) · %.1f%%", stats.translated(), stats.total(), percentage);
 
         Component statusMessage = hasMissingKeyIssue
                 ? Component.translatable(KEY_MISMATCH_STATUS_KEY).withStyle(ChatFormatting.RED)
@@ -70,8 +70,7 @@ public final class TooltipInternalLineSupport {
             return false;
         }
 
-        boolean isAnythingPending = stats.total() > stats.translated();
-        return processedTooltip.pending() || processedTooltip.missingKeyIssue() || isAnythingPending;
+        return processedTooltip.pending() || processedTooltip.missingKeyIssue();
     }
 
     public static boolean shouldShowErrorStatusLine(TooltipTranslationSupport.TooltipProcessingResult processedTooltip) {

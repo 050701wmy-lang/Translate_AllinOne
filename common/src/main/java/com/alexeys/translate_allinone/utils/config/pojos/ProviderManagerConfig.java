@@ -43,6 +43,7 @@ public class ProviderManagerConfig {
         routes.item = normalizeRouteValue(routes.item);
         routes.scoreboard = normalizeRouteValue(routes.scoreboard);
         routes.other_translations = normalizeRouteValue(routes.other_translations);
+        routes.hypixel = normalizeRouteValue(routes.hypixel);
         routes.wynn_npc_dialogue = normalizeRouteValue(routes.wynn_npc_dialogue);
         routes.wynntils_task_tracker = normalizeRouteValue(routes.wynntils_task_tracker);
         routes.wynncraft = normalizeRouteValue(routes.wynncraft);
@@ -136,6 +137,7 @@ public class ProviderManagerConfig {
         public String item = "";
         public String scoreboard = "";
         public String other_translations = "";
+        public String hypixel = "";
         public String wynncraft = "";
         public String wynn_npc_dialogue = "";
         public String wynntils_task_tracker = "";

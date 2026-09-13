@@ -18,8 +18,7 @@ import net.minecraft.client.gui.screens.inventory.BookViewScreen;
 import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import net.minecraft.network.chat.Component;
 public final class ComponentRenderTranslationSupport {
-    private static final Set<String> REFRESHED_KEYS = new HashSet<>();
-    private static boolean refreshHeld;
+    private static final java.util.Map<OtherTranslationsConfig, Set<String>> REFRESHED_KEYS = new java.util.WeakHashMap<>();
     private static final EntityTranslationRenderCache ENTITY_RENDER_CACHE = new EntityTranslationRenderCache();
 
     @FunctionalInterface
@@ -131,7 +130,7 @@ public final class ComponentRenderTranslationSupport {
                     route,
                     context,
                     config.target_language,
-                    policyVersion
+                    policyVersion + ":dictionary=" + WynnSharedDictionaryService.getInstance().getItemSkillVersion()
             );
             if (!allowForceRefresh) {
                 TranslationResult cached = ENTITY_RENDER_CACHE.get(cacheKey);
@@ -174,14 +173,13 @@ public final class ComponentRenderTranslationSupport {
             Set<String> privateTokens
     ) {
         try {
-            ComponentDynamicTemplate template = ComponentDynamicTemplate.prepare(original, privateTokens);
-            ComponentTranslationDocument document = ComponentTranslationRuntime.prepare(
-                    template.templateComponent(),
-                    route,
-                    context,
-                    policyVersion,
-                    template.privatePlaceholders()
-            );
+            if (route == ComponentTranslationRoute.BOSS_BAR || route == ComponentTranslationRoute.SCOREBOARD) {
+                Component objective = SurfaceTextCompletion.objective(original, config.target_language);
+                if (objective != null) return new TranslationResult(original, objective, null,
+                        ComponentTranslationRuntime.State.CACHE_HIT, false);
+            }
+            HudSentenceTemplate template = HudSentenceTemplate.prepare(original, privateTokens);
+            ComponentTranslationDocument document = template.document(route);
             if (document.units().isEmpty()) {
                 return TranslationResult.original(original, document);
             }
@@ -228,9 +226,9 @@ public final class ComponentRenderTranslationSupport {
             return;
         }
         try {
-            ComponentDynamicTemplate template = ComponentDynamicTemplate.prepare(original);
+            HudSentenceTemplate template = HudSentenceTemplate.prepare(original, Set.of());
             forceRefreshAndQueue(
-                    ComponentTranslationRuntime.prepare(template.templateComponent(), route, context, policyVersion),
+                    template.document(route),
                     config,
                     context
             );
@@ -311,7 +309,6 @@ public final class ComponentRenderTranslationSupport {
     static void resetRefreshState() {
         synchronized (REFRESHED_KEYS) {
             REFRESHED_KEYS.clear();
-            refreshHeld = false;
         }
     }
 
@@ -323,8 +320,7 @@ public final class ComponentRenderTranslationSupport {
         boolean pressed = isRefreshPressed(config);
         if (!pressed) {
             synchronized (REFRESHED_KEYS) {
-                REFRESHED_KEYS.clear();
-                refreshHeld = false;
+                REFRESHED_KEYS.remove(config);
             }
         }
     }
@@ -336,17 +332,15 @@ public final class ComponentRenderTranslationSupport {
         boolean pressed = isRefreshPressed(config);
         synchronized (REFRESHED_KEYS) {
             if (!pressed) {
-                REFRESHED_KEYS.clear();
-                refreshHeld = false;
+                REFRESHED_KEYS.remove(config);
                 return;
             }
-            if (!refreshHeld) {
-                REFRESHED_KEYS.clear();
-                refreshHeld = true;
+            if (!REFRESHED_KEYS.containsKey(config)) {
+                REFRESHED_KEYS.put(config, new HashSet<>());
                 ENTITY_RENDER_CACHE.clear();
             }
             String key = ComponentTranslationRuntime.cacheKey(document, config.target_language);
-            if (REFRESHED_KEYS.add(key)) {
+            if (REFRESHED_KEYS.get(config).add(key)) {
                 ComponentTranslationRuntime.forceRefresh(document, config.target_language);
             }
         }

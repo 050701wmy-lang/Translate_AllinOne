@@ -14,6 +14,12 @@ import java.util.stream.Collectors;
 import static org.junit.jupiter.api.Assertions.*;
 
 class HudGlyphProtectionTest {
+    @org.junit.jupiter.api.BeforeAll
+    static void bootstrap() {
+        net.minecraft.SharedConstants.tryDetectVersion();
+        net.minecraft.server.Bootstrap.bootStrap();
+    }
+
     private Component location() {
         return Component.literal("\uE001 Graveyard").withStyle(Style.EMPTY.withColor(ChatFormatting.RED)
                 .withFont(new FontDescription.Resource(Identifier.fromNamespaceAndPath("server", "hud"))));
@@ -35,7 +41,10 @@ class HudGlyphProtectionTest {
         var document = ExternalScoreboardTranslationSupport.prepareDocument(external.templateComponent(), external.privatePlaceholders());
         Component translated = external.restore(new ComponentTranslationApplier().apply(document, reply(document)));
         assertEquals("\uE001 墓地", translated.getString());
-        assertEquals(source.getStyle(), translated.getStyle());
+        translated.visit((style, text) -> {
+            if (!text.isEmpty()) assertEquals(source.getStyle(), style);
+            return java.util.Optional.empty();
+        }, Style.EMPTY);
     }
 
     @Test

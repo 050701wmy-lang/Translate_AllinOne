@@ -1,4 +1,9 @@
 {
+  "text.translate_allinone.configscreen.desc.hypixel_hotkey_mode": "Controls enabled SkyBlock NPC, server message and mod interface translations.",
+  "text.translate_allinone.configscreen.desc.hypixel_hotkey": "Bind the Hypixel translation key: hold to translate, hold for original, or disable the hotkey.",
+  "text.translate_allinone.configscreen.desc.hypixel_refresh_hotkey": "Refresh the current SkyBlock mod interface and the most recent tracked NPC or server message.",
+  "text.translate_allinone.configscreen.label.skyblock_mod_ui": "SkyBlock mod UI translation",
+  "text.translate_allinone.configscreen.desc.skyblock_mod_ui": "Automatically translate Skyblocker, SkyHanni, SkyOcean and Custom Scoreboard screens and widget tooltips. Independent of generic UI translation with a separate cache; uses the Other Translations model route.",
   "text.translate_allinone.configscreen.group.hypixel_messages": "SkyBlock Messages",
   "text.translate_allinone.configscreen.group.hypixel_compatibility": "Scoreboard Compatibility",
   "text.translate_allinone.configscreen.section.hypixel": "Hypixel",
@@ -563,6 +568,7 @@
   "text.translate_allinone.configscreen.route.chat_output": "CHAT_OUTPUT",
   "text.translate_allinone.configscreen.route.item": "ITEM",
   "text.translate_allinone.configscreen.route.scoreboard": "SCOREBOARD",
+  "text.translate_allinone.configscreen.route.hypixel": "Hypixel",
   "text.translate_allinone.configscreen.route.other_translations": "OTHER TRANSLATIONS",
   "text.translate_allinone.configscreen.route.wynn_npc_dialogue": "WYNN_NPC_DIALOGUE",
   "text.translate_allinone.configscreen.route.wynncraft": "WYNNCRAFT",

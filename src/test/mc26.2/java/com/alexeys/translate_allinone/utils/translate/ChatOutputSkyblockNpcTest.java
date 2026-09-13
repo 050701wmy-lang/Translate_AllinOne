@@ -9,6 +9,20 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class ChatOutputSkyblockNpcTest {
+    @Test
+    void recognizesKatPetUpgradesWithUppercaseFormattingCodes() {
+        for (String body : new String[]{
+                "I'll get your §fBee §fupgraded to §A§LUNCOMMON §fin no time!",
+                "I was able to upgrade your pet §fBee§f to §A§LUNCOMMON§f.",
+                "I'll get your §aBee §fupgraded to §9§LRARE §fin no time!"}) {
+            assertTrue(ChatOutputTranslateManager.isSkyblockNpcMessage(
+                    Component.literal("§e[NPC] §bKat§f: " + body)), body);
+            assertTrue(ChatOutputTranslateManager.isSkyblockNpcMessage(
+                    Component.literal("§E[NPC] §BKat§F: " + body + "§R [T]")), body);
+            assertFalse(ChatOutputTranslateManager.isSkyblockNpcMessage(
+                    Component.literal("[VIP] Player: " + body)), body);
+        }
+    }
 
     @Test
     void recognizesFormattedSkyblockNpcDialogue() {

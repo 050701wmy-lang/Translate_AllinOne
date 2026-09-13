@@ -1,0 +1,4519 @@
+{
+  "source": "D:\\Data\\Translate_AllinOne\\dictionary\\skb_items_zh.json",
+  "target": "E:/Minecraft/.minecraft/versions/Skyblock/config/translate_allinone/dictionary/skyblock_items_zh.json",
+  "originalSha256": "da722ef1a2e2b451b3558ed99d6a4497ec34c6b3bc0a95e65a0e760684ab8209",
+  "originalEntries": 282,
+  "communityEntries": 11912,
+  "added": 10887,
+  "braceRepairs": 169,
+  "preservedConflicts": [
+    "Health",
+    "Defense",
+    "Sea Creature Chance",
+    "Respiration",
+    "Pressure Resistance",
+    "Farming Fortune",
+    "Farming Wisdom",
+    "- Bow",
+    "Mining Fortune",
+    "- Fishing Weapon",
+    "Magic Find",
+    "Foraging Wisdom",
+    "- Helmet",
+    "MYTHIC",
+    "Heat Resistance",
+    "damage",
+    "LEGENDARY FISHING ROD",
+    "Ability Damage",
+    "Increases damage dealt to Ж",
+    "- Sword",
+    "- Longsword",
+    "- Gauntlet",
+    "Foraging Fortune",
+    "Chimera",
+    "Scavenger",
+    "Looting",
+    "- Armor",
+    "Mending",
+    "Hunter Fortune",
+    "Bonus Attack Speed",
+    "Cocoa Beans Fortune",
+    "- Pickaxe",
+    "- Chestplate",
+    "Grants +{d1}♣ Pet Luck.",
+    "Wheat Fortune",
+    "Carrot Fortune",
+    "Potato Fortune",
+    "destination to your fast travel",
+    "- Hoe",
+    "- Axe",
+    "Swing Range",
+    "- Boots",
+    "Block Fortune",
+    "Cold Resistance",
+    "Grants +{d1}✯ Magic Find.",
+    "Dwarven Metal Fortune",
+    "island will create a portal to The",
+    "Pumpkin Fortune",
+    "Sugar Cane Fortune",
+    "Cactus Fortune",
+    "Mushroom Fortune",
+    "Nether Wart Fortune",
+    "Grants +{d1}☂ Fishing Speed.",
+    "Grants +{d1}α Sea Creature Chance.",
+    "Gemstone Fortune",
+    "Pristine",
+    "LEGENDARY WAND",
+    "Grants +{d1} ☘ Farming Fortune, which",
+    "Last Stand",
+    "increases the speed of",
+    "Grants +{d1}☘ Farming Fortune on ൠ",
+    "I-V: Enchantment Table",
+    "Pet Luck",
+    "Chance",
+    "Islands.",
+    "Fig Fortune",
+    "Mangrove Fortune",
+    "Quest item",
+    "Bait.",
+    "creatures.",
+    "Mining Wisdom",
+    "Grants +{d1}☯ Enchanting Wisdom.",
+    "Grants +{d1}☯ Farming Wisdom.",
+    "dimension.",
+    "Coins!",
+    "island!",
+    "Ore Fortune",
+    "grants +{d1}☘ Farming Fortune for",
+    "Combo",
+    "dealing {d1}x your ☠ Crit Damage",
+    "- Leggings",
+    "- Shovel",
+    "Mana.",
+    "Creatures during the Spooky Festival.",
+    "Grants +{d1}☯ Fishing Wisdom.",
+    "Ability: Ray of Hope  RIGHT CLICK",
+    "Treasure.",
+    "increases your chance to catch",
+    "zombie.",
+    "Grants +{d1}☯ Combat Wisdom."
+  ],
+  "skipped": [
+    {
+      "key": "Grants +{d1}⛃ Treasure Chance while",
+      "value": "§7在水下时提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "underwater.",
+      "value": "§9§6+{d1}⛃宝藏几率§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Tank: +{d1}❈ Defense and reduces damage",
+      "value": "§b坦克§7：+§a{d1}❈防御力§7，且若在§e{d1}§7秒内被同一怪物击中，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "if you are hit by the same monster within {d1}",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Arrows home towards dragons if",
+      "value": "§7若龙在§a{d1}§7格内，箭矢",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "they are within {d1} blocks.",
+      "value": "§7会追踪龙。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "back.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "blocks.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}☘ Mining Fortune while",
+      "value": "§7挖掘§6琥珀§7时提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "mining Amber.",
+      "value": "§7§6+{d1}☘挖掘Fortune§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}☘ Mining Fortune while in",
+      "value": "§7在§5水晶hollows§7中时提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the Crystal Hollows.",
+      "value": "§7§6+{d1}☘挖掘Fortune§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}⸕ Mining Speed for {d2}s when using",
+      "value": "§7使用§e§l右键§6物品能力§7时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "your RIGHT CLICK Item Ability.",
+      "value": "§7获得§6+{d1}⸕挖掘速度§7，持续§a{d2}秒§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}❈ Defense for {d2}s when using your",
+      "value": "§7使用§e§l右键§6物品能力§7时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "RIGHT CLICK Item Ability.",
+      "value": "§7获得§a+{d1}❈防御力§7，持续§a{d2}秒§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{{d1}}α Sea Creature Chance",
+      "value": "§7每级§5山心§7等级为你的宠物提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "to your pet for each Heart of the",
+      "value": "§7§3+{{d1}}α海怪几率",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Mountain level.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{{d1}}⚓ Double Hook Chance",
+      "value": "§7在§5水晶hollows§7中时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "while in the Crystal Hollows.",
+      "value": "§7§9+{{d1}}⚓双钩几率",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "of your choice.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants a random +{d1}☘ Farming",
+      "value": "§7在§eJacob的农耕竞赛中，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Fortune stat during Jacob's Farming",
+      "value": "§7随机提供§6+{d1}☘农耕",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Every {d1}th hit deals {{d2}}% of your",
+      "value": "§7每第{d1}次攻击对§a{d1}格内的敌人",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "final damage to enemies within {d1}",
+      "value": "§7造成你最终伤害§a{{d2}}%§7的伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "blocks. Enemies hit deal {d1} less",
+      "value": "§7被击中的敌人造成伤害",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "damage for {d1}s.",
+      "value": "§7减少§a{d1}§7，持续{d1}秒。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "This weapon lets you absorb {d1} of",
+      "value": "§7此武器允许你吸收任何武器",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the basic combat stats of any",
+      "value": "§7§c{d1}§7的基础战斗属性。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "weapon.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "in waves by Arachne when she falls",
+      "value": "§7阿拉克尼生命值低于{d1}和{d2}时",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "below {d1} and {d2} of her health",
+      "value": "§7波次生成的生物。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}❁ Strength while",
+      "value": "§7中毒时提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "poisoned.",
+      "value": "§7§c+{d1}❁力量§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Shootout.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{{d1}}▚ Mining Spread while",
+      "value": "§7挖掘硬石时提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "mining Hard Stone.",
+      "value": "§7§e+{{d1}}▚挖掘spread§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Consumes {{d1}}% less energy when",
+      "value": "§7隧道挖掘时",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "tunneling.",
+      "value": "§7消耗能量减少§a{{d1}}%§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "quiver.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Holding this artifact will grant you {d1}x",
+      "value": "§7持有此神器将使你在市长选举中",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "voting power in Mayor Elections!",
+      "value": "§7获得§a{d1}倍§7投票权！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "season.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Receive {d1} less damage from",
+      "value": "§7手持时，受到末影人的伤害",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Endermen when held.",
+      "value": "§7减少§a{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Endermen.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Your \"Unlimited\" Attributes are +{d1}",
+      "value": "§7你的\"Unlimited\"属性",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "stronger.",
+      "value": "§7强度+{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} more ❁ Damage against Ж",
+      "value": "§7对§4Ж节肢§7生物造成的§c❁伤害",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Arthropod mobs.",
+      "value": "§7§a+{d1}❈防御力§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ❈ Defense against Ж",
+      "value": "§7对§4Ж节肢§7生物提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}.{d2} ⚓ Double Hook Chance",
+      "value": "§7在§b钓鱼岛屿§7上提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "while on Fishing Islands.",
+      "value": "§7§9+{d1}.{d2}⚓双钩几率",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "are {d1} stronger on you. Gain a {d2}.{d3}",
+      "value": "§7提高§a{d1}§7。在§2树木礼物§7中找到",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "chance to find Signal Enhancers in",
+      "value": "§7§6信号增强器§7的几率提高§a{d2}.{d3}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Tree Gifts.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Berries have a +{d1} chance to",
+      "value": "§7在§dStarlyn竞赛§7中，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Contests.",
+      "value": "§7提高§a+{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants a +{d1} chance to find an",
+      "value": "§7在宝藏箱和",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the Crystal Nucleus.",
+      "value": "§7几率提高§a+{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}.{d2} ❃ Tracking on Griffin",
+      "value": "§7在§eGriffin§e地洞§7上提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Burrows.",
+      "value": "§7§d+{d1}.{d2}❃追踪",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} more ❁ Damage against",
+      "value": "§7对§4♨地狱§7生物造成的§c❁伤害",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "♨ Infernal mobs.",
+      "value": "§7提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ✯ Magic Find on ♆",
+      "value": "§7对§c♆岩浆§7生物提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Magmatic mobs.",
+      "value": "§7§b+{d1}✯魔法发现§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ❈ Defense against ♨",
+      "value": "§7对§4♨地狱§7生物提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Infernal mobs.",
+      "value": "§7§a+{d1}❈防御力§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants a +{d1} extra chance of",
+      "value": "§7在§dSuperpairs§7中找到",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Superpairs.",
+      "value": "§7额外几率提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "When you haven't been damaged in",
+      "value": "§7若你过去§a{d1}秒§7或更久未受伤害，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the last {d1}s or more, your mana",
+      "value": "§7你的魔力消耗",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "You have a +{d1} chance to gain extra",
+      "value": "§7获得额外§aChums§7的几率",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Chums.",
+      "value": "§7提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants a +{d1}.{d2} chance to charm the",
+      "value": "§7击杀怪物时获得§9碎片§7的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Shard of monsters you kill.",
+      "value": "§7几率提高§a+{d1}.{d2}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1} more Coins from fishing",
+      "value": "§7从钓鱼宝藏中额外获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "treasures.",
+      "value": "§7§a+{d1}§6金币§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants a +{d1} chance to Chop an",
+      "value": "§7在横扫的基础上，额外",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "swept.",
+      "value": "§7几率提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Your David's Cloak gains +{d1} ❂ True",
+      "value": "§7你的§fDavid的披风§7获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Defense.",
+      "value": "§c{{d1}}❤生命值§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Deal +{d1}.{d2} more ❁ Damage per",
+      "value": "§7每层§f狼祖母§7宠物连击，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grandma Wolf pet combo. (Max {d1}",
+      "value": "§7额外造成§a+{d1}.{d2}§c❁伤害§7。§8(最大{d1}",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants a +{d1} chance to double any",
+      "value": "§7来自§5水晶hollows§7宝藏箱的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Chests.",
+      "value": "§7几率提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ☘ Hunter Fortune",
+      "value": "§7对§f§l普通§7属性提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "towards COMMON Attributes.",
+      "value": "§7§d+{d1}☘猎人Fortune",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "for that block.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}.{d2} more ❁ Damage when at",
+      "value": "§7满生命值时额外获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "full health.",
+      "value": "§7§a+{d1}.{d2}§c❁伤害§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Your Dragon Shortbow gains +{d1}",
+      "value": "§7在§d末地§7时，你的§5龙之短弓",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "more ❁ Damage while in The End.",
+      "value": "§7获得§a+{d1}§c❁伤害§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increase Pull by +{d1} when using your",
+      "value": "§7使用你的§7钓鱼网§7时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Fishing Nets.",
+      "value": "§7拉力提高§b+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ❈ Defense against ⊙",
+      "value": "§7对§5⊙末地§7生物提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Ender mobs.",
+      "value": "§7§a+{d1}❈防御力§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} more experience orbs",
+      "value": "§7从击杀生物中获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "from killing mobs.",
+      "value": "§7§a+{d1}§7更多经验球。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Dungeon Blessings are +{d1} stronger",
+      "value": "§7地牢祝福对你的效果",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "on you.",
+      "value": "§7提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ☘ Fig Fortune for every",
+      "value": "§7你的§6无花果原木§7收藏中每位数",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "digit in your Fig Log collection. (Max",
+      "value": "§7提供§6+{d1}☘无花果Fortune§7。§8(最大",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ∮ Sweep towards Fig",
+      "value": "§7对§6无花果§7树提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Trees.",
+      "value": "§7§2+{d1}∮横扫",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Has a +{d1} chance not to consume",
+      "value": "§7不消耗任何鱼饵的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "any bait.",
+      "value": "§7几率提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ☂ Fishing Speed while on",
+      "value": "§7在§2foraging岛屿§7上时提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Foraging Islands.",
+      "value": "§7§c+{d1}❁力量§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ❁ Strength while on",
+      "value": "§7在§2foraging岛屿§7上时提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}.{d2}▚ Gemstone Spread for",
+      "value": "§7在§b冰川矿井§7中时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "have while in the Glacite Mineshafts.",
+      "value": "§7提供§e+{d1}.{d2}▚宝石spread§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Frogs have a +{d1} chance to jump {d2}",
+      "value": "§7青蛙有§a+{d1}的几率跳跃时间",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "less time.",
+      "value": "§7减少{d2}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain a +{d1} chance to gain an",
+      "value": "§7开始§6化石挖掘器§7时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "starting the Fossil Excavator.",
+      "value": "§7几率提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants a +{d1} chance to obtain an",
+      "value": "§7找到§f冬季礼物§7时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "extra Winter Gift when finding one.",
+      "value": "§7获得额外一份§f冬季礼物§7的几率提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Your Hunting Axes gain +{d1} more",
+      "value": "§7你的§a狩猎斧§7从其手持武器",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "stats from the weapon they hold.",
+      "value": "§7获得的属性提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Your Black Holes gain +{d1} ☘ Hunter",
+      "value": "§7你的§5黑洞§7获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Fortune.",
+      "value": "§7§d+{d1}☘猎人Fortune",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ☘ Farming Fortune if",
+      "value": "§7若你的花园地块内存在§2ൠ害虫§7，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "your Garden Plot currently has a ൠ",
+      "value": "§7提供§6+{d1}☘农耕Fortune§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Pest in it.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Your Vacuum deals +{d1} extra ❁",
+      "value": "§7你的§a吸尘器§7造成额外§c❁",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Damage.",
+      "value": "§c伤害§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Kat takes +{d1} less time to upgrade a",
+      "value": "§bKat§7升级宠物所需时间",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Pet.",
+      "value": "§7减少§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gives +{d1} chance to have an extra",
+      "value": "§7在§7付费奖励箱中",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Chest.",
+      "value": "§7几率提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Heals for +{d1}.{d2} of your max health",
+      "value": "§7每次击杀生物时，治疗相当于",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "each time you kill a mob.",
+      "value": "§7你最大生命值§a+{d1}.{d2}§7的生命值。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants a +{d1}.{d2} chance to find a Wet",
+      "value": "§7钓到宝藏时，找到§5湿书§7的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Book when fishing a Treasure.",
+      "value": "§7几率提高§a+{d1}.{d2}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Fish Treasure Shards are +{d1}",
+      "value": "§7钓鱼宝藏碎片",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "easier to find.",
+      "value": "§7更容易找到，难度降低§a+{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ☘ Farming Fortune during",
+      "value": "§7在§7夜晚§7时提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the Night.",
+      "value": "§7§6+{d1}☘农耕Fortune§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Regain +{d1}.{d2} Mana every time you hit a",
+      "value": "§7每次击中怪物时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "monster.",
+      "value": "§7恢复§a+{d1}.{d2}§7魔力。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ☘ Mangrove Fortune for",
+      "value": "§7你的§6红树林原木§7收藏中每位数",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "every digit in your Mangrove Log",
+      "value": "§7提供§6+{d1}☘红树林Fortune§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ∮ Sweep towards",
+      "value": "§7对§6红树林§7树提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Mangrove Trees.",
+      "value": "§7§2+{d1}∮横扫",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants a +{d1} chance to get a",
+      "value": "§7获得第二个§6重型珍珠§7的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "second Heavy Pearl.",
+      "value": "§7几率提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}.{d2} ✯ Magic Find against ✿",
+      "value": "§7对§2✿神话§7生物提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Mythological mobs.",
+      "value": "§7§a+{d1}❈防御力§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ❈ Defense against ✿",
+      "value": "§7对§2✿神话§7生物提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Your pets gain +{d1} more Pet EXP",
+      "value": "§7从§6Fann§7处，你的宠物获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "from Fann.",
+      "value": "§7§a+{d1}§7更多宠物经验。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "When hit, your next hit deals +{d1}",
+      "value": "§7受到攻击时，你的下一次攻击造成",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain a +{d1} chance to obtain rare",
+      "value": "§7从§2ൠ害虫§7中获得§9稀有§9战利品§7的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "loot from ൠ Pests.",
+      "value": "§7几率提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1} more Copper from Garden",
+      "value": "§7从§a花园访客§7处多获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Visitors.",
+      "value": "§7§a+{d1}§7个§c铜币§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants a +{d1} chance to double",
+      "value": "§7在§7爬虫融合§7中，碎片数量",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "shards from a Reptile Fusion.",
+      "value": "§7翻倍的几率提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Your Chocolate Factory gains +{d1}",
+      "value": "§7你的§6巧克力工厂§7每秒",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "more Chocolate per second.",
+      "value": "§7多获得§a+{d1}§6巧克力§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Run.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain a +{d1} chance to negate",
+      "value": "§7免疫击退的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "knockback.",
+      "value": "§7几率提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants a +{d1}.{d2} chance to fish a",
+      "value": "§7钓到§fShinyfish§7的几率",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Shinyfish.",
+      "value": "§7提高§a+{d1}.{d2}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Your Axe gains +{d1} ∮ Sweep on",
+      "value": "§7你的斧在投掷时获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "throws.",
+      "value": "§2+{d1}∮横扫§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ❈ Defense against ༕",
+      "value": "§7对§2༕不死§7生物提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Undead mobs.",
+      "value": "§7§a+{d1}❈防御力§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}.{d2} ∮ Sweep for each",
+      "value": "§7你拥有的每个§f§l普通§7属性，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "unique Common Attribute you own.",
+      "value": "§7提供§2+{d1}.{d2}∮横扫§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants a +{d1}.{d2} chance to obtain a",
+      "value": "§7破坏下界疣时，获得§5Warty§7的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Warty when breaking Nether Warts.",
+      "value": "§7几率提高§a+{d1}.{d2}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Your pet's EXP Share grants +{d1}",
+      "value": "§7你宠物的§a经验分享§7提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "more EXP.",
+      "value": "§7§a+{d1}§7更多经验。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants a +{d1} chance to drop",
+      "value": "§7掉落双倍§7Berries§7和§dSeaLumies§7的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "double Berries and Sea Lumies.",
+      "value": "§7几率提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Find the Autopet in your Pets",
+      "value": "§8解锁至少{d1}条规则后，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "menu after unlocking at least {d1}",
+      "value": "§8在你的§a宠物菜单§8中找到自动宠物。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "rule.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants a {d1} chance to automatically",
+      "value": "§7自动将从敌人身上获得的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "enemies.",
+      "value": "§7提高§a{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Pedestal!",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "damage. Consecutive throws cost {d1}x",
+      "value": "§7连续投掷消耗的魔力为§9{当前}x，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "more mana and deal {d1}x more damage",
+      "value": "§7造成的伤害为§c{当前}x§7，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Buffs the Yeti Sword by {{d1}} ❁",
+      "value": "§7将§6雪人剑§7的§c❁伤害",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Damage and ✎ Intelligence and",
+      "value": "§7和§b✎智力§7提升§a{{d1}}§7，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Buffs the Yeti Sword by {{d1}} ❁ Damage",
+      "value": "§7将§6雪人剑§7的§c❁伤害",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "and ✎ Intelligence and reduces its",
+      "value": "§7和§b✎智力§7提升§a{{d1}}§7，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Workshop.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{{d1}}✯ Magic Find against",
+      "value": "§7对§f冬季海怪§7提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Winter Sea Creatures.",
+      "value": "§7§b+{{d1}}✯魔法发现§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants {d1}❃ Tracking while on",
+      "value": "§7在§cJerry工坊§7上时提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Jerry's Workshop.",
+      "value": "§7§d{d1}❃追踪",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "anvil.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{{d1}}✧ Pristine while in the",
+      "value": "§7在§c岩浆fields§7中时提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}✎ Intelligence while on your",
+      "value": "§7戴在头上时，根据你游玩的SkyBlock年数，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "head for each SkyBlock year you've",
+      "value": "§7每一年提供§b+{d1}✎智力§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "been playing.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Spells deal {d1} increased",
+      "value": "§7法术造成的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "❁damage.",
+      "value": "§c❁伤害§5提高{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain {d1}✯Magic Find for every year that",
+      "value": "§7Barry未被选中的每一年，获得§b{d1}✯魔法发现§7（最大{d1}）。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Barry has not been elected (max {d1})",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the back of the HQ.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Deals +{{d1}}% damage to Spooky",
+      "value": "§7在§6闹鬼节日§7期间，对§6闹鬼§7敌人",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "enemies during the Spooky Festival.",
+      "value": "§7造成§a+{{d1}}%§7伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "+{{d1}}% chance to fish up spooky sea",
+      "value": "§7钓上闹鬼海怪的几率",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "creatures",
+      "value": "§7提高§a+{{d1}}%",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "have summoned.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Additionally, it gives a +{d1} chance to",
+      "value": "§7此外，在活动期间，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "event.",
+      "value": "§7提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants a +{d1} chance to find rare",
+      "value": "§7找到稀有§7糖果§7的几率",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Candy.",
+      "value": "§7提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the Dwarven Mines.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Pests.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "followers you've slain.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "with stats!",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain {{d1}}% more collection",
+      "value": "§7§7从任何来源获得的收藏",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "items from any source!",
+      "value": "§7物品数量增加§c{{d1}}%§7！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain {{d1}}% more collection items from",
+      "value": "§7从任何来源获得的收藏物品",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "any source!",
+      "value": "§7数量增加§c{{d1}}%§7！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain {{d1}} more coins per",
+      "value": "§7每级怪物等级击杀时",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "monster level on kill.",
+      "value": "§7多获得§c{{d1}}金币§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}❁ Strength, +{d2}☣",
+      "value": "§7在当前§7Bingo§7活动中，每完成一个",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Crit Chance, and +{d1}❤",
+      "value": "§7个人Bingo目标，获得§c+{d1}❁力量§7，§9+{d2}☣",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Health per completed Personal",
+      "value": "§9暴击几率§7，和§c+{d1}❤",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Event",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "enemy hit.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Points!",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Adds +{d1},{d2}♢ Fuel to a refuelable",
+      "value": "§7为可加燃料的机器添加",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "machine.",
+      "value": "§7§2+{d1},{d2}♢燃料§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Left-click to change the radius",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "it effects.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "potions.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "traded.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Adds +{d1}✦ Speed to potions with",
+      "value": "§7为具有速度属性的药水",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "that stat.",
+      "value": "§7添加§f+{d1}✦速度§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}❁ Strength against enemies",
+      "value": "§7对处于岩浆中的敌人",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "who are in lava.",
+      "value": "§7获得§c+{d1}❁力量§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Isle.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "fortune.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Damages mobs within {d1} blocks for {d2}",
+      "value": "§7每秒对§a{d1}格内的生物造成其最大§c❤生命值",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "of their max ❤ Health per second.",
+      "value": "§7§a{d2}§7的伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} Fishy Treats from",
+      "value": "§7从弹跳的§5弹跳沙滩球§7和",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Giant Bouncy Beach Ball.",
+      "value": "§7§a+{d1}§9鱼味零食§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Blazing Volcano.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "on.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Adds +{d1}❁ Damage bonus to the",
+      "value": "§7为§6Blazetekk™火腿电台§7添加",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Blazetekk™ Ham Radio.",
+      "value": "§7§c+{d1}❁伤害§7加成。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1} more Coins and Skill XP",
+      "value": "§7从礼物中额外获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "from gifts.",
+      "value": "§7§a+{d1}§6金币§7和§3技能经验§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Fishing Festival.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain {{d1}}❈ Defense per {d2} Max ❤",
+      "value": "§7每§c{d2}最大§c❤生命值提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Health.",
+      "value": "§7§a{{d1}}❈防御力§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Kuudra.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Range increases to {d1} blocks and",
+      "value": "§7在地牢中扮演§a坦克§7时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "when you play as a Tank in dungeons.",
+      "value": "§7上限提高至§a+{d1}❈防御力§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Slash in a huge arc, dealing {d1} melee",
+      "value": "§7以巨大弧形挥砍，对所有击中的敌人",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "damage to all enemies hit!",
+      "value": "§7造成§c{d1}近战伤害！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "only works while in The Catacombs!",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "enchantments are available.",
+      "value": "",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}.{d2}☂ Fishing Speed per ✪",
+      "value": "§7护甲上每颗§6✪",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Upgrade Star on your armor.",
+      "value": "§6升级之星§7提供§b+{d1}.{d2}☂钓鱼速度§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}.{d2}☯ Fishing Wisdom when",
+      "value": "§7安装到你的§6船§7上时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "attached to your Ship.",
+      "value": "§7给予§3+{d1}.{d2}☯钓鱼智慧§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}.{d2}ൠ Bonus Pest Chance for",
+      "value": "§7每个解锁的§3害虫图鉴§7等级",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "every Pest Bestiary tier unlocked.",
+      "value": "§7提供§2+{d1}.{d2}ൠ额外害虫几率§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "gaining a stack.",
+      "value": "§8秒内未获得层数则失去{d1}层。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "a stack.",
+      "value": "§8秒内未获得层数则失去{d1}层。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "perform {d1} Ground Pounds dealing damage to",
+      "value": "§7进行§a{d1}次§c震地§7，对§a{d1}§7格内的怪物",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "mobs within {d1} blocks. (Damage scales with your",
+      "value": "§7造成伤害。§8（伤害随",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "stack of ⁑ Hydra Strike. Lose {d1} stack",
+      "value": "§7层§6⁑九头蛇打击§7。§8{d1}秒内未获得层数则失去{d1}层。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "On hit, repeat dealt damage after {d1}s",
+      "value": "§7命中时，若地狱怪护盾切换了",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "if the Hellion Shield has switched",
+      "value": "§7调谐，则在§a{d1}秒§7后",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases your speed cap by {d1}",
+      "value": "§7在§a花园§7中提升",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "while in The Garden.",
+      "value": "§7你的速度上限{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "The Catfish is a Rare Sea Creature that spawns",
+      "value": "§7鲶鱼是一种稀有海洋生物，钓鱼等级达到{d1}",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "while fishing after reaching Fishing level {d1}.",
+      "value": "§7后钓鱼时有几率生成。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants {d1}x this equipment's stats",
+      "value": "§7在Diana的§2神话仪式§7期间",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Mythological Ritual.",
+      "value": "§7提升§a{d1}x§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants {d1}x this armor's stats while in",
+      "value": "§7在§a主城§7参与Diana的§2神话仪式§7期间",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "The Hub during Diana's Mythological",
+      "value": "§7此护甲属性提升§a{d1}x§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{{d1}}☘ Farming Fortune while",
+      "value": "§7在§b公共岛屿§7上时",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "on Public Islands.",
+      "value": "§7给予§6+{{d1}}☘农业好运§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "The [Lv{d1}] Chickzilla can be spawned once by",
+      "value": "§7[Lv{d1}]§cChickzilla§7可在达到§5{d1},{d2}法师声望",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1},{d2} Mage Reputation and bringing him",
+      "value": "§7且带回他的§a{d1}只鸡§7后",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "his {d1} chickens back.",
+      "value": "§7召唤一次。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Feeding this to your pets gives them",
+      "value": "§7喂给宠物可获得§a{d1},{d2}",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "a boost of {d1},{d2} Exp!",
+      "value": "§7经验提升！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "throughout the year! During these",
+      "value": "§7活动期间获得§3+{d1}☯采矿智慧§7，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "events gain +{d1}☯ Mining Wisdom,",
+      "value": "§7收集§9精炼矿物§7和§5闪光",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Combos in the Time Chamber take +{d1}.{d2}",
+      "value": "§7在§a时光密室§7中的连击",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "seconds to expire.",
+      "value": "§7需要§a+{d1}.{d2}秒§7后才会过期。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Decreases your ☂ Fishing Speed by",
+      "value": "§7减少你的§b☂钓鱼速度§c{d1}§7，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1}, but lures a special Trophy Fish",
+      "value": "§7但会在§cCrimsonIsle§7吸引",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}❈ Defense for {d2}s",
+      "value": "§7在受到敌人的第一次",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "on the first hit from an",
+      "value": "§7攻击时，获得§a+{d1}❈防御§7持续",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "enemy.",
+      "value": "§a{d2}秒§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "The Crazy Witch is a mob added in the",
+      "value": "§7疯女巫是在SpookyFestivalv{d1}更新中加入的怪物。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Spooky Festival v{d1} Update. It can only spawn",
+      "value": "§7它只能在SpookyFestivals期间的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Causes an explosion when dropping",
+      "value": "§7当生命值低于§a{d1}§7时产生爆炸，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "below {d1} HP, damaging and knocking",
+      "value": "§7伤害并击退周围的所有怪物。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}☘ Farming Fortune per",
+      "value": "§7每个§9芯片§7等级给予",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Chip Level!",
+      "value": "§6+{d1}☘农业好运§7！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "You gain {d1}x Coins from Griffin",
+      "value": "§7你从§eGriffin",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Burrows and ✿ Mythological mobs,",
+      "value": "§e洞穴§7和§2✿神话§7生物处获得的§6金币§7变为§a{d1}x",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Mythological mobs and deal +{d1}.{d2}x❁",
+      "value": "§7根据消耗的§6金币§7位数",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Damage for each digit of Coins",
+      "value": "§7造成+{d1}.{d2}x❁伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain {d1}x Coins from Griffin Burrows and",
+      "value": "§7从Griffin洞穴和§2✿神话§7生物处",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "+{d1}✯ Magic Find on ✿ Mythological mobs,",
+      "value": "§7获得§a{d1}x§6金币§7以及§b+{d1}✯MagicFind§7，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ❁ Damage and +{d2}.{d3}✯",
+      "value": "§7根据你在所有§2✿神话§7生物上的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Magic Find on ✿ Mythological mobs",
+      "value": "§7§3图鉴§7等级，给予§c+{d1}❁伤害§7和§b+{d2}.{d3}✯",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}❤ Health and +{d2}❈",
+      "value": "§7在§d末地§7和§cCrimsonIsle§7获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Defense in The End and the Crimson",
+      "value": "§7§c+{d1}❤生命值§7和§a+{d2}❈",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "spawns while fishing after unlocking Fishing level",
+      "value": "§7在解锁钓鱼等级{d1}后钓鱼时生成。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1}. It takes the appearance of an iron golem.",
+      "value": "§7外观为铁傀儡。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}▚ Mining Spread when",
+      "value": "§7开采§9方块§7时给予",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "mining Blocks.",
+      "value": "§7§e+{d1}▚采矿扩散§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}.{d2}✧ Pristine and +{d3}.{d4}▚",
+      "value": "§7在§bGlacite矿坑§7内时给予",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gemstone Spread while inside the",
+      "value": "§7§5+{d1}.{d2}✧纯净§7和§e+{d3}.{d4}▚",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Stun Sea Creatures for {d1}s after",
+      "value": "§7钓上海洋生物后，使其昏迷",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "fishing them up.",
+      "value": "§7§a{d1}秒§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "The Dreadwing has a {d1}.{d2} chance to spawn",
+      "value": "§7在§2Galetea§7上破坏树木时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "when breaking a tree on Galetea.",
+      "value": "§7Dreadwing有§a{d1}.{d2}§7几率生成。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Adds +{d1} Absorption ❤ to potions",
+      "value": "§7为具有该属性的药水添加",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "with that stat.",
+      "value": "§7§6+{d1}吸收❤§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} chance to get Shark",
+      "value": "§7在§b钓鱼节§7期间增加",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Teeth during Fishing Festivals.",
+      "value": "§7§a+{d1}§7几率获得鲨鱼牙齿。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "be broken at a time, and re-appear after",
+      "value": "§7方块会在§a{d1}秒§7后重新出现。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1}s. {d2}⸕ charges are regenerated each",
+      "value": "§7每秒恢复§e{d2}§c⸕§7充能。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "dealing {d1},{d2}-{d3},{d4} damage",
+      "value": "§7根据你所在的地宫层数",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "based on the dungeon floor you are",
+      "value": "§7造成§c{d1},{d2}§7-§c{d3},{d4}§7伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Earn +{d1} ᠅ Mithril Powder from",
+      "value": "§7从§2矮人矿山§7的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Mining Events in the Dwarven Mines.",
+      "value": "§7§b采矿活动§7中获得§2+{d1}᠅秘银粉末§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Right-click to open this bundle",
+      "value": "§7右键打开这个包含§6{d1}x古怪绘画",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "containing {d1}x Eccentric Painting.",
+      "value": "§7的包裹。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gives +{{d1}} Fear for every {d2} Primal",
+      "value": "§7每击杀§a{d2}§cPrimalFears§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Fears killed, up to {d1} Primal Fears.",
+      "value": "§7给予§a+{{d1}}§5Fear§7，最多§a{d1}§cPrimalFears§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain {{d1}}❈ Defense for every {d2} ✦",
+      "value": "§7每{d2}§f✦速度§7获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Speed.",
+      "value": "§a{{d1}}❈防御§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain {{d1}}❤ Health for every {d2} ❈",
+      "value": "§7每{d2}§a❈防御§7获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Shoot {d1} Fireballs which deal {d2}.{d3} damage in",
+      "value": "§7向前方快速连续射出{d1}个火球，每个",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "rapid succession in front of you!",
+      "value": "§7造成§c{d2}.{d3}§7伤害！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases ❤ Health by +{d1} and ❈",
+      "value": "§7你的绿宝石收藏中每§b{d2},{d3}§7颗",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Defense by +{d1} for every {d2},{d3}",
+      "value": "§7绿宝石，提升§c❤生命值§a+{d1}§7和§a❈",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Emeralds in your collection. Max {d1}",
+      "value": "§a防御§a+{d1}§7。每项最多{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "stronger as you carry more coins in",
+      "value": "§7这把剑越强大§8（上限{d1}B金币）",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "your purse (Capped at {d1}B coins)",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "and +{d1}.{d2}☯ of a random Wisdom stat",
+      "value": "§7周末给予随机一项§3智慧§7属性",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Adds +{d1}♢ Fuel to a refuelable",
+      "value": "§7为可补充燃料的物品添加",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Take {{d1}}% less damage from ⊙ Ender",
+      "value": "§7受到§5⊙末地§7生物的伤害",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "mobs",
+      "value": "§7减少§a{{d1}}%",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain a {{d1}}% chance to dig up a bonus",
+      "value": "§7每§d+{d1}♣宠物幸运§7获得§a{{d1}}%§7几率",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Nest Endermite per +{d1}♣ Pet Luck",
+      "value": "§7挖出额外§c巢穴末影螨",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Shoots an Ender Pearl. Upon landing you deal",
+      "value": "§7射出一颗末影珍珠。落地时对半径§a{d1}§7格",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "damage to all Monsters in a {d1} block radius for",
+      "value": "§7内的所有怪物造成相当于其",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}✦ Speed for {d2}s after",
+      "value": "§7传送后获得§f+{d1}✦速度§7持续",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "teleporting.",
+      "value": "§a{d2}秒§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Taunt enemies in a {d1} block radius and reduce",
+      "value": "§7嘲讽§a{d1}格半径内的敌人，并使其对你的伤害降低§c{d1}§7，持续§a{d2}秒。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "their damage against you by {d1} for {d2}s.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "increases its Bane of Arthropods",
+      "value": "§7将其节肢杀手等级提高§a{d1}§7！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "level by {d1}!",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increase the experience orbs you",
+      "value": "§7当此物品在你的物品栏或饰品袋中时，你获得的经验球增加§a{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "gain by {d1} while this item is in your",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "The explosion deals the arrow's",
+      "value": "§7爆炸将箭矢的伤害分摊给§e{d1}.{d2}格内的怪物。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "damage split to mobs within {d1}.{d2} blocks.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "nearby crops on the public islands,",
+      "value": "§7每§a{d1}秒额外再生一棵作物。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "regrowing an extra crop every {d1}",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "applied to a Hoe, Axe, or Vacuum. Can",
+      "value": "§7可应用于物品最多§a{d1}次。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "be applied to an item up to {d1} times.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases your ✦ Speed by +{d1}",
+      "value": "§7在Farm、TheBarn、",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "while held in the Farm, The Barn,",
+      "value": "§7MushroomDesert和Garden中手持时，增加§f✦速度§a+{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "island. Increases the speed of",
+      "value": "§7附近农业仆从的速度提高§a{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "nearby farming minions by {d1}.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Regrow an extra crop on farming",
+      "value": "§7每§a{d1}秒在农业岛屿上额外再生一棵作物。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "islands every {d1} seconds.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases how high you can fall",
+      "value": "§7在受到摔落伤害前，可坠落高度增加§a{d1}",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "before taking fall damage by",
+      "value": "§7可坠落高度增加§a{d1}格，摔落伤害减少",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1} and reduces fall damage by",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "- Increases healing from your",
+      "value": "§8-§7你的§a治疗之环§7治疗量提高§a{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Healing Circle by {d1}.",
+      "value": "§8-§7你的§aWish",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "- Reduces the cooldown of your Wish",
+      "value": "§a终极技能§7冷却时间减少§b{d1}秒。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Ultimate by {d1} seconds.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "inside. Also combines the Tiered",
+      "value": "§7同时，穿着§a{d1}件§7MelonArmor、CropieArmor和",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Squash Armor. Grants {d1}☘ Farming",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain {d1}.{d2} of mana used near",
+      "value": "§7获得附近消耗法力的§a{d1}.{d2}，转化为§c⫽凶猛，持续{d1}",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "seconds, capped at {d1} ⫽",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Applies the {d1} Fighting booster when",
+      "value": "§7当与Foraging盔甲、",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "combined with Foraging Armor,",
+      "value": "§7装备或斧头结合时，应用§b{d1}Fighting§7增幅器。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Consume to grow crops within the",
+      "value": "§7消耗后使Greenhouse内的作物生长§2{d1}个生长阶段。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Greenhouse by {d1} Growth Stages.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "visitors to your Garden and makes",
+      "value": "§7更高稀有度的访客出现几率提高§a{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "higher rarity visitors {d1} more",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "On hit, repeat the last {d1} hits of dealt",
+      "value": "§7命中时，如果HellionShield已切换共鸣，则在§a{d1}秒后重复最后{d1}次造成的伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "damage after {d1}s if the Hellion Shield",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases the stats of Diver Armor",
+      "value": "§7将DiverArmor和§aAbyssalArmor§7的属性提高§a{{d1}}%。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "and Abyssal Armor by {{d1}}%.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Magma Lord Armor, and Abyssal",
+      "value": "§aArmor§7的属性提高§a{{d1}}%。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Armor by {{d1}}%.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases the chance to activate",
+      "value": "§7将§d§lFlash§7附魔的激活几率提高§a{{d1}}%。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the Flash Enchantment by {{d1}}%.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}.{d2}☘ Mining Fortune for",
+      "value": "§7每拥有§b{d1}❄寒冷，提供§6+{d1}.{d2}☘miningfortune。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "every {d1}❄ Cold you have.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants {{d1}}☘ Foraging Fortune for",
+      "value": "§7每次跳跃时，在§e{d1}秒内提供§6{{d1}}☘foragingfortune。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1} seconds every time you jump.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Ice blocks will be created below",
+      "value": "§7当你在水面上行走时，会在你脚下生成半径为§a{d1}格的冰。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "a radius of {d1} blocks.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "While in combat on the Crimson",
+      "value": "§7在CrimsonIsle战斗时，每§a{d1}秒生成一个水坑。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Isle, spawn a pool every {d1}s.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "❤ Health every second and applies",
+      "value": "§7并施加§b缓慢I§7，持续§e{d1}秒。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Slowness I for {d1} seconds.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "flavored mint to permanently gain",
+      "value": "§7软糖，永久获得§3+{d1}☯社交智慧§c在不玩",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "+{d1}☯ Social Wisdom while not playing",
+      "value": "§cSkyBlock§7时。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "When applied to armor, grants +{d1}❈",
+      "value": "§7当应用于盔甲时，提供§a+{d1}❈防御§7和§c+{d1}❤生命§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Defense and +{d1}❤ Health.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Chocolate Rabbit that you haven't",
+      "value": "§aChocolateRabbit§7，并提供§6+{d1}Chocolate",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "found yet and grants +{d1} Chocolate",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "dealing {d1} of their total ❤ Health",
+      "value": "§7造成其总§c❤生命§a{d1}§7的伤害给§a{d1}格内的所有敌人。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "as damage to all enemies within {d1}",
+      "value": "§7爆炸范围内的敌人也会被§6污染§7，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "dungeon items by {d1} while in The",
+      "value": "§7在§cThe",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Catacombs for each digit on your",
+      "value": "§cCatacombs§7中，根据你秘密计数的每一位数字，增加地牢物品属性§a{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Restores {d1} of your maximum",
+      "value": "§7穿着时，每秒恢复你最大",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "❤ Health every second while",
+      "value": "§7§c❤生命的§a{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Ghasts are mobs found in the northern end of",
+      "value": "§7恶魂是在BlazingFortress北端，夜间（SkyBlock时间{d1}:{d2}PM至{d3}:{d4}AM）",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the Blazing Fortress at nighttime ({d1}:{d2} PM - {d3}:{d4}",
+      "value": "§7天空中的区域内生成的生物，该区域也是等级{d1}岩浆怪生成的地方，或者岩浆怪首领附近。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "level {d1} Magma Cubes spawn, or the Magma Cube Boss.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases the amount of souls you",
+      "value": "§7可存储的灵魂数量增加§a{d1}，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "getting a mob's soul by {{d1}}%.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Reduces the summoning cost of mobs",
+      "value": "§7生物召唤消耗降低§a{{d1}}%，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "of all summoned mobs by {{d1}}%.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Deal {d1} more damage to ☽ Spooky",
+      "value": "§7在SpookyFestival期间对§6☽Spooky",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "mobs during the Spooky Festival.",
+      "value": "§7生物造成§a{d1}§7额外伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "increases by {d1} every",
+      "value": "§7每§b{d1}秒§7增加§c{d1}，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "mana cost increases by {d1}",
+      "value": "§7法力消耗每§d{d1}秒§7增加§d{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Toss this ball and try bouncing it on",
+      "value": "§7抛出这个球，尝试在§a{d1}秒内尽可能多地在",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "in {d1}s to earn Fishy Treats. The",
+      "value": "§7参与的玩家越多，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "health that your target has",
+      "value": "§7伤害提高，最多§a{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "above you up to {d1}.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases your ☠ Crit Damage and",
+      "value": "§7当你的§eⓈ横扫范围§7超过§e{d3}Ⓢ时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "❁ Strength by {{d1}}% for every",
+      "value": "§7每拥有§e{d1}.{d2}Ⓢ横扫范围，你的§9☠暴击伤害§7和",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1}.{d2}Ⓢ Swing Range over {d3}Ⓢ (up to",
+      "value": "§c❁力量§7提高§c{{d1}}%§7（最高§e{d1}Ⓢ）。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases your melee damage by",
+      "value": "§7如果你距离目标超过{d2}格，你的近战伤害提高",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "heals you for {d1} of your max ❤",
+      "value": "§7在§a{d1}秒内为你恢复最大§c❤生命的§c{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "over {d1}s.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "While in combat on the Crimson Isle,",
+      "value": "§7在CrimsonIsle战斗时，每§a{d1}秒生成一个水坑。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "spawn a pool every {d1}s.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Prevents victims from walking for",
+      "value": "§7命中时阻止受害者移动§2{d1}.{d2}秒。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1}.{d2}s when hit.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases the chance of finding",
+      "value": "§7找到稀有哥布林蛋的几率提高§a{{d1}}%。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "rare goblin eggs by {{d1}}%.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Mining Speed. +{d1}⸕ Mining Speed for",
+      "value": "§7miningspeed。每移除§b{d1}✎智力，获得§6+{d1}⸕miningspeed。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "every {d1}✎ Intelligence removed.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases your total ф Rift Time by",
+      "value": "§7你的§aфRift时间§7总量增加§a{d1}§7，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1} but it goes down {d2} faster.",
+      "value": "§7但消耗速度提高§c{d2}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Dragon, gain +{d1} coins per monster",
+      "value": "§aDragon§7，则你拥有的每一种其他独特的满级战斗宠物，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "kill for every other unique maxed",
+      "value": "§7每击杀一只怪物额外获得§6+{d1}硬币。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "increases its Luck of the Sea level",
+      "value": "§7将其LuckoftheSea等级提高§a{d1}§7！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases the pet's ☠ Crit Damage",
+      "value": "§7将宠物的§9☠暴击伤害§7提高§a{d1}，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "by {d1} and ☣ Crit Chance by {d2}.",
+      "value": "§7§9☣暴击几率§7提高§a{d2}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "While at less than {d1} HP, reduce",
+      "value": "§7当生命值低于§a{d1}时，受到的伤害减少§a{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "of your maximum health and deal {d1}",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Punch the ground, damaging enemies in a",
+      "value": "§7猛击地面，对你周围六边形区域内的敌人造成§a{d1}.{d2}基础魔法伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "hexagon around you for {d1}.{d2} base Magic",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ✯ Magic Find when",
+      "value": "§7当连击数达到§a{d1}或以上时，获得§b+{d1}✯魔法发现。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "getting a combo of {d1} or above.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{{d1}}% ❁ Strength when above",
+      "value": "§7当§c❤生命§7高于§c{d1}时，获得§c+{{d1}}%❁力量。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1} ❤ Health.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "The Grim Reaper is a legendary sea creature added in the Spooky",
+      "value": "§7GrimReaper是在SpookyFestivalv{d1}更新中添加的传奇海怪。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "until {d1} hour after the Spooky Festival by those above Fishing {d2}",
+      "value": "§7由钓鱼等级{d2}以上的玩家钓到。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "killing a Monster, and also increases",
+      "value": "§7并且将该件盔甲的§c❤生命§7加成提高§a{d1}",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the ❤ Health bonus of a piece of",
+      "value": "§7§8(最大{d2})",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the armor by {d1} (Max {d2})",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Zaps your enemies for {{d1}}x your ✎",
+      "value": "§7每§a{d1}秒用你的§b✎智力§7的{{d1}}x电击你的敌人。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Intelligence every {d1}s.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "to upgrade the minion speed bonus",
+      "value": "§7以将仆从速度加成升级到§a{d1}§7和§a{d2}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "to {d1} and {d2}.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Combines the Tiered Bonuses of",
+      "value": "§7结合穿着§a{d1}件§7MelonArmor、",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "wearing {d1} pieces of the Melon Armor,",
+      "value": "§7CropieArmor、SquashArmor和",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Cropie Armor, Squash Armor, and",
+      "value": "§7FermentoArmor的阶级加成。提供§6{d1}☘农业",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Fermento Armor. Grants {d1}☘ Farming",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "for each player with a Hermit Crab",
+      "value": "§aPet§7的玩家，提供§6+{{d1}}⛃宝藏几率，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Pet within {d1} blocks, up to {d2} players.",
+      "value": "§7最多计算§a{d2}名玩家。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}❣ Health Regen to you",
+      "value": "§7为你和§a{d1}格内的所有玩家提供§c+{d1}❣生命恢复。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "and all players within {d1} blocks.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases the speed of your mount",
+      "value": "§7你的坐骑速度提高§a{{d1}}%。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "by {{d1}}%.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}.{d2}☘ Mining Fortune and",
+      "value": "§7每拥有§c{d3}♨Heat，提供§6+{d1}.{d2}☘miningfortune§7和",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "+{d1}.{d2}⸕ Mining Speed per {d3}♨ Heat you",
+      "value": "§6+{d1}.{d2}⸕采矿速度§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases the chance for monsters",
+      "value": "§7怪物掉落其盔甲的几率提高§a{{d1}}%。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "to drop their armor by {{d1}}%.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Temporary ☘ Farming Fortune buffs",
+      "value": "§7临时的§6☘农业fortune§7增益每§9Chip§7等级增强§a{d1}！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "are {d1} stronger per Chip Level!",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Deals {d1},{d2}.{d3} damage to nearby",
+      "value": "§7对附近的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Deals {d1} ❁ Damage per second to",
+      "value": "§7对附近的§2ൠ害虫§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "nearby ൠ Pests.",
+      "value": "§7每秒造成§c{d1}❁伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants {d1}☘ Foraging Fortune and",
+      "value": "§7每有一位数字在你的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1}∮ Sweep for every digit in your",
+      "value": "§7红树林收藏中，便给予§6{d1}☘foraging财富和§2{d1}∮横扫。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "grants +{d1}☘ Foraging Fortune for",
+      "value": "§7每拥有一只其他独特的满级foraging宠物，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "every other unique maxed Foraging",
+      "value": "§7便给予§6+{d1}☘foraging财富。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "placing within the Top {d1} in Fruit",
+      "value": "§7在§6水果挖掘",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Digging.",
+      "value": "§6中排名前§a{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}❁ Strength for {d2}s when using your",
+      "value": "§7使用你的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Actually adds {{d1}} damage to the",
+      "value": "§7实际为Jerry之刃",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Aspect of the Jerry",
+      "value": "§7增加§c{{d1}}伤害",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Activates all perks of another",
+      "value": "§7每{d1}个Skyblock天",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "({d1} hours).",
+      "value": "§7市长的所有perks。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}.{d2}⛃ Treasure Chance while",
+      "value": "§7在§2死水河口",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "on the Backwater Bayou.",
+      "value": "§7时给予§6+{d1}.{d2}⛃宝藏几率。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{{d1}}☘ Mining Fortune while on",
+      "value": "§7在§c猩红岛屿",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the Crimson Isle.",
+      "value": "§7时给予§6+{{d1}}☘采矿财富。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{{d1}}♔ Trophy Fish Chance",
+      "value": "§7在§c猩红岛屿",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "while on the Crimson Isle.",
+      "value": "§7时给予§6+{{d1}}♔奖杯鱼几率。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants a {d1} chance to gain double",
+      "value": "§7采矿矿石时获得双倍经验的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "experience when mining ores.",
+      "value": "§7几率增加§a{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}❁ Rift Damage and +{d2}⚡ Mana",
+      "value": "§7在§a{d1}格范围内，每有一位其他穿戴者，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Regen for each other wearer within",
+      "value": "§7获得§5+{d1}❁裂隙伤害和§b+{d2}⚡法力恢复。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1} blocks.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "each time you hit them with",
+      "value": "§7最多叠加§a{d1}次。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "melee. Stacks up to {d1} times.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Your Critical Hits deal {d1} more",
+      "value": "§7如果你在目标背后，暴击",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "damage if you are behind your",
+      "value": "§7造成额外§9{d1}伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Earn +{d1} Coins and +{d2} Fishing XP",
+      "value": "§7当你将§a鱼饵存入他人的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "when depositing Chum in someone",
+      "value": "§7桶中时，获得§6+{d1}硬币和§3+{d2}钓鱼经验。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "seconds! Arrows deal {d1} of what",
+      "value": "§7箭矢造成",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "they would normally deal.",
+      "value": "§7正常伤害的§a{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain {d1} more Magma Cream when",
+      "value": "§7击杀岩浆怪时获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "killing Magma Cubes.",
+      "value": "§7§a{d1}额外§c岩浆膏。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants {d1} additional",
+      "value": "§7每次成功钓到一条鱼时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "experience orb every time you",
+      "value": "§7额外给予§a{d1}",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain a {{d1}}% chance for mobs to not",
+      "value": "§7在§b❄寒冷区域，怪物",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "inflict ❄ Cold when damaging you in",
+      "value": "§7攻击你时有§a{{d1}}%几率",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{{d1}}✯ Magic Find for every",
+      "value": "§7在§b冰川隧道和§b冰川",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Glacite Tunnels and Glacite",
+      "value": "§7便获得§b+{{d1}}✯魔法发现，该效果翻倍。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain {{d1}}☘ Mining Fortune for each",
+      "value": "§7在当前Skyblock日中，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Regain {d1}.{d2} of your mana on",
+      "value": "§7命中时恢复",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "hit.",
+      "value": "§7你法力的§b{d1}.{d2}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Heal for {d1}.{d2} of mana used",
+      "value": "§7为你附近使用的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "near you.",
+      "value": "§7法力的§a{d1}.{d2}进行治疗。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Copies {d1} of your active pet's",
+      "value": "§7复制你当前激活的宠物的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Combat stats.",
+      "value": "§c战斗属性的§a{d1}。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}.{d2}ൠ Bonus Pest Chance",
+      "value": "§7每击杀一只§2ൠ害虫，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "per ൠ Pest killed for {d1} minutes.",
+      "value": "§7在§a{d1}分钟内给予§2+{d1}.{d2}ൠ额外害虫几率。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}☯ Fishing Wisdom",
+      "value": "§7在公共岛屿上获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "on public islands.",
+      "value": "§7§3+{d1}☯钓鱼智慧。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Start a special fishing",
+      "value": "§7在每月的头§b{d1}天",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "event the first {d1} days",
+      "value": "§7启动一个特殊的钓鱼",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ❤ Health and ❁",
+      "value": "§7在§c大师模式地下城中，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Strength while in Master Mode",
+      "value": "§7给予§a+{d1}§c❤生命值和§c❁",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants {d1}.{d2} more Farming Tool",
+      "value": "§7每级§9芯片提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Experience per Chip Level!",
+      "value": "§7§a{d1}.{d2}额外§e农耕工具经验！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Deal up to +{{d1}}% ❁ Damage based on",
+      "value": "§7根据敌人已损失生命值，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the enemy's missing health",
+      "value": "§7造成最多§c+{{d1}}%❁伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}☄ Mending while in",
+      "value": "§7在",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "This range is extended to {d1} blocks",
+      "value": "§7当扮演坦克时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "while playing as a Tank.",
+      "value": "§7此范围扩大到§e{d1}格。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "You may drink up to {d1} doses",
+      "value": "§7在味道变得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "becomes too abstract.",
+      "value": "§7你最多可以喝§a{d1}剂。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}✦ Speed while on Mining",
+      "value": "§7在§b采矿岛屿上时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Detonate the Nuke, dealing",
+      "value": "§7引爆核弹，对§a{d1}格半径内的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1}.{d2} max health true damage",
+      "value": "§7所有敌人造成",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "to all enemies in a {d1} block",
+      "value": "§7§c{d1}.{d2}最大生命值真实伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "placing within the Top {d1} in Catch a",
+      "value": "§7在§3Catcha",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "using a legendary Griffin Pet. It reduces",
+      "value": "§7你每次击中它，你的属性会降低{d1}，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "second it is alive, capping at {d1}, which is",
+      "value": "§7存活时，它会在你所站的方块上",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Any damage taken is max {d1} of the wearer's",
+      "value": "§7任何受到的伤害最多为穿戴者最大",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "❤ Health. Gain Regeneration when this ability",
+      "value": "§c❤生命值的§a{d1}。此能力激活时",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{{d1}}⸕ Mining Speed when mining",
+      "value": "§7开采§2秘银",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Mithril.",
+      "value": "§7时，给予§6+{{d1}}⸕采矿速度。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases all Combat Stats by +{{d1}}%",
+      "value": "§7在§b采矿岛屿上，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "on Mining Islands.",
+      "value": "§7所有§c战斗属性提高§a+{{d1}}%。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{{d1}}% ᠅ Mithril Powder from",
+      "value": "§7来自所有来源的§2秘银粉末",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "all sources.",
+      "value": "§7增加§2+{{d1}}%。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{{d1}}% ✯ Magic Find while on",
+      "value": "§7在§b采矿岛屿上时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Scavenged Items appear {{d1}}% more",
+      "value": "§7在§2Divan矿井中，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "often while in the Mines of Divan.",
+      "value": "§7§cScavengedItems的出现频率提高§a{{d1}}%。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Automatons drop their parts {{d1}}%",
+      "value": "§9自动机器人掉落其部件的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "more frequently.",
+      "value": "§7频率提高§a{{d1}}%。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain {d1} damage resistance while",
+      "value": "§7与§6Kuudra战斗时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "fighting Kuudra.",
+      "value": "§7获得§a{d1}伤害减免。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}.{d2}☘ Farming Fortune per",
+      "value": "§7每拥有§c{{d1}}❁力量，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "every {{d1}} ❁ Strength.",
+      "value": "§7获得§6+{d1}.{d2}☘农耕财富。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{{d1}}☘ Sugar Cane Fortune for",
+      "value": "§7在§a花园§7中，每服务过一种独特的访客，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "every unique visitor you've served",
+      "value": "§7便获得§6+{{d1}}☘甘蔗财富。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1}x damage to Egg Sacs spawned by",
+      "value": "§7§c狼蛛Broodfather生成的§a卵囊",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the Tarantula Broodfather!",
+      "value": "§7造成§c{d1}x伤害！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "You can only consume {d1} of these",
+      "value": "§7在负罪感变得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "little guys before the guilt becomes",
+      "value": "§7太过严重之前，你只能吃掉§a{d1}",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Field Mice are {d1}x more likely to be",
+      "value": "§6田鼠在此类陷阱中被捕获的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "caught in this type of trap!",
+      "value": "§7几率提高§a{d1}x！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}☂ Fishing Speed if you're",
+      "value": "§7如果你不是从§2MushedGlowy",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Tonic.",
+      "value": "§7则获得§b+{d1}☂钓鱼速度。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Instantly grows crops and saplings",
+      "value": "§7立即生长{d1}x{d2}方格内的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "in a {d1}x{d2} square.",
+      "value": "§7作物和树苗。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} more Coins from killing ✿",
+      "value": "§7从击杀§2✿神话生物",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Hits through Piercing deal +{d1}.{d2}",
+      "value": "§7通过§9Piercing穿透的每次命中比上一次造成",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "damage than the previous one, up to",
+      "value": "§7§c+{d1}.{d2}伤害，最多",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "summon an additional {d1} souls in their",
+      "value": "§7亡灵法师武器中存储",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "necromancer weapon.",
+      "value": "§7并额外召唤§e{d1}个灵魂。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Given to every player as a",
+      "value": "§7作为SkyBlock第{d1}年的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "celebration for the {d1}th",
+      "value": "§7庆祝活动，赠予每位玩家。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Each piece grants a {d1}.{d2} bonus gift",
+      "value": "§7每件护甲为你在§c礼物攻击",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "from the Gift Attack minigame!",
+      "value": "§7提供§a{d1}.{d2}额外礼物几率！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Foraging minions work {{d1}}% faster",
+      "value": "§7在你的岛屿上，foraging仆从的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "while on your island",
+      "value": "§7工作速度提高§a{{d1}}%。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain a {{d1}}% chance to get exp from",
+      "value": "§7破坏原木时获得经验的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "breaking a log",
+      "value": "§7几率提高§a{{d1}}%。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}❈ Defense while on Mining",
+      "value": "§7在§b采矿岛屿上时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}❂ True Defense for {d2}s when using",
+      "value": "§7使用",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Deal +{d1} extra damage when",
+      "value": "§7当箭矢击中怪物的头部时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "arrows hit the head of a mob.",
+      "value": "§7造成§a+{d1}额外伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "According to Professor Selta they",
+      "value": "§7§o根据Selta教授的说法，它们是{d1}V电池，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "about {d1}mA of current. Professor",
+      "value": "§7§oSelta教授目前在一家精神病院。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}☘ Crop Fortune for the",
+      "value": "§7在§eJacob的农耕竞赛期间，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Contest per Chip Level!",
+      "value": "§7提供§6+{d1}☘作物财富！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "You receive +{d1} ❤ and +{d2} ❁ per",
+      "value": "§7每完成§a{d1}个挑战，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1} challenges you complete.",
+      "value": "§7你获得§c+{d1}❤和§c+{d2}❁。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Adds {{d1}} levels to intimidation",
+      "value": "§7为恐吓",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "accessories",
+      "value": "§7饰品增加{{d1}}级。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gives +{{d1}}❁ Strength to players",
+      "value": "§7在§a{d1}格内向玩家提供§c+{{d1}}❁力量，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "within {d1} blocks",
+      "value": "§7不叠加。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "+{d1}❁ Strength for each upgrade of",
+      "value": "§7你的恐吓饰品的每次升级，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "your Intimidation Accessory.",
+      "value": "§7获得§c+{d1}❁力量。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain {d1} bonus score on",
+      "value": "§7在地下城跑酷中获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "dungeon runs.",
+      "value": "§7§e{d1}额外分数。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}✦ Speed while in the",
+      "value": "§7在§e蘑菇沙漠",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Mushroom Desert.",
+      "value": "§7中时，获得§f+{d1}✦速度。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{{d1}}☂ Fishing Speed while in",
+      "value": "§7在§b冰川隧道",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the Glacite Tunnels.",
+      "value": "§7中时，给予§b+{{d1}}☂钓鱼速度。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "While active, ൠ Pests will take {d1}x as",
+      "value": "§7激活时，§2ൠ害虫的生成时间",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "long to spawn.",
+      "value": "§7会延长§a{d1}x倍。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Earn +{d1} Mithril Powder and +{d2}☘",
+      "value": "§7在陨落之星附近",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Mining Fortune when mining near a",
+      "value": "§7采矿时，获得§2+{d1}秘银粉末和§6+{d2}☘",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}.{d2}☘ Mining Fortune while",
+      "value": "§7开采§f钛矿石",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "mining Titanium Ore.",
+      "value": "§7时，给予§6+{d1}.{d2}☘采矿财富。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Deal +{d1} damage to monsters Level",
+      "value": "§7对等级§a{d1}+§7的怪物造成§c+{d1}§7伤害，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}☘ Mining Fortune if the",
+      "value": "§7如果你挖掘的方块具有与",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Breaking Power as this tool.",
+      "value": "§2挖掘等级§7，则给予§6+{d1}☘采矿fortune。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "interacted with once, and you can",
+      "value": "§7互动一次，并且你每§a{d1}",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "only place one campfire every {d1}",
+      "value": "§7分钟只能放置一堆篝火",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Your potato minions farm {d1} faster",
+      "value": "§7你的土豆仆从在工作时",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "while wearing on your island.",
+      "value": "§7速度提高§a{d1}§7倍。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1} chance to find rare items",
+      "value": "§7从怪物和首领处发现稀有物品的几率",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "from monsters and bosses.",
+      "value": "§7提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1} chance to find pets and",
+      "value": "§7发现宠物和",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "craft higher tier pets.",
+      "value": "§7制作更高品质宠物的几率提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Allows you to harness the power of",
+      "value": "§7允许你利用§a{d1}§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1} Gemstones, although only half of",
+      "value": "§7个宝石的力量，尽管只能发挥",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Heal {d1}.{d2}x more from Vampirism and",
+      "value": "§7从§9吸血§7和§9生命窃取§7中",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Lifesteal.",
+      "value": "§7获得§a{d1}.{d2}x§7倍治疗。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Healing reduction is {d1} less",
+      "value": "§7治疗效果降低效果对你",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "effective on you.",
+      "value": "§7减少§a{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "sea creatures and deal +{d1}",
+      "value": "§7海怪，并对§9鱿鱼§7、§9守卫者§7和",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "damage to Squids, Guardians and",
+      "value": "§9远古守卫者§7造成§a+{d1}",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "He is a 'Professor' and has three phases. In the {d1}st he",
+      "value": "§7他是一个'教授'，有三个阶段。第一阶段，他",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "chance to deal {d1} damage plus {d2}",
+      "value": "§7对附近敌人造成§a{d1}伤害加上",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "of your Strength to nearby enemies!",
+      "value": "§7你{d2}%力量的伤害！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants an additional {d1} charge when",
+      "value": "§7在填充空雷瓶时",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "filling empty thunder bottles.",
+      "value": "§7额外给予§c{d1}§7充能。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}☘ Mining Fortune when",
+      "value": "§7挖掘§2秘银§7或§f钛§7时",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "mining Mithril or Titanium.",
+      "value": "§7给予§6+{d1}☘采矿fortune§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Makes fish swim {d1} faster towards",
+      "value": "§7使鱼类向你的浮漂",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "your bobber.",
+      "value": "§7游动速度提高§a{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "these boots also gain +{d1}☘ Farming",
+      "value": "§7这双靴子还会根据农耕技能等级",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Fortune for every Farming Skill level.",
+      "value": "§7获得§6+{d1}☘农耕fortune§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "of Cheese! If the player gets a drop",
+      "value": "§7你也有§a{d1}",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "during this buff, you have a {d1}",
+      "value": "§7几率获得同样的物品。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "You may eat up to {d1} peppers before",
+      "value": "§7在被认为真正危险之前，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "it's considered truly dangerous.",
+      "value": "§7你最多可以吃§a{d1}§7个辣椒。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{{d1}}% bonus gift chance",
+      "value": "§7在§c礼物攻击§7活动期间，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "during the Gift Attack event.",
+      "value": "§7给予§a+{{d1}}%§7额外礼物几率。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{{d1}}% chance of getting",
+      "value": "§7获得双倍§b冰精华§7的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "double Ice Essence.",
+      "value": "§7几率提高§a+{{d1}}%§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "second you are on fire additionally",
+      "value": "§7额外将所有燃烧伤害提高§c{d1}.{d2}",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "increase all burning damage by {d1}.{d2}",
+      "value": "§7，最高提高",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "regeneration by +{d1} while",
+      "value": "§7你的自然生命恢复速度",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "out of combat.",
+      "value": "§7提高§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Has {d1} abilities over {d2}",
+      "value": "§7在§4{d2}§7个阶段中",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "phases!",
+      "value": "§7拥有§c{d1}§7种技能！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{{d1}}☘ Farming Fortune",
+      "value": "§7每级作物里程碑",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Milestone.",
+      "value": "§7和§f+{{d1}}✦速度§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain {{d1}}% more Copper from Garden",
+      "value": "§7从§a花园访客§7和分析§e突变§7中",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Visitors and from analyzing Mutations.",
+      "value": "§7获得的§c铜§7增加§a{{d1}}%§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "every other unique maxed Farming",
+      "value": "§7技能，给予§6+{d1}☘农耕fortune",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Heal back {d1} of your missing ❤",
+      "value": "§7使用§e§l右键",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "CLICK Item Ability. Has a {d1}s cooldown.",
+      "value": "§7治疗你已损失§c❤生命值§7的§a{d1}§7。冷却时间§c{d1}秒。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Shoots {d1} arrows at a time! The {d2}",
+      "value": "§7一次射出{d1}支箭！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Your Axes deal {d1} more ❁ Damage",
+      "value": "§7你的斧对§2⸙Woodland§7类怪物",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "to ⸙ Woodland mobs.",
+      "value": "§7造成§c+{d1}§c❁伤害§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increase rarity and gain +{d1}☯",
+      "value": "§7根据计数器的位数",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "on the counter. (Max {d1} digits)",
+      "value": "§7获得§3+{d1}☯符文锻造智慧§7。§8(最多{d1}位)",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Deal +{d1} extra damage when arrows",
+      "value": "§7箭矢击中怪物头部时",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "hit the head of a mob.",
+      "value": "§7造成§a+{d1}§7额外伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}✎ Mana when using your",
+      "value": "§7使用§e§l右键",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "cooldown.",
+      "value": "§7冷却时间§c{d1}秒。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants a +{{d1}}% chance to find",
+      "value": "§7采矿时找到§e宝藏箱§7的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Treasure Chests while mining.",
+      "value": "§7几率提高§a+{{d1}}%§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Earn +{{d1}}% Gemstone Powder from all",
+      "value": "§7从所有来源获得的§d宝石粉末§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "sources.",
+      "value": "§7增加§a+{{d1}}%§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Adds +{d1} minion speed buff and",
+      "value": "§7为此能量水晶供能的信标",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "fueled by this power crystal!",
+      "value": "§a+{d1}§7档案属性！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases your next hit by {d1} of",
+      "value": "§7你下次攻击的伤害提高为你",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the last fire damage you took.",
+      "value": "§7最后一次受到的火焰伤害的§c{d1}%§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}❈ Defense per ignited",
+      "value": "§7每点燃一个敌人，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "enemy within a {d1} block radius up to",
+      "value": "§7在{d1}格半径内获得§a+{d1}❈防御§7，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Beach Balls during the Year of the",
+      "value": "§7的几率提高§a{{d1}}%§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Seal by {{d1}}%.",
+      "value": "§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain a {{d1}}% chance to materialize",
+      "value": "§7钓到§6宝藏§7时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "some Treasure Bait in your",
+      "value": "§7有§a{{d1}}%§7几率",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Take {d1} less damage from Sea",
+      "value": "§7从海怪受到的伤害",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Breathe {d1}x as long underwater when",
+      "value": "§7装备时，在水下",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "wearing!",
+      "value": "§7呼吸时间延长§a{d1}倍！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "On teleport: Your next melee hit",
+      "value": "§7传送时：你在§a{d1}秒内的下一次近战攻击",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "within {d1}s deals {d2} more damage.",
+      "value": "§7造成§c{d2}§7额外伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "On teleport: Restores {d1} of your",
+      "value": "§7传送时：恢复你",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "maximum health.",
+      "value": "§c{d1}%§7的最大生命值。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Rapidly teleports you to up to {d1} enemies within",
+      "value": "§7快速传送至§b{d1}格内的最多§b{d1}个敌人身边，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1} blocks, rooting each of them and allowing",
+      "value": "§7定住每个敌人，并允许",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "enemies around it. Use this ability",
+      "value": "§7吸引周围所有敌人。在§e{d1}秒内再次使用此技能",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "again within {d1} seconds to detonate",
+      "value": "§7可引爆扭曲，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gives a {{d1}}% shield after",
+      "value": "§7在§d{1}秒未受伤害后，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gives a {{d1}}% shield after not taking",
+      "value": "§7在§d{1}秒未受伤害后，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases your total mana by {{d1}}%",
+      "value": "§7在地牢中时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "while in dungeons",
+      "value": "§7你的总魔力提高§a{{d1}}%§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Shiny pigs run away from you {d1}",
+      "value": "§7持有此物品时，闪光猪",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "faster while holding this.",
+      "value": "§7逃跑速度提高§e{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Extract {d1} extra coins from shiny",
+      "value": "§7从闪光宝珠中",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "orbs.",
+      "value": "§7额外提取§6{d1}§7硬币。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Leap into the air and deal {d1} damage to",
+      "value": "§7跃入空中，对",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "receive a {d1} discount when buying",
+      "value": "§7从§5黑暗拍卖§7购买物品时",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "items from the Dark Auction.",
+      "value": "§7享受§a{d1}§7折扣。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Your skeleton shoots an arrow",
+      "value": "§7当怪物靠近时(冷却{d1}秒)，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gains +{d1}❁ Strength and +{d2}☠ Crit",
+      "value": "§7在地牢中每度过一分钟，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Damage every minute spent in the",
+      "value": "§7获得§c+{d1}❁力量§7和§9+{d2}☠暴击",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}❁ Strength and +{d2}☠ Crit",
+      "value": "§7每击杀§b{d1}§7个Skeletor，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Damage for every {d1} Skeletor kills",
+      "value": "§7给予§c+{d1}❁力量§7和§9+{d2}☠暴击",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "have above {d1} into +{d2}☘ Block",
+      "value": "§f✦速度§7转化为§6+{d2}☘方块",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases the damage your arrows",
+      "value": "§7超过§e{d1}§7格后，箭矢",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "attacks causing you to take {{d1}}%",
+      "value": "§7使你受到的伤害",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "reduced damage",
+      "value": "§7减免§a{{d1}}%",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Applies +{{d1}}❁ Strength to all",
+      "value": "§7为你装备的所有§4蛛形Ж",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "equipment you have equipped.",
+      "value": "§7附加§c+{{d1}}❁力量§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "minions work {{d1}}% faster while on",
+      "value": "§7仆从在私人岛屿上时",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Killing mobs grants +{d1}.{d2}❁ Strength",
+      "value": "§7击杀怪物为死亡地点",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "and +{d1}.{d2}✯ Magic Find for {d3}s to all",
+      "value": "§7§a{d1}§7格内的所有玩家提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "players staying within {d1} blocks of",
+      "value": "§c+{d1}.{d2}❁力量§7和§b+{d1}.{d2}✯魔法发现§7",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "where they died. Stacks up to {d1}",
+      "value": "§7，持续§a{d3}秒§7。§8最多叠加{d1}",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Broodfather when you are at least",
+      "value": "§7{d1}时，稀有地从",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Spider Slayer LVL {d1}.",
+      "value": "§7狼蛛之父掉落。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Deals +{d1} damage to Ж Arthropod",
+      "value": "§7对§4Ж节肢§7生物",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Fishing rod deals {d1} more",
+      "value": "§7钓鱼竿对怪物造成",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "damage to monsters.",
+      "value": "§7额外§a{d1}§7伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Sea Creatures spawn with {{d1}}% of",
+      "value": "§3海洋生物§7生成时已损失",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "their maximum health missing.",
+      "value": "§a{{d1}}%§7的最大生命值。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Each armor piece grants +{d1} chance",
+      "value": "§7每件盔甲在万圣节活动期间",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}ൠ Bonus Pest Chance",
+      "value": "§7在被喷洒的田地中破坏作物时",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "when breaking crops in a sprayed",
+      "value": "§2§7获得§2+{d1}ൠ额外害虫几率§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "plot. Pests are {d1}x more likely to",
+      "value": "§7§2害虫§7在喷洒地块中出现的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "spawn in sprayed plots.",
+      "value": "§7可能性提高§a{d1}倍§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1},{d2}.{d3} damage and setting all mobs on fire in",
+      "value": "§c{d1},{d2}.{d3}§7伤害并使§a{d1}§7格半径内的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "a {d1} block radius over {d2}s.",
+      "value": "§7所有怪物着火，持续§a{d2}秒§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1}.{d2} damage per second to",
+      "value": "§7每秒对区域内怪物",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "mobs within.",
+      "value": "§7造成§c{d1}.{d2}§7伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "hitting the ground, also creates an explosion",
+      "value": "§7撞击地面时，还会在§a{d1}§7格内产生爆炸，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "of {d1} blocks, dealing the same damage.",
+      "value": "§7造成相同伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "players within {d1} blocks are healed for {d2}",
+      "value": "§7§e{d1}§7格内玩家获得你§9生命窃取§7、",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "of your Life Steal, Drain, and Vampirism healing.",
+      "value": "§7§9吸取§7和§9吸血鬼§7治疗的§a{d2}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Creates a stone platform in the air",
+      "value": "§7旅行{d1}格后在脚下生成",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "after traveling {d1} blocks. Perfect",
+      "value": "§7一个石质平台。非常适合",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Consumes {d1} Sulphur from the",
+      "value": "§7消耗§e物品栏§7或§a箭袋§7中的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Inventory or Quiver to double the",
+      "value": "§a{d1}§6硫磺§7以使每发射击的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Use {d1} of your max health to gain +{d2}❁",
+      "value": "§7消耗§c{d1}§7最大生命值，基于你每拥有{d1}点",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Strength for every {d1} of total HP you have",
+      "value": "§7总生命获得§c+{d2}❁力量§7，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "them.",
+      "value": "§7并对其获得§b+{d1}✯魔法发现§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Heals for {d1}.{d2} of your max health",
+      "value": "§7根据你每次命中造成的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "hit, up to {d1},{d2} ☠ Crit Damage.",
+      "value": "§7治疗最大生命的§a{d1}.{d2}§7，上限§9{d1},{d2}☠暴击伤害§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} weapon damage if",
+      "value": "§7如果你没有§5龙§7宠物",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "you don't have a Dragon pet",
+      "value": "§7获得§f+{d1}§7武器伤害",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Marks your location and teleport back there",
+      "value": "§7标记你的位置并在§a{d1}秒§7后",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "after {d1}s.",
+      "value": "§7传送回来。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}✦ for every Ramero",
+      "value": "§7每用此剑§b谋杀§7一个§bRamero§7，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "murdered with this sword.",
+      "value": "§7获得§f+{d1}✦§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gains +{d1} Damage for each",
+      "value": "§7§7每个达成VII级或以上的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "higher.",
+      "value": "§c+{d1}伤害§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Throw a potion which gives all teammates in a",
+      "value": "§7投掷一瓶药水，给予§a{d1}§7格半径内",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1} block radius {d2} HP worth of absorption",
+      "value": "§7所有队友§a{d2}§7点生命值的吸收效果",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Anti-healing is {{d1}}% less effective",
+      "value": "§7受到的反治疗§7效果",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "against you.",
+      "value": "§7降低§a{{d1}}%§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "each bat alive.",
+      "value": "§7每秒造成§c{d1}§7最大§c❤§7伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}❤ Health when",
+      "value": "§7应用到护甲时获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "applied to an armor piece. Can",
+      "value": "§7§c+{d1}❤生命§7。每件物品",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1}❁ Strength when",
+      "value": "§7应用到武器时获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "applied to a weapon. Can only be",
+      "value": "§7§c+{d1}❁力量§7。每件物品只能",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1} of the hit's damage to up",
+      "value": "§7§{d1}格内最多{d1}只怪物",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "to {d1} monsters within {d2} blocks.",
+      "value": "§7造成§a{d1}§7该次伤害的伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "lightning, dealing {d1} of the hit's",
+      "value": "§e闪电§7，对{d2}格内最多{d1}只",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "damage to up to {d1} monsters within {d2}",
+      "value": "§7怪物造成§a{d1}§7该次伤害的伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "discharge, adding {d1} damage to that",
+      "value": "§7为该次攻击基于收集的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "hit for each charge collected.",
+      "value": "§7每个充能附加§a{d1}§7伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases your ❈ Defense by +{d1}",
+      "value": "§7对抗海洋生物时，提升",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "against Sea Creatures.",
+      "value": "§7你的§a❈防御§a+{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1},{d2} Exp to any of your",
+      "value": "§7为你任一§e农耕工具",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Farming Tools.",
+      "value": "§7提供§b+{d1},{d2}经验§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Transmission ability, its ability range",
+      "value": "§7其技能范围增加§d+{d1}§7。可应用",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "is increased by +{d1}. Can be applied",
+      "value": "§7当应用到提供传送能力的物品时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} extra loot to end of",
+      "value": "§7在地下城完成时的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "dungeon chests.",
+      "value": "§7宝箱额外获得§a+{d1}§7战利品。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Permanently adds +{d1} contact slots",
+      "value": "§7永久为你拥有的所有",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "any current and future Abiphones",
+      "value": "§7增加§b+{d1}§7个联系人槽位",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Decreases your ♨ Heat or ❄ Cold",
+      "value": "§7每使用§2{d2}燃料§7时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "by {d1} for every {d2} Fuel used.",
+      "value": "§7你的§c♨热量§7或§b❄寒冷§7减少§a{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "additional +{d1} ❈ Defense when",
+      "value": "§7静止时额外获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "standing still.",
+      "value": "§a+{d1}❈防御§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{{d1}}% ❈ Defense to {d2}",
+      "value": "§7给予你周围{d1}格内的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "players within {d1} blocks of you.",
+      "value": "§7{d2}名玩家§a+{{d1}}%❈防御§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{{d1}}% less damage. Gain +{{d2}}♨",
+      "value": "§7受到伤害减少§a{{d1}}%§7。受到{d1}次攻击后的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Vitality for {d1} seconds after taking",
+      "value": "§7{d1}秒内获得§4+{{d2}}♨",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1} hits.",
+      "value": "§7活力§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Adds +{d1} to the damage of",
+      "value": "§7为箭术药水增加",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Archery potions.",
+      "value": "§c+{d1}§7伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Deal {{d1}}% more damage to enemies",
+      "value": "§7对{d1}.{d2}格内的敌人",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "within {d1}.{d2} blocks.",
+      "value": "§7造成§a{{d1}}%§7额外§c伤害§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Increases all Fishing Stats and ✯ Magic Find by",
+      "value": "§7§a{d3}格§7内每有一个钓鱼浮漂，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "+{d1}.{d2} per fishing bobber within {d3} blocks, up to",
+      "value": "§7所有§b钓鱼属性§7和§b✯魔法发现§7增加",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1} bobbers.",
+      "value": "§b+{d1}.{d2}§7，最多计入§b{d1}§7个浮漂。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "When breaking crops, there is a",
+      "value": "§7破坏作物时，有§a{d1}.{d2}",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1}.{d2} chance to trigger Crop",
+      "value": "§7几率触发§d§l作物",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "additional crops for {d1}s, with a {d2}",
+      "value": "§7额外收获作物§a{d1}秒§7，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "increased chance of rare drops",
+      "value": "§7稀有掉落物几率增加§a{d2}",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "ℏ Gain +{d1}.{d2}☯ Combat Wisdom with Slayer",
+      "value": "§8ℏ§7使用杀手武器时获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "ℏ With Smoldering Polarization, gain +{d1}✯",
+      "value": "§8ℏ§7在有§a阴燃极化§7时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Magic Find on your slayer weapon.",
+      "value": "§7杀手武器上§b魔法发现§b+{d1}✯§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the mob and deals {d1} of",
+      "value": "§7并造成你上一次攻击",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "your last hit.",
+      "value": "§7§c{d1}§7的伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Magic Find by {d1}.{d2} per player within",
+      "value": "§b魔法发现§7每多一名§b{d1}§7格内玩家",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1} blocks of you, up to {d2} players.",
+      "value": "§7增加§e{d1}.{d2}§7，最多计入§c{d2}§7名玩家。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "You have {d1} chance to gain",
+      "value": "§7每次受到怪物攻击时，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "you take hits from mobs.",
+      "value": "§b{d1}§7个经验球。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "{d1} experience orbs every",
+      "value": "§7每次受到怪物攻击时",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "time you take hits from mobs.",
+      "value": "§7获得§b{d1}§7个经验球。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants {d1} of the mana used",
+      "value": "§7将施放技能消耗的法力",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "to cast abilities as ❈ Defense",
+      "value": "§7的§d{d1}§7转化为§a❈防御",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Shoot a second arrow dealing {d1} of",
+      "value": "§7射出第二支箭，造成",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the first arrow's damage.",
+      "value": "§7第一支箭§c{d1}§7的伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Shoot a second arrow dealing {d1}",
+      "value": "§7射出第二支箭，造成",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "of the first arrow's damage.",
+      "value": "§7第一支箭§c{d1}§7的伤害。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "enemies. Each arrow deals {d1}",
+      "value": "§7拔出。每支箭造成你",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the target, up to {d1} arrows.",
+      "value": "§c{d1}§7，最多计入§c{d1}§7支箭。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Your weapon gains {d1}x the Damage of",
+      "value": "§7你的武器获得最近击杀怪物",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "the latest monster killed and adds it",
+      "value": "§7伤害的§c{d1}倍§7，并在你",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "+{d1}.{d2}❁ Strength per maxed out",
+      "value": "§7每个达到满级的收藏",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "collection. You have {d1}",
+      "value": "§7提供§c+{d1}.{d2}❁力量§7。你有",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "collections maxed.",
+      "value": "§a§k{d1}§a个满级收藏§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ❁ Damage and +{d2} ❁",
+      "value": "§7每级§c地下墓穴§7等级提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Strength per Catacombs level.",
+      "value": "§c+{d1}❁伤害§7和§a+{d2}§c❁力量§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "second from all monsters within {d1}",
+      "value": "§7内所有怪物吸取",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Heals for {d1} of your missing",
+      "value": "§7击杀敌人时，恢复你",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "health whenever you kill an",
+      "value": "§7已损失生命值的§a{d1}§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Reduces the target's walk speed",
+      "value": "§7降低目标行走速度§a{d1}§7，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "by {d1} and deals +{d2}.{d3} of",
+      "value": "§7并每秒造成你伤害的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "your damage per second per hit,",
+      "value": "§7§2+{d2}.{d3}§7每秒每次命中伤害，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Receives -{d1} ⫽ Ferocity",
+      "value": "§7未激活时，受到的⫽凶暴",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}❁ Strength per piece of",
+      "value": "§7每穿戴一件§5末影盔甲",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Ender Armor worn.",
+      "value": "§7获得§c+{d1}❁力量§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Water Hydra is a Legendary Sea Creature that spawns",
+      "value": "§7水九头蛇是在钓鱼等级达到XIX（{d1}）",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "while fishing after unlocking it at Fishing Level XIX ({d1}).",
+      "value": "§7后解锁并可在钓鱼时生成的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "players within {d1} blocks for {d2} of",
+      "value": "§7§9{d1}§7格内的玩家，治疗量为你",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "your ❈ Defense and gain {d1}❈",
+      "value": "§7§a❈防御§7的§9{d2}§7并获得§a{d1}❈",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "gifts.",
+      "value": "§7从礼物中获得§a+{d1}§7更多§6硬币§7和§3技能经验§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Grants +{d1} ❁ Strength per",
+      "value": "§7每级§c地下墓穴§7等级提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Deals +{d1} damage to ☠ Wither",
+      "value": "§7对§8☠凋零§7生物",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "immunity from damage for {d1}s. Consumes {d2}",
+      "value": "§7免疫伤害§a{d1}秒§7。每次格挡攻击",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "max mana each time you block a hit. You cannot",
+      "value": "§7消耗§b{d2}§b最大法力§7。护盾激活时",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Take {{d1}}% less damage from 🦴",
+      "value": "§7受到§f🦴骷髅§7生物的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Skeletal mobs.",
+      "value": "§7伤害减少§a{{d1}}%§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Deal {{d1}}% more damage to ☠ Wither",
+      "value": "§7对§8☠凋零§7生物造成的",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain {{d1}} ☠ Crit Damage for every",
+      "value": "§7每个附近的狼怪物提供",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "nearby wolf monster.",
+      "value": "§a{{d1}}§9☠暴击伤害§7。",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain {d1}✯ Magic Find when slaying",
+      "value": "§7一击杀死怪物时获得",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "monsters in one hit!",
+      "value": "§b{d1}✯魔法发现§7！",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Gain +{d1}❈ Defense for each Zombie",
+      "value": "§7范围内每有一个穿戴僵尸士兵套装的玩家，",
+      "reason": "Empty text or incompatible placeholders"
+    },
+    {
+      "key": "Soldier Set within {d1} blocks.",
+      "value": "§7获得§a+{d1}❈防御§7，距离§a{d1}§7格。",
+      "reason": "Empty text or incompatible placeholders"
+    }
+  ],
+  "totalEntries": 11169
+}

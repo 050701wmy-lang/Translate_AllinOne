@@ -637,6 +637,7 @@ public final class ComponentTranslationRuntimeCore {
         while (iterator.hasNext() && requests.size() < maxBatchSize) {
             PendingRequest candidate = iterator.next();
             if (candidate.document().route() != first.document().route()
+                    || providerRoute(candidate.document()) != providerRoute(first.document())
                     || !candidate.targetLanguage().equals(first.targetLanguage())) {
                 continue;
             }
@@ -666,11 +667,7 @@ public final class ComponentTranslationRuntimeCore {
         PendingRequest first = batch.requests().get(0);
         ApiProviderProfile provider = ProviderRouteResolver.resolve(
                 access().config(),
-                switch (route) {
-                    case ITEM -> ProviderRouteResolver.Route.ITEM;
-                    case OTHER_TRANSLATIONS, SCREEN_UI -> ProviderRouteResolver.Route.OTHER_TRANSLATIONS;
-                    case SCOREBOARD -> ProviderRouteResolver.Route.SCOREBOARD;
-                }
+                providerRoute(first.document())
         );
         if (provider == null) {
             ComponentTranslationDebugLogger.flow(
@@ -696,11 +693,7 @@ public final class ComponentTranslationRuntimeCore {
             );
             return;
         }
-        ProviderRouteResolver.Route providerRoute = switch (route) {
-            case ITEM -> ProviderRouteResolver.Route.ITEM;
-            case OTHER_TRANSLATIONS, SCREEN_UI -> ProviderRouteResolver.Route.OTHER_TRANSLATIONS;
-            case SCOREBOARD -> ProviderRouteResolver.Route.SCOREBOARD;
-        };
+        ProviderRouteResolver.Route providerRoute = providerRoute(first.document());
         if (ProviderRouteResolver.hasApiKeyDecryptFailure(access().config(), providerRoute)) {
             ProviderSurface surface = switch (route) {
                 case ITEM -> ProviderSurface.ITEM_TOOLTIP;
@@ -1194,11 +1187,23 @@ public final class ComponentTranslationRuntimeCore {
         return route == DispatchRoute.OTHER_TRANSLATIONS ? OTHER_TRANSLATIONS_REQUESTS_PER_MINUTE : 0;
     }
 
+    public static ProviderRouteResolver.Route providerRoute(ComponentTranslationDocument document) {
+        if (document.route() == ComponentTranslationRoute.SKYBLOCK_UI
+                || "hypixel".equals(document.semanticSettings().get("provider_route"))) {
+            return ProviderRouteResolver.Route.HYPIXEL;
+        }
+        return switch (dispatchRoute(document.route())) {
+            case ITEM -> ProviderRouteResolver.Route.ITEM;
+            case OTHER_TRANSLATIONS, SCREEN_UI -> ProviderRouteResolver.Route.OTHER_TRANSLATIONS;
+            case SCOREBOARD -> ProviderRouteResolver.Route.SCOREBOARD;
+        };
+    }
+
     private static DispatchRoute dispatchRoute(ComponentTranslationRoute route) {
         return switch (route) {
             case SCREEN_UI -> DispatchRoute.SCREEN_UI;
             case ADVANCEMENT, SIGN_FACE, SIGN_CONTINUOUS, ENTITY_NAME, TEXT_DISPLAY, BOOK_PAGE,
-                    PLAYER_LIST, BOSS_BAR, TITLE, ACTION_BAR, HOVER_TEXT ->
+                    PLAYER_LIST, BOSS_BAR, TITLE, ACTION_BAR, HOVER_TEXT, SKYBLOCK_UI ->
                     DispatchRoute.OTHER_TRANSLATIONS;
             case SCOREBOARD -> DispatchRoute.SCOREBOARD;
             case TOOLTIP_LINE, TOOLTIP_STRUCTURED, TOOLTIP_PARAGRAPH, CHAT_OUTPUT -> DispatchRoute.ITEM;

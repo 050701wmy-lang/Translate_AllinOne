@@ -341,14 +341,8 @@ final class TooltipTemplateRuntime {
         if (status == TranslationStatus.TRANSLATED && resolvedLookup.renderedLineOverride() != null) {
             finalTooltipLine = resolvedLookup.renderedLineOverride();
         } else if (status == TranslationStatus.TRANSLATED) {
-            String reassembledTranslated = TemplateProcessor.reassembleDecorativeGlyphs(
-                    TemplateProcessor.reassemble(translatedTemplate, preparedTemplate.templateResult().values()),
-                    preparedTemplate.glyphResult().values(),
-                    true
-            );
-            finalTooltipLine = resolvedLookup.format() == CachedTranslationFormat.TAGGED
-                    ? StylePreserver.reapplyStylesFromTags(reassembledTranslated, preparedTemplate.styleResult().styleMap, true)
-                    : StylePreserver.fromLegacyText(reassembledTranslated);
+            finalTooltipLine = renderCompatibilityText(preparedTemplate, translatedTemplate, resolvedLookup.format());
+            if (finalTooltipLine == null) finalTooltipLine = originalTextObject;
         } else if (status == TranslationStatus.ERROR) {
             errorMessage = lookupResult.errorMessage();
             if (TooltipInternalLineSupport.isMissingKeyIssue(errorMessage)) {
@@ -1157,7 +1151,6 @@ final class TooltipTemplateRuntime {
 
     private static ResolvedTemplateLookup resolveLookup(PreparedTooltipTemplate preparedTemplate) {
         long resolveStartedAtNanos = System.nanoTime();
-        ItemTemplateCache cache = ItemTemplateCache.getInstance();
         CachedTranslationFormat currentFormat = preparedTemplate.useTagStylePreservation()
                 ? CachedTranslationFormat.TAGGED
                 : CachedTranslationFormat.LEGACY;
@@ -1186,6 +1179,7 @@ final class TooltipTemplateRuntime {
             );
         }
 
+        ItemTemplateCache cache = ItemTemplateCache.getInstance();
         LookupResult currentLookup = cache.peek(preparedTemplate.translationTemplateKey());
         DecodedStoredTranslation decodedCurrentTranslation = decodeStoredTranslation(currentLookup.translation(), currentFormat);
         if (currentLookup.status() == TranslationStatus.TRANSLATED
@@ -1702,6 +1696,15 @@ final class TooltipTemplateRuntime {
             return Component.empty();
         }
 
+        translation = TooltipPunctuationSupport.clean(preparedTemplate.sourceLine().getString(), translation);
+
+        Component aligned = TooltipDictionaryStyleSupport.renderSourceAligned(
+                List.of(renderOriginalPreparedLine(preparedTemplate)), translation, text -> {
+                    var lookup = SHARED_DICTIONARY_SERVICE.lookupItemLine(text);
+                    return lookup.hit() ? lookup.translation() : null;
+                });
+        if (aligned != null) return aligned;
+
         if (containsLegacyFormattingCode(translation)) {
             Component legacyRendered = renderLegacyFormattedLocalDictionaryTranslation(preparedTemplate, translation);
             if (legacyRendered != null) {
@@ -1714,7 +1717,11 @@ final class TooltipTemplateRuntime {
                 resolveLeadingVisibleStyle(renderOriginalPreparedLine(preparedTemplate)),
                 true
         );
-        return Component.literal(translation).setStyle(inheritedStyle);
+        return TooltipDictionaryStyleSupport.render(List.of(renderOriginalPreparedLine(preparedTemplate)),
+                translation, inheritedStyle, text -> {
+                    var lookup = SHARED_DICTIONARY_SERVICE.lookupItemLine(text);
+                    return lookup.hit() ? lookup.translation() : null;
+                });
     }
 
     private static Component renderLegacyFormattedLocalDictionaryTranslation(
@@ -1950,11 +1957,18 @@ final class TooltipTemplateRuntime {
             return null;
         }
 
+        String originalText = preparedTemplate.sourceLine().getString();
+        cachedTranslation = SharedHudTranslationSupport.repairTooltipResidue(originalText, cachedTranslation,
+                resolveItemTranslateConfigOrDefault().target_language);
+        cachedTranslation = TooltipPunctuationSupport.clean(originalText, cachedTranslation);
+
         String reassembledTranslated = TemplateProcessor.reassembleDecorativeGlyphs(
                 TemplateProcessor.reassemble(cachedTranslation, preparedTemplate.templateResult().values()),
                 preparedTemplate.glyphResult().values(),
                 true
         );
+        if (SharedHudTranslationSupport.hasIncompleteTooltipProse(originalText, reassembledTranslated,
+                resolveItemTranslateConfigOrDefault().target_language)) return null;
         return format == CachedTranslationFormat.TAGGED
                 ? StylePreserver.reapplyStylesFromTags(reassembledTranslated, preparedTemplate.styleResult().styleMap, true)
                 : StylePreserver.fromLegacyText(reassembledTranslated);

@@ -25,8 +25,12 @@ public final class ScoreboardEntryTemplate {
     public record Prepared(
             Component original,
             ComponentTranslationDocument document,
-            ComponentDynamicTemplate template
+            ComponentDynamicTemplate template,
+            HudSentenceTemplate sentence
     ) {
+        public Prepared(Component original, ComponentTranslationDocument document, ComponentDynamicTemplate template) {
+            this(original, document, template, null);
+        }
         public Prepared {
             original = original == null ? Component.empty() : original.copy();
         }
@@ -40,6 +44,7 @@ public final class ScoreboardEntryTemplate {
                 throw new IllegalStateException("Scoreboard Component document is unavailable.");
             }
             Component translated = APPLIER.apply(document, response);
+            if (sentence != null) return sentence.restore(translated);
             return template == null ? translated : template.restore(translated);
         }
     }
@@ -57,6 +62,11 @@ public final class ScoreboardEntryTemplate {
         Component original = prepareComponentSource(copyOrEmpty(prefix), copyOrEmpty(owner), copyOrEmpty(suffix));
         boolean ownerIsPassthrough = protectOwner || !translateOwner;
         String ownerText = owner == null ? "" : owner.getString();
+        if (!ownerIsPassthrough || ownerText.isBlank()
+                || ownerText.replaceAll("§[0-9a-fk-or]", "").isBlank()) {
+            HudSentenceTemplate sentence = HudSentenceTemplate.prepare(original, HudGlyphProtection.tokens(original, Set.of()));
+            return new Prepared(original, sentence.document(ComponentTranslationRoute.SCOREBOARD), null, sentence);
+        }
         ComponentDynamicTemplate template = ComponentDynamicTemplate.prepare(
                 original,
                 HudGlyphProtection.tokens(original,

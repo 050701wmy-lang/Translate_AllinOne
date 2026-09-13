@@ -48,6 +48,11 @@ public abstract class UiTranslationGuiGraphicsExtractorMixin {
         if (source == null || source.isEmpty()) {
             return source;
         }
+        // Tooltip drawing is deferred until after the item translation scope closes.
+        // Mark its prepared lines now so the later screen draw cannot translate animations again.
+        if (UiTranslationScope.isInternal()) {
+            return source.stream().map(UiTranslationRuntime::protectPreparedTooltip).toList();
+        }
         List<FormattedCharSequence> translated = new java.util.ArrayList<>(source.size());
         for (FormattedCharSequence sequence : source) {
             translated.add(UiTranslationRuntime.translateFormattedCharSequence(sequence, UiTextRole.TOOLTIP));

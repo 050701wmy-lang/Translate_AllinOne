@@ -6,6 +6,9 @@ import java.util.EnumSet;
 import java.util.Set;
 
 public enum ComponentCacheModule {
+    NPC_DIALOGUE("npc_dialogue", "component_npc_dialogue_translate_cache.json", EnumSet.of(
+            ComponentTranslationRoute.CHAT_OUTPUT
+    )),
     ITEM("item", "component_item_translate_cache.json", EnumSet.of(
             ComponentTranslationRoute.TOOLTIP_LINE,
             ComponentTranslationRoute.TOOLTIP_STRUCTURED,
@@ -33,6 +36,7 @@ public enum ComponentCacheModule {
     TITLE("title", "component_title_translate_cache.json", EnumSet.of(ComponentTranslationRoute.TITLE)),
     ACTION_BAR("action_bar", "component_action_bar_translate_cache.json", EnumSet.of(ComponentTranslationRoute.ACTION_BAR)),
     HOVER_TEXT("hover_text", "component_hover_text_translate_cache.json", EnumSet.of(ComponentTranslationRoute.HOVER_TEXT)),
+    SKYBLOCK_UI("skyblock_ui", "component_skyblock_ui_translate_cache.json", EnumSet.of(ComponentTranslationRoute.SKYBLOCK_UI)),
     SCREEN_UI("screen_ui", "component_screen_ui_translate_cache.json", EnumSet.of(
             ComponentTranslationRoute.SCREEN_UI
     ));

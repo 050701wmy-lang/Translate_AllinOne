@@ -25,7 +25,9 @@ import net.minecraft.network.chat.contents.TranslatableContents;
 public final class TooltipTextMatcherSupport {
     private static final Logger LOGGER = LoggerFactory.getLogger("Translate_AllinOne/TooltipTextMatcherSupport");
     private static final long DEV_LOG_REPEAT_WINDOW_MILLIS = 1200L;
-    private static final Pattern NAMESPACED_IDENTIFIER_PATTERN = Pattern.compile("^\\[?#?[A-Za-z0-9_.-]+:[A-Za-z0-9_/.-]+\\]?$");
+    // Minecraft resource locations are lowercase. Human labels such as
+    // "Cooldown:5s" must not be discarded as namespace:path identifiers.
+    private static final Pattern NAMESPACED_IDENTIFIER_PATTERN = Pattern.compile("^\\[?#?[a-z0-9_.-]+:[a-z0-9_/.-]+\\]?$");
     private static final Pattern GENERIC_IDENTIFIER_PATTERN = Pattern.compile("^(?=.*[A-Za-z])[A-Za-z0-9]+(?:[._/][A-Za-z0-9]+)+$");
     private static final Pattern BARE_INTERNAL_TOKEN_PATTERN = Pattern.compile("^[a-z][a-z0-9_-]{9,}$");
     private static final TextPattern TEXTUAL_CONTENT_PATTERN = TextPattern.builder()

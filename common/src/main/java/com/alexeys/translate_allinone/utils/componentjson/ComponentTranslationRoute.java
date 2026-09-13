@@ -13,6 +13,7 @@ public enum ComponentTranslationRoute {
     TOOLTIP_PARAGRAPH("tooltip_paragraph", "item"),
     SCOREBOARD("scoreboard", "scoreboard"),
     SCREEN_UI("screen_ui", "screen_ui"),
+    SKYBLOCK_UI("skyblock_ui", "screen_ui"),
     PLAYER_LIST("player_list", "other_translations"),
     BOSS_BAR("boss_bar", "other_translations"),
     TITLE("title", "other_translations"),

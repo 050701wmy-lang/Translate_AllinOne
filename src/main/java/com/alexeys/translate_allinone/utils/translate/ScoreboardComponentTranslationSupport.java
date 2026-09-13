@@ -48,6 +48,8 @@ public final class ScoreboardComponentTranslationSupport {
             return prepared.renderOriginal();
         }
 
+        Component objective = SurfaceTextCompletion.objective(prepared.original(), config.target_language);
+        if (objective != null) return objective;
         ComponentTranslationRuntime.Resolution<Component> resolution = ComponentTranslationRuntime.resolve(
                 prepared.document(),
                 config.target_language,

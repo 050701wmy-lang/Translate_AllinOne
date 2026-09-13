@@ -105,7 +105,7 @@ final class WynncraftPlaceholderDictionary {
                 continue;
             }
 
-            String translated = applyTranslationTemplate(entry.translationTemplate(), matcher, entry.placeholders());
+            String translated = applyTranslationTemplate(entry.translationTemplate(), matcher, entry.placeholders(), snapshot);
             if (translated != null && !translated.isBlank()) {
                 return new LookupResult(translated, MatchType.PATTERN, entry.sourceId());
             }
@@ -195,6 +195,24 @@ final class WynncraftPlaceholderDictionary {
 
         if (loadedFileCount <= 0) {
             return DictionarySnapshot.empty();
+        }
+        // New bundled terms should reach existing installations without overwriting user dictionary files.
+        // Only supplement explicitly selected built-in dictionaries, after all user entries have loaded.
+        for (Path path : dictionaryPaths) {
+            if (path == null || path.getFileName() == null || !Files.exists(path)) continue;
+            String name = path.getFileName().toString();
+            if (!Set.of("skyblock_items_zh.json", "wynncraft_items_zh.json").contains(name)) continue;
+            try (var stream = WynncraftPlaceholderDictionary.class.getResourceAsStream(
+                    "/assets/translate_allinone/lang/dictionary/" + name)) {
+                if (stream == null) continue;
+                try (Reader reader = new java.io.InputStreamReader(stream, StandardCharsets.UTF_8)) {
+                    var defaults = new LinkedHashMap<String, String>();
+                    collectEntries(JsonParser.parseReader(reader).getAsJsonObject(), defaults);
+                    mergeEntries(defaults, exactTranslations, patternEntries, resolveDictionarySourceId(path));
+                }
+            } catch (IOException | RuntimeException error) {
+                Translate_AllinOne.LOGGER.warn("Failed to load bundled dictionary defaults: {}", name, error);
+            }
         }
         Translate_AllinOne.LOGGER.info(
                 "Loaded {}. files={}, exact={}, patterns={}",
@@ -416,7 +434,8 @@ final class WynncraftPlaceholderDictionary {
                 || previousCodePoint == '±';
     }
 
-    private static String applyTranslationTemplate(String template, Matcher matcher, List<String> placeholders) {
+    private static String applyTranslationTemplate(String template, Matcher matcher, List<String> placeholders,
+                                                   DictionarySnapshot snapshot) {
         if (template == null || template.isBlank()) {
             return null;
         }
@@ -427,6 +446,15 @@ final class WynncraftPlaceholderDictionary {
             String value = matcher.group(i + 1);
             if (placeholder == null || placeholder.isBlank() || value == null) {
                 continue;
+            }
+            // Explicit glossary slots share wording with standalone labels and item names.
+            // Ordinary placeholders (names, numbers, prefixes) must remain verbatim.
+            if (placeholder.startsWith("term_")) {
+                DictionaryEntry term = snapshot.exactTranslations().get(
+                        normalizeSourceText(value).toLowerCase(Locale.ROOT));
+                if (term == null) return null; // Let the provider translate an unknown term in context.
+                value = term.translation().replaceAll("§[0-9a-fk-orA-FK-OR]", "");
+                if (value.isBlank()) return null;
             }
             translated = translated.replace(
                     "{" + placeholder + "}",

@@ -22,6 +22,8 @@ public class ModConfig {
     public ScoreboardConfig scoreboardTranslate = new ScoreboardConfig();
 
     public OtherTranslationsConfig otherTranslations = new OtherTranslationsConfig();
+    public com.alexeys.translate_allinone.utils.config.pojos.HypixelUiConfig hypixelUi =
+            new com.alexeys.translate_allinone.utils.config.pojos.HypixelUiConfig();
 
     public WynnCraftConfig wynnCraft = new WynnCraftConfig();
 
